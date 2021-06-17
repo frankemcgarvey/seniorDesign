@@ -32,7 +32,7 @@ extern "C" {
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
+#include "pdm_to_pcm.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

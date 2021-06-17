@@ -1,0 +1,14 @@
+/*
+ * pdm_to_pcm.c
+ *
+ *  Created on: Jun 14, 2021
+ *      Author: frank
+ */
+
+
+#include "pdm_to_pcm.h"
+
+
+void pdm_to_pcm_init(PDM_Filter_Handler_t* handler, PDM_Filter_Config_t* config){
+
+}

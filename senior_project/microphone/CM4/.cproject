@@ -90,6 +90,12 @@
                                     <listOptionValue builtIn="false" value="../../Drivers/CMSIS/Device/ST/STM32H7xx/Include"/>
                                     									
                                     <listOptionValue builtIn="false" value="../../Drivers/CMSIS/Include"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/Inc}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone_CM7/PDM2PCM/App}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/ST/STM32_Audio/Addons/PDM/Inc}&quot;"/>
                                     								
                                 </option>
                                 								
@@ -344,5 +350,7 @@
         </scannerConfigBuildInfo>
         	
     </storageModule>
+    	
+    <storageModule moduleId="refreshScope"/>
     
 </cproject>

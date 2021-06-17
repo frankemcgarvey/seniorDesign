@@ -1,0 +1,30 @@
+/*
+ * pdm_to_pcm.c
+ *
+ *  Created on: Jun 14, 2021
+ *      Author: frank
+ */
+
+
+#include "pdm_to_pcm.h"
+
+
+void pdm_to_pcm_init(PDM_Filter_Handler_t* handler, PDM_Filter_Config_t* config){
+
+	  for(index = 0; index < ChannelNumber; index++)
+	  {
+	    /* Init PDM filters */
+	    PDM_FilterHandler[index].bit_order  = PDM_FILTER_BIT_ORDER_MSB;
+	    PDM_FilterHandler[index].endianness = PDM_FILTER_ENDIANNESS_LE;
+	    PDM_FilterHandler[index].high_pass_tap = 2122358088;
+	    PDM_FilterHandler[index].out_ptr_channels = ChannelNumber;
+	    PDM_FilterHandler[index].in_ptr_channels  = ChannelNumber;
+	    PDM_Filter_Init((PDM_Filter_Handler_t *)(&PDM_FilterHandler[index]));
+
+	    /* Configure PDM filters */
+	    PDM_FilterConfig[index].output_samples_number = AudioFreq/1000;
+	    PDM_FilterConfig[index].mic_gain = 24;
+	    PDM_FilterConfig[index].decimation_factor = PDM_FILTER_DEC_FACTOR_64;
+	    PDM_Filter_setConfig((PDM_Filter_Handler_t *)&PDM_FilterHandler[index], &PDM_FilterConfig[index]);
+	  }
+}

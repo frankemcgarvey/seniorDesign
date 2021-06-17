@@ -1,0 +1,2 @@
+pdm_to_pcm.c:12:6:pdm_to_pcm_init	32	static
+pdm_to_pcm.c:32:6:pdm_to_pcm	64	static,ignoring_inline_asm

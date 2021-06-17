@@ -19,6 +19,7 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
+#include "pdm2pcm.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -35,6 +36,11 @@ typedef enum{
 	FULL,
 }dma_flag_t;
 
+typedef enum{
+	BUSY,
+	READY,
+}uart_flag_t;
+
 /* USER CODE END PTD */
 
 /* Private define ------------------------------------------------------------*/
@@ -43,12 +49,15 @@ typedef enum{
 #ifndef HSEM_ID_0
 #define HSEM_ID_0 (0U) /* HW semaphore 0*/
 #endif
+
+
+
 /* USER CODE END PD */
 
 /* Private macro -------------------------------------------------------------*/
 /* USER CODE BEGIN PM */
 
-#define BUFFER_SIZE 256
+
 /* USER CODE END PM */
 
 /* Private variables ---------------------------------------------------------*/
@@ -59,14 +68,13 @@ SAI_HandleTypeDef hsai_BlockA1;
 DMA_HandleTypeDef hdma_sai1_a;
 
 UART_HandleTypeDef huart3;
+DMA_HandleTypeDef hdma_usart3_tx;
 
 /* USER CODE BEGIN PV */
 
 dma_flag_t dmaFlag = NONE;
-
-uint16_t pdmBuffer[BUFFER_SIZE] = {0};
-uint16_t pcmBuffer[BUFFER_SIZE/8] = {0};
-
+uart_flag_t uartFlag = READY;
+volatile buffer_t * const buffer = (buffer_t *) 0x30040000;
 
 /* USER CODE END PV */
 
@@ -106,13 +114,8 @@ int main(void)
   SCB_EnableDCache();
 
 /* USER CODE BEGIN Boot_Mode_Sequence_1 */
-  /* Wait until CPU2 boots and enters in stop mode or timeout*/
-  timeout = 0xFFFF;
-  while((__HAL_RCC_GET_FLAG(RCC_FLAG_D2CKRDY) != RESET) && (timeout-- > 0));
-  if ( timeout < 0 )
-  {
-  Error_Handler();
-  }
+
+
 /* USER CODE END Boot_Mode_Sequence_1 */
   /* MCU Configuration--------------------------------------------------------*/
 
@@ -153,37 +156,42 @@ Error_Handler();
   MX_USART3_UART_Init();
   MX_CRC_Init();
   MX_SAI1_Init();
+  MX_PDM2PCM_Init();
   /* USER CODE BEGIN 2 */
 
-  uint8_t data = 0;
-  uint8_t *pdata = &data;
+  for(uint32_t i = 0; i < BUFFER_SIZE; i++){
+	  buffer->pdmBuffer[i] = 0;
+  }
 
-  data = 0x69;
+  SCB_CleanDCache_by_Addr((uint32_t*)&buffer->pcmBuffer[0], BUFFER_SIZE);
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  HAL_SAI_Receive_DMA(&hsai_BlockA1, pData, Size)
+  HAL_SAI_Receive_DMA(&hsai_BlockA1, (uint8_t*)&buffer->pdmBuffer[0], BUFFER_SIZE);
 
-  while (1)
-  {
+  while (1){
 
+	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != HALF){}
+	  //Reset Flag
 	  dmaFlag = NONE;
+	  //Filter PDM to PCM
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t*)&buffer->pcmBuffer[0], 2);
+	  //Transmit PCM
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], 64);
 
-	  //TODO
-	  //Logic for transmission
-
-	  //HAL_UART_Transmit(&huart3, pdata, 1, HAL_UART_TIMEOUT_VALUE);
-
-
+	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != FULL){}
+	  //Reset Flag
 	  dmaFlag = NONE;
+	  //Filter PDM to PCM
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[32], 2);
+	  //Transmit PCM
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[32], 64);
 
-	  //TODO
-	  //Logic for transmission
 
     /* USER CODE END WHILE */
 
@@ -206,9 +214,12 @@ void SystemClock_Config(void)
   HAL_PWREx_ConfigSupply(PWR_DIRECT_SMPS_SUPPLY);
   /** Configure the main internal regulator output voltage
   */
-  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE1);
+  __HAL_PWR_VOLTAGESCALING_CONFIG(PWR_REGULATOR_VOLTAGE_SCALE0);
 
   while(!__HAL_PWR_GET_FLAG(PWR_FLAG_VOSRDY)) {}
+  /** Macro to configure the PLL clock source
+  */
+  __HAL_RCC_PLL_PLLSOURCE_CONFIG(RCC_PLLSOURCE_HSE);
   /** Initializes the RCC Oscillators according to the specified parameters
   * in the RCC_OscInitTypeDef structure.
   */
@@ -217,7 +228,7 @@ void SystemClock_Config(void)
   RCC_OscInitStruct.PLL.PLLState = RCC_PLL_ON;
   RCC_OscInitStruct.PLL.PLLSource = RCC_PLLSOURCE_HSE;
   RCC_OscInitStruct.PLL.PLLM = 1;
-  RCC_OscInitStruct.PLL.PLLN = 24;
+  RCC_OscInitStruct.PLL.PLLN = 120;
   RCC_OscInitStruct.PLL.PLLP = 2;
   RCC_OscInitStruct.PLL.PLLQ = 4;
   RCC_OscInitStruct.PLL.PLLR = 2;
@@ -235,8 +246,8 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV1;
-  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV1;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;
   RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV1;
   RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV1;
   RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV1;
@@ -272,6 +283,7 @@ static void MX_CRC_Init(void)
   {
     Error_Handler();
   }
+  __HAL_CRC_DR_RESET(&hcrc);
   /* USER CODE BEGIN CRC_Init 2 */
 
   /* USER CODE END CRC_Init 2 */
@@ -345,7 +357,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 115200;
+  huart3.Init.BaudRate = 1000000;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
@@ -359,11 +371,11 @@ static void MX_USART3_UART_Init(void)
   {
     Error_Handler();
   }
-  if (HAL_UARTEx_SetTxFifoThreshold(&huart3, UART_TXFIFO_THRESHOLD_1_8) != HAL_OK)
+  if (HAL_UARTEx_SetTxFifoThreshold(&huart3, UART_TXFIFO_THRESHOLD_8_8) != HAL_OK)
   {
     Error_Handler();
   }
-  if (HAL_UARTEx_SetRxFifoThreshold(&huart3, UART_RXFIFO_THRESHOLD_1_8) != HAL_OK)
+  if (HAL_UARTEx_SetRxFifoThreshold(&huart3, UART_RXFIFO_THRESHOLD_8_8) != HAL_OK)
   {
     Error_Handler();
   }
@@ -390,6 +402,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream0_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream0_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream0_IRQn);
+  /* DMA1_Stream1_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA1_Stream1_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA1_Stream1_IRQn);
 
 }
 
@@ -418,6 +433,13 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai){
 	dmaFlag = FULL;
 }
 
+void HAL_UART_TxHalfCpltCallback(UART_HandleTypeDef *huart){
+	volatile uint32_t h = 1;
+}
+
+void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
+	uartFlag = READY;
+}
 
 /* USER CODE END 4 */
 
@@ -454,4 +476,3 @@ void assert_failed(uint8_t *file, uint32_t line)
 #endif /* USE_FULL_ASSERT */
 
 /************************ (C) COPYRIGHT STMicroelectronics *****END OF FILE****/
-

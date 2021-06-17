@@ -1,0 +1,34 @@
+/*
+ * pdm_to_pcm.c
+ *
+ *  Created on: Jun 14, 2021
+ *      Author: frank
+ */
+
+
+#include "pdm_to_pcm.h"
+
+
+void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_t* PDM_FilterConfig, uint32_t channelNumber){
+
+	  for(index = 0; index < channelNumber; index++)
+	  {
+	    /* Init PDM filters */
+	    PDM_FilterHandler[index].bit_order  = PDM_FILTER_BIT_ORDER_MSB;
+	    PDM_FilterHandler[index].endianness = PDM_FILTER_ENDIANNESS_LE;
+	    PDM_FilterHandler[index].high_pass_tap = 2122358088;
+	    PDM_FilterHandler[index].out_ptr_channels = channelNumber;
+	    PDM_FilterHandler[index].in_ptr_channels  = channelNumber;
+	    PDM_Filter_Init((PDM_Filter_Handler_t *)(&PDM_FilterHandler[index]));
+
+	    /* Configure PDM filters */
+	    PDM_FilterConfig[index].output_samples_number = 16;
+	    PDM_FilterConfig[index].mic_gain = 24;
+	    PDM_FilterConfig[index].decimation_factor = PDM_FILTER_DEC_FACTOR_64;
+	    PDM_Filter_setConfig((PDM_Filter_Handler_t *)&PDM_FilterHandler[index], &PDM_FilterConfig[index]);
+	  }
+}
+
+void pdm_to_pcm(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_t* PDM_FilterConfig, uint32_t channelNumber){
+
+}
