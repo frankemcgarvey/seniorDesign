@@ -3305,3 +3305,4 @@
 2021-06-17 15:16:58,636 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 12371mS.
 2021-06-17 15:16:58,639 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 2mS.
 2021-06-17 15:16:58,649 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-18 16:22:30,425 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 567164784 Bytes (1073741824)

@@ -51,6 +51,9 @@ typedef enum{
 #endif
 
 
+#define channelNumber 2
+#define pcmChunkSize  32
+
 
 /* USER CODE END PD */
 
@@ -157,14 +160,8 @@ Error_Handler();
   MX_CRC_Init();
   MX_SAI1_Init();
   MX_PDM2PCM_Init();
+
   /* USER CODE BEGIN 2 */
-
-  for(uint32_t i = 0; i < BUFFER_SIZE; i++){
-	  buffer->pdmBuffer[i] = 0;
-  }
-
-  SCB_CleanDCache_by_Addr((uint32_t*)&buffer->pcmBuffer[0], BUFFER_SIZE);
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -179,19 +176,18 @@ Error_Handler();
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
-	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t*)&buffer->pcmBuffer[0], 2);
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t*)&buffer->pcmBuffer[0], channelNumber);
 	  //Transmit PCM
-	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], 64);
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], pcmChunkSize*2);
 
 	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != FULL){}
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
-	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[32], 2);
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[pcmChunkSize], channelNumber);
 	  //Transmit PCM
-	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[32], 64);
-
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[pcmChunkSize], pcmChunkSize*2);
 
     /* USER CODE END WHILE */
 
@@ -357,7 +353,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 1000000;
+  huart3.Init.BaudRate = 2000000;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;
