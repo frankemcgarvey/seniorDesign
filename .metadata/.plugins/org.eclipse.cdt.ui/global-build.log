@@ -202,3 +202,17 @@ Finished building: microphone_CM7.bin
  
 Finished building: microphone_CM7.list
  
+22:21:54 **** Incremental Build of configuration Debug for project microphone_CM4 ****
+make -j8 all 
+arm-none-eabi-size   microphone_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3192	     24	   1568	   4784	   12b0	microphone_CM4.elf
+Finished building: default.size.stdout
+ 
+22:21:56 **** Incremental Build of configuration Debug for project microphone_CM7 ****
+make -j8 all 
+arm-none-eabi-size   microphone_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  52472	   1148	   2556	  56176	   db70	microphone_CM7.elf
+Finished building: default.size.stdout
+ 
