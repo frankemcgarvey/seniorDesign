@@ -7961,3 +7961,506 @@
 2021-06-22 18:35:24,213 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
 2021-06-22 18:35:24,221 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
 2021-06-22 19:14:12,092 [INFO] NvicIntPanel:90 - NVIC parent = com.st.microxplorer.plugins.ip.nvic.MultiNvicIntPanel[,0,0,0x0,invalid,layout=javax.swing.BoxLayout,alignmentX=0.0,alignmentY=0.0,border=,flags=9,maximumSize=,minimumSize=,preferredSize=]
+2021-06-22 20:42:12,514 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 626609712 Bytes (1073741824)
+2021-06-22 20:42:17,469 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 689460720 Bytes (1073741824)
+2021-06-22 20:42:18,146 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-22 20:42:18,147 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-22 20:42:18,148 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-22 20:42:18,148 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-22 20:42:18,148 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-22 20:42:18,148 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-22 20:42:18,150 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-22 20:42:18,850 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 20:42:19,002 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 20:42:19,073 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-22 20:42:19,180 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-22 20:42:19,463 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-22 20:42:20,233 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:20,243 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-22 20:42:20,324 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-22 20:42:20,326 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:20,328 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:20,429 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-22 20:42:20,534 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-22 20:42:20,539 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 20:42:20,613 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-22 20:42:20,616 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:20,617 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-22 20:42:20,639 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-22 20:42:20,751 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-22 20:42:20,763 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-22 20:42:20,854 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-22 20:42:20,857 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:20,869 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 20:42:20,986 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 20:42:20,990 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 20:42:21,066 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 20:42:21,071 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 20:42:21,168 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 20:42:21,168 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:21,178 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:21,271 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-22 20:42:21,413 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-22 20:42:21,433 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 20:42:21,733 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-22 20:42:21,758 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 20:42:21,853 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 20:42:21,898 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 20:42:21,979 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 20:42:21,992 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 20:42:22,081 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 20:42:22,210 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 20:42:22,374 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 20:42:22,379 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-22 20:42:22,447 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-22 20:42:22,471 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 20:42:22,574 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 20:42:22,661 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 20:42:22,662 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-22 20:42:22,663 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 20:42:22,663 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 20:42:22,678 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-22 20:42:22,783 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-22 20:42:22,797 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-22 20:42:23,008 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-22 20:42:23,694 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 20:42:23,765 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 20:42:23,886 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-22 20:42:23,904 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:23,926 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-22 20:42:24,079 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-22 20:42:24,081 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 20:42:24,137 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-22 20:42:24,251 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-22 20:42:24,270 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 20:42:24,332 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-22 20:42:24,428 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-22 20:42:24,590 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-22 20:42:24,598 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 20:42:24,701 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-22 20:42:24,818 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 20:42:24,928 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 20:42:24,937 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-22 20:42:25,014 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-22 20:42:25,078 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 20:42:25,186 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 20:42:25,220 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 20:42:25,221 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 20:42:25,269 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-22 20:42:25,359 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-22 20:42:25,374 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-22 20:42:25,488 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-22 20:42:27,291 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 338mS.
+2021-06-22 20:42:27,314 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-22 20:42:27,925 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-22 20:42:38,645 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 11331mS.
+2021-06-22 20:42:38,646 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-06-22 20:42:38,650 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-22 21:11:37,594 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 603042160 Bytes (1073741824)
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-22 21:11:38,590 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-22 21:11:38,591 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-22 21:11:38,591 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-22 21:11:38,592 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-22 21:11:38,592 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-22 21:11:38,592 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-22 21:11:38,592 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-22 21:11:38,593 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-22 21:11:39,130 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:11:39,341 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:11:39,504 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-22 21:11:39,601 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-22 21:11:39,889 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-22 21:11:40,645 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:40,657 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:11:40,749 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-22 21:11:40,756 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:40,758 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:40,883 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-22 21:11:40,979 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-22 21:11:40,985 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:11:41,062 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:11:41,065 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:41,066 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-22 21:11:41,089 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-22 21:11:41,197 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-22 21:11:41,208 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-22 21:11:41,302 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-22 21:11:41,308 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:41,323 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:11:41,420 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:11:41,426 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:11:41,509 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:11:41,514 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:11:41,622 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:11:41,625 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:41,629 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:41,725 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:11:41,865 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-22 21:11:41,881 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:11:41,969 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:11:41,996 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:11:42,080 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:11:42,089 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:11:42,169 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:11:42,194 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:11:42,283 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:11:42,418 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:11:42,582 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:11:42,588 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-22 21:11:42,671 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-22 21:11:42,698 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:11:42,805 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:11:42,912 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:11:42,912 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-22 21:11:42,913 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:11:42,914 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:11:42,932 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-22 21:11:43,026 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-22 21:11:43,040 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-22 21:11:43,296 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-22 21:11:44,111 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:11:44,216 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:11:44,324 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-22 21:11:44,344 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:44,359 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:11:44,475 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-22 21:11:44,478 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:11:44,546 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-22 21:11:44,638 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-22 21:11:44,645 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:11:44,741 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:11:44,800 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:11:44,923 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-22 21:11:44,938 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:11:45,064 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:11:45,134 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:11:45,249 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:11:45,254 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-22 21:11:45,323 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-22 21:11:45,346 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:11:45,603 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:11:45,637 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:11:45,638 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:11:45,657 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-22 21:11:45,756 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-22 21:11:45,770 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-22 21:11:46,003 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-22 21:11:47,601 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 326mS.
+2021-06-22 21:11:47,620 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-22 21:11:48,310 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-22 21:11:59,557 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 11937mS.
+2021-06-22 21:11:59,559 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-06-22 21:11:59,565 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-22 21:12:34,510 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 672109128 Bytes (1073741824)
+2021-06-22 21:12:38,602 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 662130416 Bytes (1073741824)
+2021-06-22 21:12:39,140 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-22 21:12:39,140 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-22 21:12:39,140 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-22 21:12:39,140 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-22 21:12:39,141 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-22 21:12:39,141 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-22 21:12:39,141 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-22 21:12:39,141 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-22 21:12:39,142 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-22 21:12:39,142 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-22 21:12:39,142 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-22 21:12:39,142 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-22 21:12:39,143 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-22 21:12:39,792 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:12:39,880 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:12:39,954 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-22 21:12:40,063 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-22 21:12:40,358 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-22 21:12:41,056 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,066 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:12:41,141 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-22 21:12:41,144 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,146 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,223 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-22 21:12:41,296 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-22 21:12:41,305 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:12:41,378 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:12:41,381 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,382 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-22 21:12:41,396 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-22 21:12:41,504 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-22 21:12:41,512 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-22 21:12:41,613 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-22 21:12:41,617 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,632 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:12:41,732 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:12:41,746 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:12:41,827 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:12:41,833 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:12:41,982 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:12:41,987 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:41,990 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:42,075 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:12:42,210 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-22 21:12:42,217 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:12:42,307 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:12:42,333 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:12:42,411 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:12:42,419 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:12:42,494 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:12:42,507 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:12:42,592 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:12:42,742 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:12:42,899 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:12:42,917 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-22 21:12:42,987 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-22 21:12:43,009 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:12:43,119 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:12:43,203 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:12:43,203 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-22 21:12:43,204 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:12:43,205 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:12:43,225 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-22 21:12:43,328 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-22 21:12:43,343 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-22 21:12:43,554 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-22 21:12:44,233 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:12:44,327 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:12:44,404 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-22 21:12:44,427 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:44,442 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:12:44,513 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-22 21:12:44,516 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:12:44,578 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-22 21:12:44,659 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-22 21:12:44,664 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:12:44,735 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:12:44,799 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:12:44,913 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-22 21:12:44,922 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:12:45,016 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:12:45,139 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:12:45,316 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:12:45,322 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-22 21:12:45,389 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-22 21:12:45,413 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:12:45,537 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:12:45,574 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:12:45,575 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:12:45,600 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-22 21:12:45,686 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-22 21:12:45,699 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-22 21:12:45,818 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-22 21:12:47,567 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 322mS.
+2021-06-22 21:12:47,594 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-22 21:12:48,171 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-22 21:12:59,012 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 11418mS.
+2021-06-22 21:12:59,014 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-06-22 21:12:59,021 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-06-22 21:15:48,693 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 745500744 Bytes (1073741824)
+2021-06-22 21:15:49,300 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-22 21:15:49,300 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-22 21:15:49,300 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-22 21:15:49,301 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-22 21:15:49,301 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-22 21:15:49,301 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-22 21:15:49,301 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-22 21:15:49,301 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-22 21:15:49,302 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-22 21:15:49,302 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-22 21:15:49,302 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-22 21:15:49,302 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-22 21:15:49,303 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-22 21:15:49,899 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:15:49,984 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:15:50,037 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-22 21:15:50,109 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-22 21:15:50,422 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-22 21:15:51,153 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:51,164 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:15:51,249 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-22 21:15:51,251 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:51,253 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:51,351 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-22 21:15:51,442 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-22 21:15:51,447 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:15:51,514 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:15:51,517 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:51,519 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-22 21:15:51,531 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-22 21:15:51,617 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-22 21:15:51,622 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-22 21:15:51,782 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-22 21:15:51,786 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:51,797 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:15:51,932 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:15:51,972 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:15:52,103 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:15:52,127 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:15:52,326 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:15:52,329 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:52,331 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:52,407 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:15:52,514 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-22 21:15:52,522 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:15:52,598 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:15:52,637 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:15:52,708 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:15:52,716 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:15:52,795 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:15:52,809 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:15:52,893 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:15:53,053 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:15:53,209 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:15:53,216 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-22 21:15:53,347 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-22 21:15:53,400 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:15:53,504 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:15:53,666 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:15:53,667 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-22 21:15:53,668 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:15:53,668 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:15:53,687 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-22 21:15:53,774 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-22 21:15:53,788 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-22 21:15:53,962 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-22 21:15:54,640 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:15:54,728 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:15:54,799 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-22 21:15:54,816 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:54,847 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:15:54,990 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-22 21:15:54,993 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:15:55,052 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-22 21:15:55,154 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-22 21:15:55,160 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:15:55,226 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:15:55,312 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:15:55,438 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-22 21:15:55,446 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:15:55,588 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:15:55,649 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:15:55,818 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:15:55,824 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-22 21:15:55,889 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-22 21:15:55,941 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:15:56,083 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:15:56,114 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:15:56,115 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:15:56,133 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-22 21:15:56,217 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-22 21:15:56,262 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-22 21:15:56,378 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-22 21:15:58,124 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 251mS.
+2021-06-22 21:15:58,146 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-22 21:15:58,716 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-22 21:16:09,352 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 11206mS.
+2021-06-22 21:16:09,353 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-22 21:16:09,361 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
+2021-06-22 21:41:43,173 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 718737336 Bytes (1073741824)
+2021-06-22 21:41:51,363 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 683728808 Bytes (1073741824)
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-22 21:41:52,245 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-22 21:41:52,246 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-22 21:41:52,246 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-22 21:41:52,250 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-22 21:41:52,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-22 21:41:52,252 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-22 21:41:52,253 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-22 21:41:52,257 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-22 21:41:52,702 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:41:52,948 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:41:53,020 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-22 21:41:53,227 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-22 21:41:53,519 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-22 21:41:54,259 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:54,270 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:41:54,367 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-22 21:41:54,371 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:54,373 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:54,467 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-22 21:41:54,548 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-22 21:41:54,553 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:41:54,636 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:41:54,639 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:54,640 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-22 21:41:54,663 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-22 21:41:54,777 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-22 21:41:54,786 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-22 21:41:54,876 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-22 21:41:54,880 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:54,892 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:41:54,994 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:41:54,999 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:41:55,076 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:41:55,082 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:41:55,182 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:41:55,184 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:55,189 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:55,269 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:41:55,404 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-22 21:41:55,437 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:41:55,524 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:41:55,590 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-22 21:41:55,709 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-22 21:41:55,717 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-22 21:41:55,790 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-22 21:41:55,804 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-22 21:41:55,902 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-22 21:41:56,076 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:41:56,257 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:41:56,264 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-22 21:41:56,335 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-22 21:41:56,359 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:41:56,467 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:41:56,549 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:41:56,549 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-22 21:41:56,550 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:41:56,551 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:41:56,570 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-22 21:41:56,658 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-22 21:41:56,673 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-22 21:41:56,875 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-22 21:41:57,606 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-22 21:41:57,691 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-22 21:41:57,772 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-22 21:41:57,787 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:57,802 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-22 21:41:57,915 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-22 21:41:57,920 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-22 21:41:58,001 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-22 21:41:58,109 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-22 21:41:58,115 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-22 21:41:58,200 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-22 21:41:58,280 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-22 21:41:58,420 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-22 21:41:58,431 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-22 21:41:58,617 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-22 21:41:58,700 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-22 21:41:58,896 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-22 21:41:58,903 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-22 21:41:58,997 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-22 21:41:59,036 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-22 21:41:59,192 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-22 21:41:59,229 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-22 21:41:59,230 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-22 21:41:59,251 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-22 21:41:59,358 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-22 21:41:59,375 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-22 21:41:59,522 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-22 21:42:01,677 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 340mS.
+2021-06-22 21:42:01,732 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-22 21:42:02,469 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-22 21:42:14,372 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 12640mS.
+2021-06-22 21:42:14,376 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 2mS.
+2021-06-22 21:42:14,382 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.

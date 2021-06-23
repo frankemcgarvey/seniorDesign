@@ -32,18 +32,12 @@
 
 typedef enum{
 	NONE,
-	HALF,
-	FULL,
-}dma_flag_t;
-
-typedef enum{
 	BUSY,
 	READY,
-}uart_flag_t;
-
-typedef enum{
-	DONE
-}tim_flag_t;
+	DONE,
+	HALF,
+	FULL,
+}flag_t;
 
 /* USER CODE END PTD */
 
@@ -82,10 +76,10 @@ DMA_HandleTypeDef hdma_usart3_tx;
 
 /* USER CODE BEGIN PV */
 
-dma_flag_t dmaFlag = NONE;
-uart_flag_t uartFlag = READY;
-tim_flag_t timFlag = NONE;
-volatile buffer_t * const buffer = (buffer_t *) 0x30040000;
+static volatile flag_t dmaFlag = NONE;
+static volatile flag_t uartFlag = READY;
+static volatile flag_t timFlag = NONE;
+static volatile buffer_t * const buffer = (buffer_t *) 0x30040000;
 
 /* USER CODE END PV */
 
@@ -171,16 +165,18 @@ Error_Handler();
   MX_PDM2PCM_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+  timFlag = NONE;
+  uint32_t byteCounter = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
   HAL_SAI_Receive_DMA(&hsai_BlockA1, (uint8_t*)&buffer->pdmBuffer[0], BUFFER_SIZE);
+  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
   HAL_TIM_Base_Start_IT(&htim1);
   while (timFlag != DONE){
-
 	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != HALF){}
 	  //Reset Flag
@@ -199,14 +195,15 @@ Error_Handler();
 	  //Transmit PCM
 	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[pcmChunkSize], pcmChunkSize*2);
 
+	  byteCounter += 128;
     /* USER CODE END WHILE */
+
     /* USER CODE BEGIN 3 */
   }
 
-  /* USER CODE END 3 */
 
   while(1){}
-
+  /* USER CODE END 3 */
 }
 
 /**
@@ -255,13 +252,13 @@ void SystemClock_Config(void)
                               |RCC_CLOCKTYPE_D3PCLK1|RCC_CLOCKTYPE_D1PCLK1;
   RCC_ClkInitStruct.SYSCLKSource = RCC_SYSCLKSOURCE_PLLCLK;
   RCC_ClkInitStruct.SYSCLKDivider = RCC_SYSCLK_DIV1;
-  RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV4;
+  RCC_ClkInitStruct.AHBCLKDivider = RCC_HCLK_DIV2;
   RCC_ClkInitStruct.APB3CLKDivider = RCC_APB3_DIV2;
-  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV1;
-  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV1;
-  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV1;
+  RCC_ClkInitStruct.APB1CLKDivider = RCC_APB1_DIV4;
+  RCC_ClkInitStruct.APB2CLKDivider = RCC_APB2_DIV4;
+  RCC_ClkInitStruct.APB4CLKDivider = RCC_APB4_DIV4;
 
-  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_1) != HAL_OK)
+  if (HAL_RCC_ClockConfig(&RCC_ClkInitStruct, FLASH_LATENCY_4) != HAL_OK)
   {
     Error_Handler();
   }
@@ -325,7 +322,7 @@ static void MX_SAI1_Init(void)
   hsai_BlockA1.Init.NoDivider = SAI_MASTERDIVIDER_DISABLE;
   hsai_BlockA1.Init.FIFOThreshold = SAI_FIFOTHRESHOLD_FULL;
   hsai_BlockA1.Init.AudioFrequency = SAI_AUDIO_FREQUENCY_MCKDIV;
-  hsai_BlockA1.Init.Mckdiv = 1;
+  hsai_BlockA1.Init.Mckdiv = 0;
   hsai_BlockA1.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockA1.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockA1.Init.PdmInit.Activation = ENABLE;
@@ -371,7 +368,7 @@ static void MX_TIM1_Init(void)
   htim1.Instance = TIM1;
   htim1.Init.Prescaler = 20000;
   htim1.Init.CounterMode = TIM_COUNTERMODE_UP;
-  htim1.Init.Period = 60630;
+  htim1.Init.Period = 60000;
   htim1.Init.ClockDivision = TIM_CLOCKDIVISION_DIV1;
   htim1.Init.RepetitionCounter = 0;
   htim1.Init.AutoReloadPreload = TIM_AUTORELOAD_PRELOAD_DISABLE;
@@ -502,15 +499,18 @@ void HAL_SAI_RxCpltCallback(SAI_HandleTypeDef *hsai){
 	dmaFlag = FULL;
 }
 
+/*
 void HAL_UART_TxCpltCallback(UART_HandleTypeDef *huart){
 	uartFlag = READY;
 }
+*/
 
 void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
 {
   if(htim == &htim1){
 	  HAL_TIM_Base_Stop_IT(htim);
 	  timFlag = DONE;
+	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
   }
 }
 
