@@ -1,0 +1,10 @@
+19:04:20 **** Incremental Build of configuration Debug for project STM32H743I_EVAL ****
+make all 
+arm-none-eabi-size   STM32H743I_EVAL.elf 
+   text	   data	    bss	    dec	    hex	filename
+  12804	    184	   4360	  17348	   43c4	STM32H743I_EVAL.elf
+Finished building: default.size.stdout
+ 
+
+19:04:20 Build Finished. 0 errors, 0 warnings. (took 607ms)
+

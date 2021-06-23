@@ -1,4 +1,4 @@
-15:41:33 **** Incremental Build of configuration Debug_CM7 for project STM32H745I_DISCO ****
+17:45:20 **** Incremental Build of configuration Debug_CM7 for project STM32H745I_DISCO ****
 make all 
 arm-none-eabi-size   STM32H745I_DISCO_CM7.elf 
    text	   data	    bss	    dec	    hex	filename
@@ -6,5 +6,5 @@ arm-none-eabi-size   STM32H745I_DISCO_CM7.elf
 Finished building: default.size.stdout
  
 
-15:41:34 Build Finished. 0 errors, 0 warnings. (took 504ms)
+17:45:20 Build Finished. 0 errors, 0 warnings. (took 495ms)
 
