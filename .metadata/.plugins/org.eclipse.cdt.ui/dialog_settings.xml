@@ -5,9 +5,17 @@
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration">
 	</section>
 	<section name="PDOMSearchPage">
+		<item key="caseSensitive" value="false"/>
+		<item key="searchFlags" value="227191"/>
+		<list key="previousPatterns">
+			<item value="TEST"/>
+			<item value="GPIOB"/>
+			<item value="GPIOE"/>
+			<item value="pb5"/>
+		</list>
 	</section>
 	<section name="org.eclipse.cdt.ui.text.hover.CMacroExpansionExploration.internal">
-		<item key="size.width" value="640"/>
-		<item key="size.height" value="180"/>
+		<item key="size.width" value="1120"/>
+		<item key="size.height" value="262"/>
 	</section>
 </section>
