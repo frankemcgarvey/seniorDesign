@@ -1,7 +1,6 @@
 Common/common_drivers/Src/pdm_to_pcm.o: \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h \
- C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm2pcm_glo.h \
  ../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal.h \
  ../Core/Inc/stm32h7xx_hal_conf.h \
@@ -31,12 +30,9 @@ Common/common_drivers/Src/pdm_to_pcm.o: \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_i2c_ex.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h \
- C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/CM7/PDM2PCM/App/pdm2pcm.h \
- C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm2pcm_glo.h
+ c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h:
-
-C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm2pcm_glo.h:
 
 ../Core/Inc/main.h:
 
@@ -96,6 +92,4 @@ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/
 
 ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_pwr_ex.h:
 
-C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/CM7/PDM2PCM/App/pdm2pcm.h:
-
-C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm2pcm_glo.h:
+c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h:

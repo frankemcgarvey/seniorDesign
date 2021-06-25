@@ -175,7 +175,7 @@ Error_Handler();
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
-	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t*)&buffer->pcmBuffer[0], CHANNEL_NUMBER);
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t*)&buffer->pcmBuffer[0], CHAN);
 	  //Transmit PCM
 	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], PCM_CHUNK_SIZE*2);
 
@@ -184,9 +184,9 @@ Error_Handler();
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
-	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[PCM_CHUNK_SIZE], CHANNEL_NUMBER);
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[pcmChunkSize], channelNumber);
 	  //Transmit PCM
-	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[PCM_CHUNK_SIZE], PCM_CHUNK_SIZE*2);
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[pcmChunkSize], pcmChunkSize*2);
 
     /* USER CODE END WHILE */
 

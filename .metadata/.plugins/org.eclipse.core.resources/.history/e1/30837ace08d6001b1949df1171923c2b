@@ -12,12 +12,11 @@
 #include "../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h"
 
 
-#define BUFFER_SIZE 	256
-#define PCM_CHUNK_SIZE 	32
-#define CHANNEL_NUMBER	2
+#define BUFFER_SIZE 256
+#define PCM_BUFFER_INC 32
 typedef struct{
 	ALIGN_32BYTES(uint16_t pdmBuffer[BUFFER_SIZE]);
-	ALIGN_32BYTES(uint16_t pcmBuffer[PCM_CHUNK_SIZE*2]);
+	ALIGN_32BYTES(uint16_t pcmBuffer[BUFFER_SIZE]);
 }buffer_t;
 
 PDM_Filter_Handler_t  PDM_FilterHandler[2];
