@@ -1,2 +1,2 @@
-pdm_to_pcm.c:12:6:pdm_to_pcm_init	32	static
-pdm_to_pcm.c:32:6:pdm_to_pcm	32	static
+pdm_to_pcm.c:13:6:pdm_to_pcm_init	32	static
+pdm_to_pcm.c:33:6:pdm_to_pcm	32	static

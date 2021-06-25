@@ -1,10 +1,27 @@
-22:21:54 **** Incremental Build of configuration Debug for project microphone_CM4 ****
+15:24:09 **** Incremental Build of configuration Debug for project microphone_CM4 ****
 make -j8 all 
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/CM7/PDM2PCM/App" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_drivers/Src/pdm_to_pcm.d" -MT"Common/common_drivers/Src/pdm_to_pcm.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_drivers/Src/pdm_to_pcm.o"
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c: In function 'pdm_to_pcm':
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c:35:2: warning: implicit declaration of function 'SCB_InvalidateDCache_by_Addr' [-Wimplicit-function-declaration]
+   35 |  SCB_InvalidateDCache_by_Addr((uint32_t*)&pdm[0], BUFFER_SIZE/2);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~~~~~~
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c:41:2: warning: implicit declaration of function 'SCB_CleanDCache_by_Addr' [-Wimplicit-function-declaration]
+   41 |  SCB_CleanDCache_by_Addr((uint32_t*)&pcm[0], BUFFER_SIZE/8);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "microphone_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="microphone_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: microphone_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  microphone_CM4.elf  > "microphone_CM4.list"
+arm-none-eabi-objcopy  -O binary  microphone_CM4.elf  "microphone_CM4.bin"
 arm-none-eabi-size   microphone_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
    3192	     24	   1568	   4784	   12b0	microphone_CM4.elf
 Finished building: default.size.stdout
  
+Finished building: microphone_CM4.bin
+Finished building: microphone_CM4.list
+ 
+ 
 
-22:21:55 Build Finished. 0 errors, 0 warnings. (took 542ms)
+15:24:11 Build Finished. 0 errors, 2 warnings. (took 1s.970ms)
 

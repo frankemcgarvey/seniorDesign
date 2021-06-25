@@ -8,7 +8,6 @@
 
 #include "pdm_to_pcm.h"
 
-
 void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_t* PDM_FilterConfig, uint32_t channelNumber){
 
 	  for(uint32_t index = 0; index < channelNumber; index++)
@@ -31,11 +30,11 @@ void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_
 
 void pdm_to_pcm(PDM_Filter_Handler_t* PDM_FilterHandler, uint8_t *pdm, uint16_t *pcm,  uint32_t channelNumber){
 
-	SCB_InvalidateDCache_by_Addr((uint32_t*)&pdm[0], BUFFER_SIZE/2);
+	SCB_InvalidateDCache_by_Addr((uint32_t*)&pdm[0], BUFFER_SIZE);
 
 	for(uint32_t i = 0; i < channelNumber; i++){
 		PDM_Filter(&pdm[i], &pcm[i], &PDM_FilterHandler[i]);
 	}
 
-	SCB_CleanDCache_by_Addr((uint32_t*)&pcm[0], BUFFER_SIZE/8);
+	SCB_CleanDCache_by_Addr((uint32_t*)&pcm[0], PCM_BUFFER_INC*2);
 }

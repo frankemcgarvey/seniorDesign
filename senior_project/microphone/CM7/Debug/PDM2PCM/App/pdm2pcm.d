@@ -37,7 +37,8 @@ PDM2PCM/App/pdm2pcm.o: ../PDM2PCM/App/pdm2pcm.c ../PDM2PCM/App/pdm2pcm.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h \
- ../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h
+ c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h \
+ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h
 
 ../PDM2PCM/App/pdm2pcm.h:
 
@@ -117,4 +118,6 @@ PDM2PCM/App/pdm2pcm.o: ../PDM2PCM/App/pdm2pcm.c ../PDM2PCM/App/pdm2pcm.h \
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h:
 
-../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h:
+c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h:
+
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h:

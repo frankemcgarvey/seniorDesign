@@ -19,7 +19,6 @@
 /* USER CODE END Header */
 /* Includes ------------------------------------------------------------------*/
 #include "main.h"
-#include "pdm2pcm.h"
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
@@ -162,20 +161,19 @@ Error_Handler();
   MX_USART3_UART_Init();
   MX_CRC_Init();
   MX_SAI1_Init();
-  MX_PDM2PCM_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
   timFlag = NONE;
-  uint32_t byteCounter = 0;
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
 
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
+
   HAL_SAI_Receive_DMA(&hsai_BlockA1, (uint8_t*)&buffer->pdmBuffer[0], BUFFER_SIZE);
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
+
   HAL_TIM_Base_Start_IT(&htim1);
+
   while (timFlag != DONE){
 	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != HALF){}
@@ -195,7 +193,6 @@ Error_Handler();
 	  //Transmit PCM
 	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[pcmChunkSize], pcmChunkSize*2);
 
-	  byteCounter += 128;
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -469,23 +466,11 @@ static void MX_DMA_Init(void)
   */
 static void MX_GPIO_Init(void)
 {
-  GPIO_InitTypeDef GPIO_InitStruct = {0};
 
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
-  __HAL_RCC_GPIOB_CLK_ENABLE();
-
-  /*Configure GPIO pin Output Level */
-  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_RESET);
-
-  /*Configure GPIO pin : PB5 */
-  GPIO_InitStruct.Pin = GPIO_PIN_5;
-  GPIO_InitStruct.Mode = GPIO_MODE_OUTPUT_PP;
-  GPIO_InitStruct.Pull = GPIO_PULLDOWN;
-  GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
-  HAL_GPIO_Init(GPIOB, &GPIO_InitStruct);
 
 }
 
@@ -510,7 +495,6 @@ void HAL_TIM_PeriodElapsedCallback(TIM_HandleTypeDef *htim)
   if(htim == &htim1){
 	  HAL_TIM_Base_Stop_IT(htim);
 	  timFlag = DONE;
-	  HAL_GPIO_WritePin(GPIOB, GPIO_PIN_5, GPIO_PIN_SET);
   }
 }
 

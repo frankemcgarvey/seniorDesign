@@ -8,8 +8,8 @@
 #ifndef COMMON_DRIVERS_INC_PDM_TO_PCM_H_
 #define COMMON_DRIVERS_INC_PDM_TO_PCM_H_
 
-#include "pdm2pcm_glo.h"
 #include "main.h"
+#include "../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h"
 
 
 #define BUFFER_SIZE 256

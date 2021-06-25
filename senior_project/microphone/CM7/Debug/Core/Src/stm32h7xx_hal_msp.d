@@ -37,7 +37,7 @@ Core/Src/stm32h7xx_hal_msp.o: ../Core/Src/stm32h7xx_hal_msp.c \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h \
- ../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h
+ c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h
 
 ../Core/Inc/main.h:
 
@@ -115,4 +115,4 @@ Core/Src/stm32h7xx_hal_msp.o: ../Core/Src/stm32h7xx_hal_msp.c \
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h:
 
-../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h:
+c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h:
