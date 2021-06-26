@@ -158,7 +158,11 @@ Error_Handler();
   MX_SAI1_Init();
   MX_TIM1_Init();
   /* USER CODE BEGIN 2 */
+
+  pdm_to_pcm_init((PDM_Filter_Handler_t*)&PDM_FilterHandler[0], (PDM_Filter_Config_t*)&PDM_FilterConfig[0], CHANNEL_NUMBER);
+
   timFlag = NONE;
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -403,7 +407,7 @@ static void MX_USART3_UART_Init(void)
 
   /* USER CODE END USART3_Init 1 */
   huart3.Instance = USART3;
-  huart3.Init.BaudRate = 2000000;
+  huart3.Init.BaudRate = 4000000;
   huart3.Init.WordLength = UART_WORDLENGTH_8B;
   huart3.Init.StopBits = UART_STOPBITS_1;
   huart3.Init.Parity = UART_PARITY_NONE;

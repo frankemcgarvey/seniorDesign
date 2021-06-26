@@ -13,4 +13,7 @@
 			<item value="C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone"/>
 		</list>
 	</section>
+	<section name="org.eclipse.ui.internal.ide.dialogs.ProjectContentsLocationArea">
+		<item key="OUTSIDE_LOCATION" value="C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone"/>
+	</section>
 </section>

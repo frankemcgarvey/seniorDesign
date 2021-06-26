@@ -10009,3 +10009,1193 @@
 2021-06-25 15:41:29,062 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 1mS.
 2021-06-25 15:41:29,074 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
 2021-06-25 15:42:33,054 [INFO] DmaTabbedPanel:192 - Cannot restore the selected Tab for DMA
+2021-06-25 16:11:04,517 [INFO] Activator:170 - 
+
+
+2021-06-25 16:11:04,521 [INFO] Activator:171 - !SESSION log4j initialized
+2021-06-25 21:47:34,061 [INFO] McuFinderGlobals:39 - Set McuFinder mode to 2 (CubeIDE integrated)
+2021-06-25 21:47:34,360 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-06-25 21:47:34,373 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-06-25 21:47:34,377 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-06-25 21:47:34,378 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:34,378 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:34,382 [INFO] DbExamples:333 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:34,389 [INFO] DbMcusAds:85 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,390 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,393 [INFO] DbMcusJson:65 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,394 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,396 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,438 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-06-25 21:47:34,458 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:34,900 [INFO] RulesReader:52 - Compatibility file has been processed (237 Rules)
+2021-06-25 21:47:35,037 [INFO] MicroXplorer:622 - Detected Java Version = 11.0.9.1
+2021-06-25 21:47:35,038 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-06-25 21:47:35,038 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-06-25 21:47:35,039 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,039 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,039 [INFO] DbExamples:333 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,039 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,039 [INFO] DbMcusAds:85 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,039 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,040 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,040 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,040 [INFO] DbMcusJson:65 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,040 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,040 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,041 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,041 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,041 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,041 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,041 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-06-25 21:47:35,042 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,042 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,144 [INFO] MainPanel:204 - HeapMemory: 377487360
+2021-06-25 21:47:35,228 [INFO] DbMcusXml:74 - Set database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/
+2021-06-25 21:47:35,228 [INFO] DbBoardsPdsc:56 - Set plugin database path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/boardmanager/
+2021-06-25 21:47:35,229 [INFO] DbMcus:258 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,229 [INFO] DbBoards:264 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,229 [INFO] DbExamples:333 - Set plugin images path to: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/plugins/mcufinder/images/
+2021-06-25 21:47:35,230 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,230 [INFO] DbMcusAds:85 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,230 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,230 [INFO] DbMcusDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,230 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,231 [INFO] DbMcusJson:65 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,231 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,231 [INFO] DbBoardsDocs:110 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,231 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,231 [INFO] DbBoardsJson:58 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,231 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,232 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,232 [INFO] CrossReferenceDbSqlite:196 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/cs/
+2021-06-25 21:47:35,232 [WARN] DbFile:35 - Overriding database path with different value: C:\Users\frank\.stmcufinder\plugins\mcufinder/ => C:\Users\frank\.stmcufinder\plugins\mcufinder
+2021-06-25 21:47:35,232 [INFO] DbExamplesSqlite:690 - Set database path to: C:\Users\frank\.stmcufinder\plugins\mcufinder//mcu/
+2021-06-25 21:47:35,252 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-06-25 21:47:35,254 [INFO] PluginManage:178 - Search for loadable plugins [exclusion list=, ]
+2021-06-25 21:47:35,256 [INFO] PluginManage:292 - Check plugin analytics
+2021-06-25 21:47:35,508 [INFO] AnalyticsPlugin:233 - Accepted Software Licenses: 
+2021-06-25 21:47:35,509 [INFO] AnalyticsPlugin:235 - Accepted CMSIS Pack Licenses: 
+2021-06-25 21:47:35,509 [INFO] AnalyticsPlugin:237 - Accepted Firmware Licenses: 
+2021-06-25 21:47:35,510 [INFO] PluginManage:342 - Loaded plugin analytics (category:tool,tabindex:-1)
+2021-06-25 21:47:35,510 [INFO] PluginManage:292 - Check plugin clock
+2021-06-25 21:47:35,527 [INFO] PluginManage:342 - Loaded plugin clock (category:base,tabindex:2)
+2021-06-25 21:47:35,527 [INFO] PluginManage:292 - Check plugin ddr
+2021-06-25 21:47:35,530 [INFO] PluginManage:342 - Loaded plugin ddr (category:tool,tabindex:6)
+2021-06-25 21:47:35,530 [INFO] PluginManage:292 - Check plugin filemanager
+2021-06-25 21:47:35,679 [INFO] PluginManage:342 - Loaded plugin filemanager (category:base,tabindex:10)
+2021-06-25 21:47:35,679 [INFO] PluginManage:292 - Check plugin ipmanager
+2021-06-25 21:47:35,690 [INFO] PluginManage:342 - Loaded plugin ipmanager (category:base,tabindex:5)
+2021-06-25 21:47:35,690 [INFO] PluginManage:292 - Check plugin pinoutandconfiguration
+2021-06-25 21:47:35,701 [INFO] PluginManage:342 - Loaded plugin pinoutandconfiguration (category:base,tabindex:1)
+2021-06-25 21:47:35,701 [INFO] PluginManage:292 - Check plugin pinoutconfig
+2021-06-25 21:47:35,738 [INFO] PluginManage:342 - Loaded plugin pinoutconfig (category:base,tabindex:0)
+2021-06-25 21:47:35,738 [INFO] PluginManage:292 - Check plugin power
+2021-06-25 21:47:35,753 [INFO] PluginManage:342 - Loaded plugin power (category:power,tabindex:4)
+2021-06-25 21:47:35,753 [INFO] PluginManage:292 - Check plugin projectmanager
+2021-06-25 21:47:35,778 [INFO] PluginManage:342 - Loaded plugin projectmanager (category:projectmanager,tabindex:3)
+2021-06-25 21:47:35,778 [INFO] PluginManage:292 - Check plugin thirdparty
+2021-06-25 21:47:35,937 [INFO] PluginManage:342 - Loaded plugin thirdparty (category:base,tabindex:-1)
+2021-06-25 21:47:35,937 [WARN] IntegrityCheckThread:59 - waiting for thirdparty lock release [integrity check]
+2021-06-25 21:47:35,937 [INFO] PluginManage:292 - Check plugin tools
+2021-06-25 21:47:35,938 [INFO] IntegrityCheckThread:61 - entering critical section [integrity check]
+2021-06-25 21:47:35,939 [INFO] ThirdPartyUpdaterWithRetryManager:56 - Updater plugin not ready yet. [1/15]
+2021-06-25 21:47:35,941 [INFO] PluginManage:342 - Loaded plugin tools (category:base,tabindex:7)
+2021-06-25 21:47:35,942 [INFO] PluginManage:292 - Check plugin tutovideos
+2021-06-25 21:47:36,205 [INFO] PluginManage:342 - Loaded plugin tutovideos (category:base,tabindex:-1)
+2021-06-25 21:47:36,206 [INFO] PluginManage:292 - Check plugin updater
+2021-06-25 21:47:36,225 [INFO] PluginManage:342 - Loaded plugin updater (category:base,tabindex:12)
+2021-06-25 21:47:36,226 [INFO] PluginManage:265 - PluginManage : Loaded plugins [13]
+2021-06-25 21:47:36,477 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-06-25 21:47:36,641 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,641 [INFO] PluginManager:203 - loadIPPluginJar : add adc
+2021-06-25 21:47:36,644 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,645 [INFO] PluginManager:203 - loadIPPluginJar : add aes
+2021-06-25 21:47:36,648 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,649 [INFO] PluginManager:203 - loadIPPluginJar : add can
+2021-06-25 21:47:36,651 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,652 [INFO] PluginManager:203 - loadIPPluginJar : add comp
+2021-06-25 21:47:36,655 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,655 [INFO] PluginManager:203 - loadIPPluginJar : add cryp
+2021-06-25 21:47:36,658 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,658 [INFO] PluginManager:203 - loadIPPluginJar : add dfsdm
+2021-06-25 21:47:36,665 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,666 [INFO] PluginManager:203 - loadIPPluginJar : add dma
+2021-06-25 21:47:36,669 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,669 [INFO] PluginManager:203 - loadIPPluginJar : add fatfs
+2021-06-25 21:47:36,675 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,675 [INFO] PluginManager:203 - loadIPPluginJar : add fmc
+2021-06-25 21:47:36,682 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,682 [INFO] PluginManager:203 - loadIPPluginJar : add freertos
+2021-06-25 21:47:36,685 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,685 [INFO] PluginManager:203 - loadIPPluginJar : add genericplugin
+2021-06-25 21:47:36,688 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,688 [INFO] PluginManager:203 - loadIPPluginJar : add gfxmmu
+2021-06-25 21:47:36,695 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,695 [INFO] PluginManager:203 - loadIPPluginJar : add gic
+2021-06-25 21:47:36,700 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,701 [INFO] PluginManager:203 - loadIPPluginJar : add gpio
+2021-06-25 21:47:36,704 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,704 [INFO] PluginManager:203 - loadIPPluginJar : add gtzc
+2021-06-25 21:47:36,708 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,708 [INFO] PluginManager:203 - loadIPPluginJar : add hash
+2021-06-25 21:47:36,712 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,712 [INFO] PluginManager:203 - loadIPPluginJar : add i2c
+2021-06-25 21:47:36,715 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,715 [INFO] PluginManager:203 - loadIPPluginJar : add i2s
+2021-06-25 21:47:36,719 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,719 [INFO] PluginManager:203 - loadIPPluginJar : add ipddr
+2021-06-25 21:47:36,723 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,724 [INFO] PluginManager:203 - loadIPPluginJar : add lorawan
+2021-06-25 21:47:36,725 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,726 [INFO] PluginManager:203 - loadIPPluginJar : add ltdc
+2021-06-25 21:47:36,731 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,731 [INFO] PluginManager:203 - loadIPPluginJar : add mdma
+2021-06-25 21:47:36,736 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,736 [INFO] PluginManager:203 - loadIPPluginJar : add nvic
+2021-06-25 21:47:36,740 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,740 [INFO] PluginManager:203 - loadIPPluginJar : add opamp
+2021-06-25 21:47:36,744 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,744 [INFO] PluginManager:203 - loadIPPluginJar : add openamp
+2021-06-25 21:47:36,748 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,749 [INFO] PluginManager:203 - loadIPPluginJar : add pdm2pcm
+2021-06-25 21:47:36,759 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,764 [INFO] PluginManager:203 - loadIPPluginJar : add plateformsettings
+2021-06-25 21:47:36,767 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,767 [INFO] PluginManager:203 - loadIPPluginJar : add quadspi
+2021-06-25 21:47:36,772 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,773 [INFO] PluginManager:203 - loadIPPluginJar : add resmgrutility
+2021-06-25 21:47:36,777 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,777 [INFO] PluginManager:203 - loadIPPluginJar : add sai
+2021-06-25 21:47:36,780 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,781 [INFO] PluginManager:203 - loadIPPluginJar : add spi
+2021-06-25 21:47:36,787 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,787 [INFO] PluginManager:203 - loadIPPluginJar : add stm32_wpan
+2021-06-25 21:47:36,789 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,790 [INFO] PluginManager:203 - loadIPPluginJar : add tim
+2021-06-25 21:47:36,793 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,794 [INFO] PluginManager:203 - loadIPPluginJar : add touchsensing
+2021-06-25 21:47:36,796 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,797 [INFO] PluginManager:203 - loadIPPluginJar : add tracer_emb
+2021-06-25 21:47:36,799 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,800 [INFO] PluginManager:203 - loadIPPluginJar : add ts
+2021-06-25 21:47:36,802 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,802 [INFO] PluginManager:203 - loadIPPluginJar : add tsc
+2021-06-25 21:47:36,804 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,805 [INFO] PluginManager:203 - loadIPPluginJar : add ucpd
+2021-06-25 21:47:36,808 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:47:36,809 [INFO] PluginManager:203 - loadIPPluginJar : add usart
+2021-06-25 21:47:37,229 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,386 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,393 [INFO] DbMcusAds:132 - JSON generation date=Tue May 11 08:32:49 PDT 2021 (1620747169502)
+2021-06-25 21:47:37,394 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,480 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-06-25 21:47:37,794 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,797 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,797 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,798 [WARN] DetailPanel:315 - Failed to get advertising image, set to default
+2021-06-25 21:47:37,800 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,891 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:37,892 [WARN] ThirdParty:796 - waiting for thirdparty lock release [close project]
+2021-06-25 21:47:38,941 [INFO] ThirdPartyUpdaterWithRetryManager:56 - Updater plugin not ready yet. [2/15]
+2021-06-25 21:47:41,950 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:41,951 [ERROR] AbstractThirdPartyUpdaterManager:153 - class java.lang.Integer cannot be cast to class java.util.List (java.lang.Integer and java.util.List are in module java.base of loader 'bootstrap')
+2021-06-25 21:47:41,951 [INFO] ThirdParty:900 - Integrity check success = false
+2021-06-25 21:47:41,951 [INFO] IntegrityCheckThread:75 - exiting critical section [integrity check]
+2021-06-25 21:47:41,951 [INFO] IntegrityCheckThread:78 - End integrity checks thread
+2021-06-25 21:47:41,951 [INFO] ThirdParty:798 - entering critical section [close project]
+2021-06-25 21:47:41,958 [INFO] ThirdParty:809 - exiting critical section [close project]
+2021-06-25 21:47:41,974 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-06-25 21:47:41,975 [FATAL] Updater:284 - Updater called before beeing initialized
+2021-06-25 21:47:41,984 [ERROR] Updater:1065 - MainUpdater not yet initialized. External WinMGr cannot be set.
+2021-06-25 21:47:41,986 [INFO] Updater:1002 - Updater Version found : 6.2.1
+2021-06-25 21:47:42,007 [INFO] ApplicationProperties:181 - Using Application install path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236
+2021-06-25 21:47:42,281 [INFO] MainUpdater:2661 - connection check result : 10
+2021-06-25 21:47:42,282 [INFO] MainUpdater:255 - Updater Check For Update Now.
+2021-06-25 21:47:42,283 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-06-25 21:47:42,329 [INFO] CheckServerUpdateThread:102 - End of CheckServer Thread
+2021-06-25 21:47:42,408 [INFO] MainUpdater:2661 - connection check result : 10
+2021-06-25 21:47:42,409 [INFO] MainUpdater:2661 - connection check result : 10
+2021-06-25 21:47:42,521 [INFO] MicroXplorer:442 - Change Database Path : 
+2021-06-25 21:47:42,521 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-06-25 21:47:42,521 [WARN] ThirdParty:796 - waiting for thirdparty lock release [close project]
+2021-06-25 21:47:42,522 [INFO] ThirdParty:798 - entering critical section [close project]
+2021-06-25 21:47:42,522 [INFO] ThirdParty:809 - exiting critical section [close project]
+2021-06-25 21:47:42,525 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-06-25 21:47:42,528 [INFO] UtilMem:74 - Begin LoadConfig() Used Memory: 185583816 Bytes (377487360)
+2021-06-25 21:47:42,530 [INFO] MicroXplorer:442 - Change Database Path : 
+2021-06-25 21:47:42,530 [INFO] MicroXplorer:472 - Change Database Version : DB.6.0.21
+2021-06-25 21:47:42,530 [INFO] OpenFileManager:303 - Change cursor
+2021-06-25 21:47:42,546 [WARN] IntegrityCheckThread:59 - waiting for thirdparty lock release [integrity check]
+2021-06-25 21:47:42,546 [INFO] IntegrityCheckThread:61 - entering critical section [integrity check]
+2021-06-25 21:47:42,659 [WARN] PackLoader:226 - Cannot read IP mode file for RoweBots.I-CUBE-UNISONRTOS.5.5.0-4
+2021-06-25 21:47:42,677 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0
+2021-06-25 21:47:42,706 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-SUBG2.4.1.0
+2021-06-25 21:47:42,738 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-EEPRMA1.3.0.0
+2021-06-25 21:47:42,750 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE1.6.2.0
+2021-06-25 21:47:42,761 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-NFC4.2.0.2
+2021-06-25 21:47:42,774 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-BLE2.3.2.0
+2021-06-25 21:47:42,782 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOF1.1.0.0
+2021-06-25 21:47:42,861 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AZRTOS-H7.1.0.0
+2021-06-25 21:47:42,936 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-MEMS1.8.3.0
+2021-06-25 21:47:43,189 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-DISPLAY.1.0.0
+2021-06-25 21:47:43,193 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-AI.6.0.0
+2021-06-25 21:47:43,211 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-ALGOBUILD.1.2.0
+2021-06-25 21:47:43,232 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-GNSS1.5.2.0
+2021-06-25 21:47:43,238 [WARN] PackLoader:226 - Cannot read IP mode file for wolfSSL.I-CUBE-wolfSSL.4.7.0
+2021-06-25 21:47:43,242 [WARN] PackLoader:226 - Cannot read IP mode file for STMicroelectronics.X-CUBE-TOUCHGFX.4.16.1
+2021-06-25 21:47:43,242 [INFO] ThirdParty:900 - Integrity check success = true
+2021-06-25 21:47:43,242 [INFO] IntegrityCheckThread:75 - exiting critical section [integrity check]
+2021-06-25 21:47:43,242 [INFO] IntegrityCheckThread:78 - End integrity checks thread
+2021-06-25 21:47:53,917 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:53,917 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:53,918 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:53,923 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,923 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,923 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,923 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,924 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,925 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,926 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,926 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,926 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,926 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,926 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:53,935 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:53,936 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:53,936 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:53,946 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-06-25 21:47:53,947 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-06-25 21:47:54,175 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,175 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,175 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,188 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS_M7
+2021-06-25 21:47:54,188 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS_M7
+2021-06-25 21:47:54,188 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS_M7
+2021-06-25 21:47:54,189 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS_M7
+2021-06-25 21:47:54,189 [WARN] ModelIntegratedComponent:182 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-06-25 21:47:54,191 [WARN] ApiManager:294 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,192 [WARN] ApiManager:294 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,192 [WARN] ApiManager:294 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,193 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.0: no header file found
+2021-06-25 21:47:54,194 [WARN] ApiManager:294 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.2: no header file found
+2021-06-25 21:47:54,196 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.2.0: no header file found
+2021-06-25 21:47:54,515 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:54,515 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:54,515 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SFXS2LP1.3.0.0: no header file found
+2021-06-25 21:47:54,516 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,516 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,516 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,516 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,516 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,517 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,518 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,519 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,519 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,519 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,519 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,519 [WARN] ModelIntegratedComponent:51 - No mode defined for component null
+2021-06-25 21:47:54,522 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:54,523 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2868A2' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:54,523 [WARN] ApiManager:294 - Cannot register API 'Board Extension:S2915A1' from pack STMicroelectronics.X-CUBE-SUBG2.4.1.0: no header file found
+2021-06-25 21:47:54,528 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA1' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-06-25 21:47:54,529 [WARN] ApiManager:294 - Cannot register API 'Board Extension:EEPRMA2' from pack STMicroelectronics.X-CUBE-EEPRMA1.3.0.0: no header file found
+2021-06-25 21:47:54,717 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A3' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,717 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS01A2' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,717 [WARN] ApiManager:294 - Cannot register API 'Board Extension:IKS02A1' from pack STMicroelectronics.X-CUBE-MEMS1.8.3.0: no header file found
+2021-06-25 21:47:54,725 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS, mode=CMSIS_V1, owner=FREERTOS_M4
+2021-06-25 21:47:54,725 [INFO] RtosManager:470 - Registered RTOS mode: class=CMSIS, group=RTOS2, mode=CMSIS_V2, owner=FREERTOS_M4
+2021-06-25 21:47:54,725 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V1, owner=FREERTOS_M4
+2021-06-25 21:47:54,725 [INFO] RtosManager:470 - Registered RTOS mode: class=RTOS, group=Core, mode=CMSIS_V2, owner=FREERTOS_M4
+2021-06-25 21:47:54,725 [WARN] ModelIntegratedComponent:182 - Missing modes for component STMicroelectronics:FreeRTOS:0.0.1:STMicroelectronics:RTOS:FreeRTOS:Core:::10.2.0:
+2021-06-25 21:47:54,727 [WARN] ApiManager:294 - Cannot register API 'Board Extension:GNSS1A1' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,727 [WARN] ApiManager:294 - Cannot register API 'Board Support:Custom' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,727 [WARN] ApiManager:294 - Cannot register API 'Data Exchange:lib_gnss' from pack STMicroelectronics.X-CUBE-GNSS1.5.2.0: no header file found
+2021-06-25 21:47:54,728 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-MS' from pack STMicroelectronics.X-CUBE-BLE1.6.2.0: no header file found
+2021-06-25 21:47:54,729 [WARN] ApiManager:294 - Cannot register API 'Board Extension:NFC04A1' from pack STMicroelectronics.X-CUBE-NFC4.2.0.2: no header file found
+2021-06-25 21:47:54,730 [WARN] ApiManager:294 - Cannot register API 'Wireless:BlueNRG-2' from pack STMicroelectronics.X-CUBE-BLE2.3.2.0: no header file found
+2021-06-25 21:47:55,526 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,527 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Request) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,527 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,527 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,527 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,528 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,528 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,528 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,528 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SignalID) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Polarity) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (RequestNumber) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncSignalID) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,529 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncPolarity) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncEnable) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (EventEnable) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncRequestNumber) has Id (SAI1_A) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Instance) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Request) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,530 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Direction) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphInc) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemInc) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (PeriphDataAlignment) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (MemDataAlignment) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Mode) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Priority) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (FIFOMode) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,531 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SignalID) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (Polarity) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (RequestNumber) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncSignalID) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncPolarity) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncEnable) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (EventEnable) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,532 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (DMA) : Parameter (SyncRequestNumber) has Id (USART3_TX) currently not set
+2021-06-25 21:47:55,555 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (FDCANFreq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,555 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Invalid parameter (FamilyName)
+2021-06-25 21:47:55,555 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SAI23Freq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,556 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SAI4AFreq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,556 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SAI4BFreq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,556 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (SPI123Freq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,556 [INFO] ImportTextPane:162 - (OptionalMessage_ERROR) IP (RCC) : Parameter (USBFreq_Value) has invalid value (240000000)
+2021-06-25 21:47:55,985 [INFO] UtilMem:74 - End LoadConfig() Used Memory: 280528744 Bytes (433061888)
+2021-06-25 21:47:55,987 [INFO] DbMcusXml:100 - Load MCU database from C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\/mcu/families.xml
+2021-06-25 21:47:56,925 [INFO] DbMcusJson:94 - JSON generation date=Mon Jun 07 01:53:21 PDT 2021 (1623056001)
+2021-06-25 21:47:57,833 [INFO] DbMcus:175 - Found 1906 MCUs (1866 are supported by CubeMX, 1866 are visible in CubeMX)
+2021-06-25 21:47:57,834 [INFO] ApiDb:251 - Load user favorites file C:\Users\frank/.stm32cubeide/favorites.mcus.txt: 0 item(s)
+2021-06-25 21:47:57,834 [INFO] ApiDb:255 - User favorites MCUs=[]
+2021-06-25 21:47:57,834 [INFO] DbMcus:187 - Set 0 / 0 favorites MCUs
+2021-06-25 21:47:57,838 [WARN] ThirdParty:762 - waiting for thirdparty lock release [change project]
+2021-06-25 21:47:57,838 [INFO] ThirdParty:764 - entering critical section [change project]
+2021-06-25 21:47:57,838 [INFO] ThirdParty:952 - CMSIS Pack Vendor :RoweBots I-CUBE-UNISONRTOS 5.5.0-4
+2021-06-25 21:47:57,838 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SFXS2LP1 3.0.0
+2021-06-25 21:47:57,838 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 2.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 3.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics HAL Drivers 0.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.16.2
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics MBEDTLS 2.14.1
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-SUBG2 4.1.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOF1 1.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AZRTOS-H7 1.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 2.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-EEPRMA1 3.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-MEMS1 8.3.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-DISPLAY 1.0.0
+2021-06-25 21:47:57,839 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics FreeRTOS 0.0.1
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_DEVICE 1.0.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-AI 6.0.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-ALGOBUILD 1.2.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-GNSS1 5.2.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.0.3
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics lwIP 2.1.2
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE1 6.2.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics USB_HOST 1.0.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-NFC4 2.0.2
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :wolfSSL I-CUBE-wolfSSL 4.7.0
+2021-06-25 21:47:57,840 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-TOUCHGFX 4.16.1
+2021-06-25 21:47:57,841 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.1.0
+2021-06-25 21:47:57,841 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.2.0
+2021-06-25 21:47:57,841 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics PDM2PCM 3.3.0
+2021-06-25 21:47:57,841 [INFO] ThirdParty:952 - CMSIS Pack Vendor :STMicroelectronics X-CUBE-BLE2 3.2.0
+2021-06-25 21:47:57,841 [INFO] ThirdParty:770 - exiting critical section [change project]
+2021-06-25 21:47:59,145 [INFO] PinOutPanel:1435 - setPackage(No Configuration,No Configuration)
+2021-06-25 21:47:59,148 [INFO] PinOutPanel:1435 - setPackage(STM32H755ZITx,LQFP144)
+2021-06-25 21:48:01,159 [INFO] UtilMem:74 - Before build in PCC Used Memory: 345077744 Bytes (517996544)
+2021-06-25 21:48:02,013 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/frank/.stm32cubemx/plugins/power
+2021-06-25 21:48:02,102 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/frank/.stm32cubemx/plugins/power
+2021-06-25 21:48:02,243 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/frank/.stm32cubemx/plugins/power
+2021-06-25 21:48:02,264 [INFO] SharedServices:72 - Folder for power plug-in: C:/Users/frank/.stm32cubemx/plugins/power
+2021-06-25 21:48:02,546 [INFO] UtilMem:74 - After build in PCC Used Memory: 334929672 Bytes (517996544)
+2021-06-25 21:48:02,619 [INFO] ApiDbMcu:458 - Load IP Config File for PDM2PCM
+2021-06-25 21:48:02,678 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,678 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,678 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,678 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,678 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,679 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,679 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,679 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,680 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,680 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,680 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,680 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,681 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,681 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,681 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,681 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,682 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,682 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,683 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,683 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,684 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,684 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,685 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,685 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,685 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,686 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,686 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,687 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,687 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,687 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,688 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,688 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,688 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,689 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,689 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,690 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,691 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,692 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,693 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,694 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,695 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,695 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,696 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,697 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,698 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,698 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,700 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,701 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,702 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,702 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,703 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,703 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,704 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,705 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,706 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,707 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,708 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,708 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,709 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,710 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,711 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,712 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,713 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,714 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,715 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,716 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,717 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,718 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,720 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,721 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,722 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,723 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,724 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,725 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,726 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,727 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,728 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,729 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,730 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,731 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,732 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,733 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,734 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,735 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,736 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,738 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,739 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,740 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,741 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,742 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,743 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,744 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,745 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,747 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,748 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,749 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,751 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,752 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,754 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,756 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,757 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,759 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,761 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,763 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,765 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,767 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,770 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,772 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,774 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,775 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,777 [INFO] IPUIPlugin:64 - create IPUIPlugin
+2021-06-25 21:48:02,792 [INFO] ApiDbMcu:458 - Load IP Config File for PDM2PCM
+2021-06-25 21:48:02,856 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] toolchainItems.length=====1
+2021-06-25 21:48:03,010 [INFO] OpenFileManager:323 - Restore cursor
+2021-06-25 22:10:22,827 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 405220344 Bytes (634388480)
+2021-06-25 22:10:27,887 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 453847552 Bytes (634388480)
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: RCC
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: USART
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: TIM1_8H7
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: CRC
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: PDM2PCM
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: DMA
+2021-06-25 22:10:28,797 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC2
+2021-06-25 22:10:28,802 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: GPIO
+2021-06-25 22:10:28,802 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SAI
+2021-06-25 22:10:28,802 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: SYS_M4
+2021-06-25 22:10:28,802 [INFO] BlockDiagram:2735 - set Specific Code input for plugin: NVIC1
+2021-06-25 22:10:28,802 [INFO] CodeGenerator:641 - code generatio: config db path: C:\ST\STM32CubeIDE_1.6.1\STM32CubeIDE\plugins\com.st.stm32cube.common.mx_6.2.1.202103241236\\db\
+2021-06-25 22:10:29,468 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-25 22:10:30,210 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-25 22:10:30,461 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp_save
+2021-06-25 22:10:30,626 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\gpio.tmp
+2021-06-25 22:10:31,092 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC1 ip!!
+2021-06-25 22:10:32,514 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:32,528 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp_save
+2021-06-25 22:10:32,678 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\cortex.tmp
+2021-06-25 22:10:32,681 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:32,683 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:32,812 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp_save
+2021-06-25 22:10:32,993 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma.tmp
+2021-06-25 22:10:33,006 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp_save
+2021-06-25 22:10:33,105 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\dma_GV.tmp
+2021-06-25 22:10:33,109 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:33,111 [INFO] Middleware:1263 - No code input for Bsp Dependency
+2021-06-25 22:10:33,141 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c_save
+2021-06-25 22:10:33,381 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.c
+2021-06-25 22:10:33,403 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h_save
+2021-06-25 22:10:33,525 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\PDM2PCM\App\pdm2pcm.h
+2021-06-25 22:10:33,530 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:33,553 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-25 22:10:33,683 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-25 22:10:33,700 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-25 22:10:33,797 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-25 22:10:33,809 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-25 22:10:33,992 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-25 22:10:33,995 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:34,002 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:34,120 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c_save
+2021-06-25 22:10:34,335 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_it.c
+2021-06-25 22:10:34,354 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h_save
+2021-06-25 22:10:34,506 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_it.h
+2021-06-25 22:10:34,545 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp_save
+2021-06-25 22:10:34,639 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_init.tmp
+2021-06-25 22:10:34,650 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp_save
+2021-06-25 22:10:34,748 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_GV.tmp
+2021-06-25 22:10:34,764 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp_save
+2021-06-25 22:10:34,867 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\sai_msp.tmp
+2021-06-25 22:10:35,087 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-25 22:10:35,337 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\stm32h7xx_hal_msp.c
+2021-06-25 22:10:35,345 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp_save
+2021-06-25 22:10:35,426 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\MXTmpFiles\system.tmp
+2021-06-25 22:10:35,456 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-25 22:10:35,598 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-25 22:10:35,817 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-25 22:10:35,818 [WARN] IPConfigManager:2976 - IP not found : TIM
+2021-06-25 22:10:35,819 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-25 22:10:35,820 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-25 22:10:35,847 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h_save
+2021-06-25 22:10:36,000 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Inc\main.h
+2021-06-25 22:10:36,019 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c_save
+2021-06-25 22:10:36,287 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\Core\Src\main.c
+2021-06-25 22:10:37,103 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp_save
+2021-06-25 22:10:37,183 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\MXTmpFiles\license.tmp
+2021-06-25 22:10:37,318 [WARN] IPConfigManager:77 - WARNING: Missing Config File for NVIC2 ip!!
+2021-06-25 22:10:37,342 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:37,356 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp_save
+2021-06-25 22:10:37,477 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\cortex.tmp
+2021-06-25 22:10:37,481 [INFO] LogOutputStream:76 - [STDOUT_REDIRECT] Command line
+2021-06-25 22:10:37,567 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp_save
+2021-06-25 22:10:37,666 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma.tmp
+2021-06-25 22:10:37,697 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp_save
+2021-06-25 22:10:37,787 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\dma_GV.tmp
+2021-06-25 22:10:37,892 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c_save
+2021-06-25 22:10:38,044 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_it.c
+2021-06-25 22:10:38,066 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h_save
+2021-06-25 22:10:38,231 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_it.h
+2021-06-25 22:10:38,328 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c_save
+2021-06-25 22:10:38,485 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\stm32h7xx_hal_msp.c
+2021-06-25 22:10:38,498 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp_save
+2021-06-25 22:10:38,587 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\MXTmpFiles\system.tmp
+2021-06-25 22:10:38,611 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h_save
+2021-06-25 22:10:38,748 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\stm32h7xx_hal_conf.h
+2021-06-25 22:10:38,800 [WARN] IPConfigManager:2976 - IP not found : NVIC
+2021-06-25 22:10:38,800 [WARN] CodeGenerator:3191 - IP not found : null
+2021-06-25 22:10:38,831 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h_save
+2021-06-25 22:10:38,940 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Inc\main.h
+2021-06-25 22:10:38,959 [INFO] CodeEngine:229 - oldGeneratedFile, C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c_save
+2021-06-25 22:10:39,137 [INFO] CodeEngine:247 - Generated code: C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM4\Core\Src\main.c
+2021-06-25 22:10:41,396 [INFO] ProjectBuilder:2460 - Time for Copy HAL[1] : 348mS.
+2021-06-25 22:10:41,420 [INFO] ProjectBuilder:3418 - Project Generator version: 3.13.0-B3
+2021-06-25 22:10:42,252 [INFO] ConfigFileManager:1242 - The Die is : DIE450
+2021-06-25 22:10:54,956 [INFO] ProjectBuilder:3584 - Time for Generating toolchain IDE Files: 13536mS.
+2021-06-25 22:10:54,956 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-25 22:10:54,961 [INFO] ProjectBuilder:2339 - Time for Copy CMSIS : 0mS.
+2021-06-25 22:29:53,875 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 828482208 Bytes (998244352)
+2021-06-25 22:30:44,494 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 777155352 Bytes (998244352)
+2021-06-25 22:33:01,636 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 823532024 Bytes (998244352)
+2021-06-25 22:36:09,629 [INFO] UtilMem:74 - End SaveConfig() Used Memory: 814389824 Bytes (998244352)
+2021-06-25 22:38:17,536 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:651)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:38:17,586 [WARN] IP:2088 - PLL2_VCI_Range not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,596 [WARN] IP:2088 - Prescaler not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,614 [WARN] IP:2088 - PLL2_VCO_SEL not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,624 [WARN] IP:2088 - PLLFRACN not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,624 [WARN] IP:2088 - PLL2FRACN not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,651 [WARN] IP:2088 - SupplySource not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,697 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:651)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:38:17,697 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:38:17,705 [WARN] IP:2088 - SDMMC1Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - LPTIM2Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - LPTIM345Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - I2C123Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - I2C4Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - SPDIFEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - ADCEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - FDCANEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - QuadSPIEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - FMCEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - SPI6Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - SPI45Enable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - SWPEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - IWDGEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - ExtClockEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - MCO1OutPutEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - MCO2OutPutEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - MCO2I2SEnable not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - HSEState not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - LSEState not found: check if there is a RefParameter without a condition.
+2021-06-25 22:38:17,727 [WARN] IP:2088 - RCC_TIM_PRescaler_Selection not found: check if there is a RefParameter without a condition.
+2021-06-25 22:41:51,012 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:41:51,020 [WARN] IP:2088 - SupplySource not found: check if there is a RefParameter without a condition.
+2021-06-25 22:41:51,075 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:41:51,096 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:41:59,191 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] Exception in thread "AWT-EventQueue-0" java.util.ConcurrentModificationException
+2021-06-25 22:41:59,192 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+2021-06-25 22:41:59,193 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+2021-06-25 22:41:59,195 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+2021-06-25 22:41:59,196 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3110)
+2021-06-25 22:41:59,197 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.clock.model.clocktree.Element.isAuto(Element.java:97)
+2021-06-25 22:41:59,199 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.clock.model.ClockTree.updateElementsState(ClockTree.java:349)
+2021-06-25 22:41:59,201 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.clock.ClockConfigurationView.clockRefresh(ClockConfigurationView.java:442)
+2021-06-25 22:41:59,205 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.plugins.clock.ClockConfigurationView.activatePlugin(ClockConfigurationView.java:384)
+2021-06-25 22:41:59,207 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at com.st.microxplorer.maingui.MainPanel$1.stateChanged(MainPanel.java:303)
+2021-06-25 22:41:59,208 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JTabbedPane.fireStateChanged(Unknown Source)
+2021-06-25 22:41:59,210 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JTabbedPane$ModelListener.stateChanged(Unknown Source)
+2021-06-25 22:41:59,211 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.DefaultSingleSelectionModel.fireStateChanged(Unknown Source)
+2021-06-25 22:41:59,213 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.DefaultSingleSelectionModel.setSelectedIndex(Unknown Source)
+2021-06-25 22:41:59,214 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JTabbedPane.setSelectedIndexImpl(Unknown Source)
+2021-06-25 22:41:59,216 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JTabbedPane.setSelectedIndex(Unknown Source)
+2021-06-25 22:41:59,218 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.plaf.basic.BasicTabbedPaneUI$Handler.mousePressed(Unknown Source)
+2021-06-25 22:41:59,221 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.AWTEventMulticaster.mousePressed(Unknown Source)
+2021-06-25 22:41:59,223 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+2021-06-25 22:41:59,225 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+2021-06-25 22:41:59,226 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+2021-06-25 22:41:59,226 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+2021-06-25 22:41:59,228 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+2021-06-25 22:41:59,228 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+2021-06-25 22:41:59,228 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+2021-06-25 22:41:59,232 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+2021-06-25 22:41:59,234 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+2021-06-25 22:41:59,235 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+2021-06-25 22:41:59,238 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+2021-06-25 22:41:59,240 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+2021-06-25 22:41:59,241 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+2021-06-25 22:41:59,242 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+2021-06-25 22:41:59,243 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+2021-06-25 22:41:59,244 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.security.AccessController.doPrivileged(Native Method)
+2021-06-25 22:41:59,246 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+2021-06-25 22:41:59,248 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+2021-06-25 22:41:59,250 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+2021-06-25 22:41:59,251 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+2021-06-25 22:41:59,253 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.security.AccessController.doPrivileged(Native Method)
+2021-06-25 22:41:59,255 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+2021-06-25 22:41:59,256 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+2021-06-25 22:41:59,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+2021-06-25 22:41:59,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+2021-06-25 22:41:59,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+2021-06-25 22:41:59,259 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2021-06-25 22:41:59,266 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+2021-06-25 22:41:59,268 [ERROR] LogOutputStream:74 - [STDERR_REDIRECT] 	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+2021-06-25 22:43:28,322 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:56)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:651)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:43:28,411 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:43:28,423 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:43:28,435 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:661)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:43:28,495 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.IP.getRefParameter(IP.java:4025)
+	at com.st.microxplorer.plugins.clock.model.clocktree.Signal.checkFrequency(Signal.java:183)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.checkConstraints(MultiplicatorFractional.java:103)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:651)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:794)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.calcValuesForPath(Round.java:914)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.getSolutionsForPath(Round.java:546)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round$RoundForPath.access$100(Round.java:439)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.getSolutionsForAllPaths(Round.java:383)
+	at com.st.microxplorer.plugins.clock.model.reversePath.Round.launchRound(Round.java:139)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.updateFrequencyValues(ActiveOutputUI.java:298)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI.access$500(ActiveOutputUI.java:43)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:818)
+	at com.st.microxplorer.plugins.clock.gui.ActiveOutputUI$7.doInBackground(ActiveOutputUI.java:814)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-25 22:43:28,504 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:56)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameterValueForParser(IP.java:3422)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:468)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getRefParameters(IP.java:1989)
+	at com.st.microxplorer.mcu.IP.getAllRequiredRefParameters(IP.java:3924)
+	at com.st.microxplorer.mcu.RCCService.getAllRequiredRefParameters(RCCService.java:283)
+	at com.st.microxplorer.plugins.clock.model.ClockTree.refreshErronousElementList(ClockTree.java:234)
+	at com.st.microxplorer.plugins.clock.model.clocktree.MultiplicatorFractional.propertyChange(MultiplicatorFractional.java:49)
+	at java.desktop/java.beans.PropertyChangeSupport.fire(Unknown Source)
+	at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at com.st.microxplorer.plugins.clock.model.clocktree.ArithmeticOperator.setSelectedValue(ArithmeticOperator.java:137)
+	at com.st.microxplorer.plugins.clock.gui.ArithmeticOperatorUI.actionPerformed(ArithmeticOperatorUI.java:386)
+	at java.desktop/javax.swing.JComboBox.fireActionEvent(Unknown Source)
+	at java.desktop/javax.swing.JComboBox.setSelectedItem(Unknown Source)
+	at java.desktop/javax.swing.JComboBox.setSelectedIndex(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicComboPopup$Handler.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.AWTEventMulticaster.mouseReleased(Unknown Source)
+	at java.desktop/java.awt.Component.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.JComponent.processMouseEvent(Unknown Source)
+	at java.desktop/javax.swing.plaf.basic.BasicComboPopup$1.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.Component.processEvent(Unknown Source)
+	at java.desktop/java.awt.Container.processEvent(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.retargetMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.processMouseEvent(Unknown Source)
+	at java.desktop/java.awt.LightweightDispatcher.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.Container.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Window.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.Component.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEventImpl(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$4.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.desktop/java.awt.EventQueue$5.run(Unknown Source)
+	at java.base/java.security.AccessController.doPrivileged(Native Method)
+	at java.base/java.security.ProtectionDomain$JavaSecurityAccessImpl.doIntersectionPrivilege(Unknown Source)
+	at java.desktop/java.awt.EventQueue.dispatchEvent(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpOneEventForFilters(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForFilter(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEventsForHierarchy(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.pumpEvents(Unknown Source)
+	at java.desktop/java.awt.EventDispatchThread.run(Unknown Source)
+2021-06-25 22:54:28,244 [FATAL] LogicalParser:300 - Exception caught
+java.util.ConcurrentModificationException
+	at java.base/java.util.LinkedHashMap$LinkedHashIterator.nextNode(Unknown Source)
+	at java.base/java.util.LinkedHashMap$LinkedKeyIterator.next(Unknown Source)
+	at com.st.microxplorer.mcu.IP.getParameterValue(IP.java:3158)
+	at com.st.microxplorer.mcu.RefParameterSemaphore.getValue(RefParameterSemaphore.java:57)
+	at com.st.microxplorer.util.MXSemaphore.getValue(MXSemaphore.java:74)
+	at com.st.microxplorer.util.LogicalParser.getUpdatedSem(LogicalParser.java:213)
+	at com.st.microxplorer.util.LogicalParser.evaluate(LogicalParser.java:396)
+	at com.st.microxplorer.util.LogicalParser.checkCondition(LogicalParser.java:298)
+	at com.st.microxplorer.mcu.RefParameter.isInUse(RefParameter.java:344)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4505)
+	at com.st.microxplorer.mcu.IP.getParameter(IP.java:4371)
+	at com.st.microxplorer.mcu.RCCService.getClockIpRefParams(RCCService.java:104)
+	at com.st.microxplorer.mcu.RCCService.getClockName(RCCService.java:232)
+	at com.st.microxplorer.plugins.ip.sai.gui.SaiManager.verifyClockSource(SaiManager.java:766)
+	at com.st.microxplorer.plugins.ip.sai.gui.SaiManager.clockChange(SaiManager.java:198)
+	at com.st.microxplorer.plugins.ip.sai.Sai.propertyChange(Sai.java:74)
+	at java.desktop/java.beans.PropertyChangeSupport.fire(Unknown Source)
+	at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at java.desktop/java.beans.PropertyChangeSupport.firePropertyChange(Unknown Source)
+	at com.st.microxplorer.util.MXPropertyChangeSupport.firePropertyChange(MXPropertyChangeSupport.java:45)
+	at com.st.microxplorer.mxsystem.MxSystem.MxFirePropertyChange(MxSystem.java:196)
+	at com.st.microxplorer.plugins.clock.gui.FractionalUI$1.doInBackground(FractionalUI.java:222)
+	at com.st.microxplorer.plugins.clock.gui.FractionalUI$1.doInBackground(FractionalUI.java:219)
+	at java.desktop/javax.swing.SwingWorker$1.call(Unknown Source)
+	at java.base/java.util.concurrent.FutureTask.run(Unknown Source)
+	at java.desktop/javax.swing.SwingWorker.run(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
+	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
+	at java.base/java.lang.Thread.run(Unknown Source)

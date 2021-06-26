@@ -1,20 +1,20 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <section name="Workbench">
 	<section name="org.eclipse.ui.texteditor.FindReplaceDialog">
-		<item key="selection" value="HAL_TIM_Base_Stop_IT"/>
+		<item key="selection" value="GPIO"/>
 		<item key="wrap" value="true"/>
 		<item key="casesensitive" value="false"/>
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
 		<list key="findhistory">
+			<item value="gpio"/>
 			<item value="HAL_TIM_Base_Stop_IT"/>
 			<item value="AL_TIM_Base_Stop_IT"/>
 			<item value="GPIOE"/>
 			<item value="pb5"/>
 			<item value="gpiob"/>
 			<item value="gpioe"/>
-			<item value="gpio"/>
 			<item value="interupt"/>
 			<item value="pdm"/>
 			<item value="IrqHand"/>
