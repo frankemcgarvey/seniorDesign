@@ -1153,7 +1153,7 @@ Error_Handler();
  8000a64:	4818      	ldr	r0, [pc, #96]	; (8000ac8 <main+0x1e8>)
  8000a66:	f7ff fec7 	bl	80007f8 <pdm_to_pcm>
 	  //Transmit PCM
-	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], PCM_CHUNK_SIZE*2);
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[0], PCM_CHUNK_SIZE*CHANNEL_NUMBER);
  8000a6a:	4b19      	ldr	r3, [pc, #100]	; (8000ad0 <main+0x1f0>)
  8000a6c:	f503 7300 	add.w	r3, r3, #512	; 0x200
  8000a70:	2240      	movs	r2, #64	; 0x40
@@ -1175,7 +1175,7 @@ Error_Handler();
  8000a88:	2200      	movs	r2, #0
  8000a8a:	701a      	strb	r2, [r3, #0]
 	  //Filter PDM to PCM
-	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[PCM_CHUNK_SIZE], CHANNEL_NUMBER);
+	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t*)&buffer->pcmBuffer[(uint32_t)((float)PCM_CHUNK_SIZE*((float)CHANNEL_NUMBER/2.0))], CHANNEL_NUMBER);
  8000a8c:	4b10      	ldr	r3, [pc, #64]	; (8000ad0 <main+0x1f0>)
  8000a8e:	f503 7180 	add.w	r1, r3, #256	; 0x100
  8000a92:	4b0f      	ldr	r3, [pc, #60]	; (8000ad0 <main+0x1f0>)
@@ -1184,7 +1184,7 @@ Error_Handler();
  8000a9a:	480b      	ldr	r0, [pc, #44]	; (8000ac8 <main+0x1e8>)
  8000a9c:	f7ff feac 	bl	80007f8 <pdm_to_pcm>
 	  //Transmit PCM
-	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[PCM_CHUNK_SIZE], PCM_CHUNK_SIZE*2);
+	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer[(uint32_t)((float)PCM_CHUNK_SIZE*((float)CHANNEL_NUMBER/2.0))], PCM_CHUNK_SIZE*CHANNEL_NUMBER);
  8000aa0:	4b0b      	ldr	r3, [pc, #44]	; (8000ad0 <main+0x1f0>)
  8000aa2:	f503 7310 	add.w	r3, r3, #576	; 0x240
  8000aa6:	2240      	movs	r2, #64	; 0x40

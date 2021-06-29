@@ -14,10 +14,11 @@
 
 #define BUFFER_SIZE 	256
 #define PCM_CHUNK_SIZE 	32
-#define CHANNEL_NUMBER	2
+#define CHANNEL_NUMBER	4
+
 typedef struct{
-	ALIGN_32BYTES(uint16_t pdmBuffer[BUFFER_SIZE]);
-	ALIGN_32BYTES(uint16_t pcmBuffer[PCM_CHUNK_SIZE*CHANNEL_NUMBER]);
+	ALIGN_32BYTES(uint32_t pdmBuffer[BUFFER_SIZE]);
+	ALIGN_32BYTES(uint16_t pcmBuffer[PCM_CHUNK_SIZE*CHANNEL_NUMER]);
 }buffer_t;
 
 PDM_Filter_Handler_t  PDM_FilterHandler[CHANNEL_NUMBER];

@@ -11199,3 +11199,7 @@ java.util.ConcurrentModificationException
 	at java.base/java.util.concurrent.ThreadPoolExecutor.runWorker(Unknown Source)
 	at java.base/java.util.concurrent.ThreadPoolExecutor$Worker.run(Unknown Source)
 	at java.base/java.lang.Thread.run(Unknown Source)
+2021-06-28 20:06:51,199 [INFO] Activator:170 - 
+
+
+2021-06-28 20:06:51,202 [INFO] Activator:171 - !SESSION log4j initialized
