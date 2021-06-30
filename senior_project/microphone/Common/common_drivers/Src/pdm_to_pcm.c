@@ -22,7 +22,7 @@ void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_
 
 	    /* Configure PDM filters */
 	    PDM_FilterConfig[index].output_samples_number = 16;
-	    PDM_FilterConfig[index].mic_gain = 24;
+	    PDM_FilterConfig[index].mic_gain = 14 ;
 	    PDM_FilterConfig[index].decimation_factor = PDM_FILTER_DEC_FACTOR_64;
 	    PDM_Filter_setConfig((PDM_Filter_Handler_t*)&PDM_FilterHandler[index], (PDM_Filter_Config_t*)&PDM_FilterConfig[index]);
 	  }
@@ -30,11 +30,11 @@ void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_
 
 void pdm_to_pcm(PDM_Filter_Handler_t* PDM_FilterHandler, uint8_t *pdm, uint16_t *pcm,  uint32_t channelNumber){
 
-	SCB_InvalidateDCache_by_Addr((uint32_t*)&pdm[0], BUFFER_SIZE);
+	SCB_InvalidateDCache_by_Addr((uint32_t*)&pdm[0], (uint32_t)((float)BUFFER_SIZE*((float)CHANNEL_NUMBER/2.0)));
 
 	for(uint32_t i = 0; i < channelNumber; i++){
 		PDM_Filter(&pdm[i], &pcm[i], &PDM_FilterHandler[i]);
 	}
 
-	SCB_CleanDCache_by_Addr((uint32_t*)&pcm[0], PCM_CHUNK_SIZE*2);
+	SCB_CleanDCache_by_Addr((uint32_t*)&pcm[0], PCM_CHUNK_SIZE*channelNumber);
 }

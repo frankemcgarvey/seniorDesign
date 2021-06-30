@@ -1139,3 +1139,6 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-06-28 20:07:03.056
 !MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2021-06-29 13:00:05.891
+!MESSAGE Won't launch debug session since we failed to locate the binary.

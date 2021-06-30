@@ -1,13 +1,7 @@
-16:01:06 **** Incremental Build of configuration Debug for project STM32H743I_EVAL ****
-make all 
-arm-none-eabi-gcc "../PDM2PCM/App/pdm2pcm.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DUSE_HAL_DRIVER -DSTM32H743xx -DUSE_STM32H743I_EVAL -DUSE_IOEXPANDER -c -I../../../Inc -I../../../../../../../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../../../../../../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../../../../../../../Drivers/BSP/STM32H743I-EVAL -I../../../../../../../../Drivers/BSP/Components/Common -I../../../../../../../../Utilities/lcd -I../../../../../../../../Utilities/Fonts -I../../../../../../../../Utilities/CPU -I../../../../../../../../Drivers/CMSIS/Include -Os -ffunction-sections -Wall -fstack-usage -MMD -MP -MF"PDM2PCM/App/pdm2pcm.d" -MT"PDM2PCM/App/pdm2pcm.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "PDM2PCM/App/pdm2pcm.o"
-In file included from ../PDM2PCM/App/pdm2pcm.c:23:
-../PDM2PCM/App/pdm2pcm.h:31:10: fatal error: pdm2pcm_glo.h: No such file or directory
-   31 | #include "pdm2pcm_glo.h"
-      |          ^~~~~~~~~~~~~~~
-compilation terminated.
-make: *** [PDM2PCM/App/subdir.mk:19: PDM2PCM/App/pdm2pcm.o] Error 1
-"make all" terminated with exit code 2. Build might be incomplete.
+09:20:09 **** Clean-only build of configuration Debug for project STM32H743I_EVAL ****
+make clean 
+make: *** No rule to make target 'clean'.  Stop.
+"make clean" terminated with exit code 2. Build might be incomplete.
 
-16:01:06 Build Failed. 2 errors, 0 warnings. (took 809ms)
+09:20:09 Build Failed. 1 errors, 0 warnings. (took 147ms)
 

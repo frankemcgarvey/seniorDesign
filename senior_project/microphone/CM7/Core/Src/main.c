@@ -163,6 +163,8 @@ Error_Handler();
 
   timFlag = NONE;
 
+  uint16_t pcmBuffer_temp[64] = {0};
+
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -174,6 +176,7 @@ Error_Handler();
   HAL_TIM_Base_Start_IT(&htim1);
 
   while (timFlag != DONE){
+
 	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != HALF){}
 	  //Reset Flag
@@ -310,7 +313,7 @@ static void MX_SAI1_Init(void)
   hsai_BlockA1.Instance = SAI1_Block_A;
   hsai_BlockA1.Init.Protocol = SAI_FREE_PROTOCOL;
   hsai_BlockA1.Init.AudioMode = SAI_MODEMASTER_RX;
-  hsai_BlockA1.Init.DataSize = SAI_DATASIZE_16;
+  hsai_BlockA1.Init.DataSize = SAI_DATASIZE_32;
   hsai_BlockA1.Init.FirstBit = SAI_FIRSTBIT_MSB;
   hsai_BlockA1.Init.ClockStrobing = SAI_CLOCKSTROBING_FALLINGEDGE;
   hsai_BlockA1.Init.Synchro = SAI_ASYNCHRONOUS;
@@ -322,9 +325,9 @@ static void MX_SAI1_Init(void)
   hsai_BlockA1.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockA1.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockA1.Init.PdmInit.Activation = ENABLE;
-  hsai_BlockA1.Init.PdmInit.MicPairsNbr = 1;
+  hsai_BlockA1.Init.PdmInit.MicPairsNbr = 2;
   hsai_BlockA1.Init.PdmInit.ClockEnable = SAI_PDM_CLOCK1_ENABLE;
-  hsai_BlockA1.FrameInit.FrameLength = 16;
+  hsai_BlockA1.FrameInit.FrameLength = 32;
   hsai_BlockA1.FrameInit.ActiveFrameLength = 1;
   hsai_BlockA1.FrameInit.FSDefinition = SAI_FS_STARTFRAME;
   hsai_BlockA1.FrameInit.FSPolarity = SAI_FS_ACTIVE_HIGH;
@@ -469,6 +472,7 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
+  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
 }
