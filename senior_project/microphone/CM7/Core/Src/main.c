@@ -163,13 +163,13 @@ Error_Handler();
 
   timFlag = NONE;
 
-  uint16_t pcmBuffer_temp[64] = {0};
+
+
 
   /* USER CODE END 2 */
 
   /* Infinite loop */
   /* USER CODE BEGIN WHILE */
-
 
   HAL_SAI_Receive_DMA(&hsai_BlockA1, (uint8_t*)&buffer->pdmBuffer[0], BUFFER_SIZE);
 

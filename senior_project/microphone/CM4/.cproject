@@ -93,9 +93,11 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/Inc}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone_CM7/PDM2PCM/App}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/Include/dsp}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/ST/STM32_Audio/Addons/PDM/Inc}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/Include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/PrivateInclude}&quot;"/>
                                     								
                                 </option>
                                 								

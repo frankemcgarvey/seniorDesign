@@ -37,6 +37,36 @@ Core/Src/stm32h7xx_it.o: ../Core/Src/stm32h7xx_it.c ../Core/Inc/main.h \
  ../../Drivers/STM32H7xx_HAL_Driver/Inc/stm32h7xx_hal_uart_ex.h \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h \
  c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_types.h \
+ ../../Drivers/CMSIS/Include/cmsis_compiler.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_memory.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/none.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_types.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/utils.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/basic_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_memory.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/none.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/utils.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/interpolation_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/bayes_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/statistics_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/basic_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/fast_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/matrix_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/statistics_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/controller_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/distance_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/svm_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/svm_defines.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/fast_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/transform_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/filtering_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h \
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h \
  ../Core/Inc/stm32h7xx_it.h
 
 ../Core/Inc/main.h:
@@ -116,5 +146,65 @@ Core/Src/stm32h7xx_it.o: ../Core/Src/stm32h7xx_it.c ../Core/Inc/main.h \
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h:
 
 c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlewares\st\stm32_audio\addons\pdm\inc\pdm2pcm_glo.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_types.h:
+
+../../Drivers/CMSIS/Include/cmsis_compiler.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_memory.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/none.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_types.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/utils.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/basic_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/arm_math_memory.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/none.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/utils.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/interpolation_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/bayes_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/statistics_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/basic_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/fast_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/matrix_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/statistics_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/controller_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/distance_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/svm_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/svm_defines.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/fast_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/transform_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/filtering_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h:
+
+../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h:
 
 ../Core/Inc/stm32h7xx_it.h:

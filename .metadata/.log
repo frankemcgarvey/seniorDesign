@@ -1142,3 +1142,48 @@ Command-line arguments:  -os win32 -ws win32 -arch x86_64
 
 !ENTRY com.st.stm32cube.ide.mcu.debug.launch 2 0 2021-06-29 13:00:05.891
 !MESSAGE Won't launch debug session since we failed to locate the binary.
+!SESSION 2021-07-02 19:18:23.362 -----------------------------------------------
+eclipse.buildId=Version 1.6.1
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY org.eclipse.core.resources 2 10035 2021-07-02 19:18:28.104
+!MESSAGE The workspace exited with unsaved changes in the previous session; refreshing workspace to recover changes.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-07-02 19:18:35.802
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-07-02 19:18:35.881
+!MESSAGE Log4j initialized with config file C:\Users\frank\OneDrive\Documents\seniorDesign\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-07-02 19:18:45.115
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-07-02 19:18:45.693
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-07-02 20:11:42.358
+!MESSAGE Indexed 'microphone_CM7' (32 sources, 102 headers) in 5.1 sec: 12,598 declarations; 89,313 references; 0 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.002%)
+
+!ENTRY org.eclipse.cdt.core 1 0 2021-07-02 21:54:44.912
+!MESSAGE Indexed 'microphone_CM7' (60 sources, 144 headers) in 6.03 sec: 13,369 declarations; 90,173 references; 490 unresolved inclusions; 1 syntax errors; 2 unresolved names (0.0019%)
+!SESSION 2021-07-03 09:39:41.855 -----------------------------------------------
+eclipse.buildId=Version 1.6.1
+java.version=11.0.9.1
+java.vendor=AdoptOpenJDK
+BootLoader constants: OS=win32, ARCH=x86_64, WS=win32, NL=en_US
+Command-line arguments:  -os win32 -ws win32 -arch x86_64
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 4 4 2021-07-03 09:39:53.505
+!MESSAGE CubeMX plugin appears to be active, Log4j initialization might be too late.
+
+!ENTRY com.st.stm32cube.ide.mcu.informationcenter 1 1 2021-07-03 09:39:53.564
+!MESSAGE Log4j initialized with config file C:\Users\frank\OneDrive\Documents\seniorDesign\.metadata\.log4j.xml
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 1 1 2021-07-03 09:40:00.743
+!MESSAGE Started RMI Server, listening on port 41337
+
+!ENTRY com.st.stm32cube.ide.mcu.ide 4 4 2021-07-03 09:40:01.331
+!MESSAGE com.st.stm32cube.ide.mcu.ide/META-INF/version/build_ref file not found, build reference will not be reported into properties

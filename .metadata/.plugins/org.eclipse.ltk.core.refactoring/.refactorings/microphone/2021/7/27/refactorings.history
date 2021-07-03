@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;DSP&apos; to &apos;CMSIS&apos;" description="Move &apos;DSP&apos; to &apos;CMSIS&apos;" destination="Drivers/CMSIS" element1="Common/common_drivers/DSP" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1625282989961" updateReferences="true"/>
+</session>

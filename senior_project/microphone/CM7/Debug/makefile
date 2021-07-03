@@ -10,6 +10,7 @@ RM := rm -rf
 # All of the sources participating in the build are defined here
 -include sources.mk
 -include PDM2PCM/App/subdir.mk
+-include Middlewares/CMSIS/CMSIS/DSP/Source/subdir.mk
 -include Drivers/STM32H7xx_HAL_Driver/subdir.mk
 -include Core/Startup/subdir.mk
 -include Core/Src/subdir.mk

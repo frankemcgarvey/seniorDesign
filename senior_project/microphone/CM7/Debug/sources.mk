@@ -25,5 +25,6 @@ Common/common_drivers/Src \
 Core/Src \
 Core/Startup \
 Drivers/STM32H7xx_HAL_Driver \
+Middlewares/CMSIS/CMSIS/DSP/Source \
 PDM2PCM/App \
 
