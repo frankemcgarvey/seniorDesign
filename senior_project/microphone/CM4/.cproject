@@ -93,11 +93,15 @@
                                     									
                                     <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/Inc}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/Include/dsp}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/Include}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include}&quot;"/>
                                     									
-                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Common/common_drivers/DSP/PrivateInclude}&quot;"/>
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include}&quot;"/>
+                                    									
+                                    <listOptionValue builtIn="false" value="&quot;${workspace_loc:/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude}&quot;"/>
                                     								
                                 </option>
                                 								

@@ -34,6 +34,7 @@ extern "C" {
 /* USER CODE BEGIN Includes */
 #include "pdm_to_pcm.h"
 #include "arm_math.h"
+#include "dsp.h"
 /* USER CODE END Includes */
 
 /* Exported types ------------------------------------------------------------*/

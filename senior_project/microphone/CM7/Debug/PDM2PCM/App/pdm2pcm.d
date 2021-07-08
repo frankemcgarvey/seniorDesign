@@ -68,6 +68,7 @@ PDM2PCM/App/pdm2pcm.o: ../PDM2PCM/App/pdm2pcm.c ../PDM2PCM/App/pdm2pcm.h \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/filtering_functions.h \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h \
+ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/dsp.h \
  ../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h
 
 ../PDM2PCM/App/pdm2pcm.h:
@@ -209,5 +210,7 @@ c:\users\frank\onedrive\documents\seniordesign\senior_project\microphone\middlew
 ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h:
 
 ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h:
+
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/dsp.h:
 
 ../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h:

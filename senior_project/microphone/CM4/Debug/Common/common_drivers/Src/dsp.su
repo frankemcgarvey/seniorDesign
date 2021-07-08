@@ -1,0 +1,5 @@
+dsp.c:14:6:matrix_init	40	static
+dsp.c:21:6:FIR_Filter_Init	32	static
+dsp.c:27:6:FIR_Filter	32	static
+dsp.c:33:6:FFT_Init	24	static
+dsp.c:40:6:GCC_PHAT	32	static

@@ -1,0 +1,27 @@
+/*
+ * dsp.h
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_DRIVERS_INC_DSP_H_
+#define COMMON_DRIVERS_INC_DSP_H_
+
+#include "arm_math.h"
+#include "stdint.h"
+
+#define TAPS 120
+#define BLOCK_SIZE 256
+#define FFT_LEN		64
+typedef struct{
+	arm_fir_instance_f32* lpFilter_inst;
+	float32_t state[TAPS + BLOCK_SIZE - 1];
+}dsp_buffer_t;
+
+
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset);
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber);
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber);
+
+#endif /* COMMON_DRIVERS_INC_DSP_H_ */
