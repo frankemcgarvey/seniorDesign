@@ -76,6 +76,7 @@ static buffer_t * const buffer = (buffer_t *) 0x30040000;
 static arm_matrix_instance_q15 pcmMatrix[2];
 static arm_matrix_instance_q15 pcmMatrix_Trans[2];
 static dsp_buffer_t dsp[CHANNEL_NUMBER];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -168,9 +169,6 @@ Error_Handler();
   pdm_to_pcm_init((PDM_Filter_Handler_t*)&PDM_FilterHandler[0], (PDM_Filter_Config_t*)&PDM_FilterConfig[0], CHANNEL_NUMBER);
 
   timFlag = NONE;
-
-
-
   /* USER CODE END 2 */
 
   /* Infinite loop */
@@ -178,36 +176,49 @@ Error_Handler();
 
   HAL_SAI_Receive_DMA(&hsai_BlockA1, (uint8_t*)&buffer->pdmBuffer[0], BUFFER_SIZE);
 
+  HAL_Delay(2000);
+
   HAL_TIM_Base_Start_IT(&htim1);
 
   while (timFlag != DONE){
 
+	  //================
 	  //Wait for Half of the buffer to be filled
 	  while(dmaFlag != HALF){}
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
 	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[0], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], CHANNEL_NUMBER);
+	  //Q15 to Float
+	  Q15_To_Float((q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], CHANNEL_NUMBER);
 	  //FIR Filter
-	//  FIR_Filter(&dsp[0], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], CHANNEL_NUMBER);
+	  FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], CHANNEL_NUMBER);
+	  //Float To Q15
+	  Float_To_Q15((float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], (q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], CHANNEL_NUMBER);
 	  //Transpose
 	  Transpose_Clean(&pcmMatrix[0], &pcmMatrix_Trans[0]);
 	  //Transmit PCM
 	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer_Trans[0][0], 2*PCM_CHUNK_SIZE*CHANNEL_NUMBER);
+	  //================
 
-	  //Wait for Half of the buffer to be filled
+	  //================
+	  //Wait for the second Half of the buffer to be filled
 	  while(dmaFlag != FULL){}
 	  //Reset Flag
 	  dmaFlag = NONE;
 	  //Filter PDM to PCM
 	  pdm_to_pcm(&PDM_FilterHandler[0],	(uint8_t*)&buffer->pdmBuffer[BUFFER_SIZE/2], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
+	  //Q15 to Float
+	  Q15_To_Float((q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
 	  //FIR Filter
-	 // FIR_Filter(&dsp[0], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], (uint16_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
+	  FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
+	  //Float To Q15
+	  Float_To_Q15((float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
 	  //Transpose
 	  Transpose_Clean(&pcmMatrix[1], &pcmMatrix_Trans[1]);
 	  //Transmit PCM
 	  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&buffer->pcmBuffer_Trans[PCM_CHUNK_SIZE][0], 2*PCM_CHUNK_SIZE*CHANNEL_NUMBER);
-
+	  //================
     /* USER CODE END WHILE */
 
     /* USER CODE BEGIN 3 */
@@ -215,7 +226,7 @@ Error_Handler();
 
 
   while(1){}
-  /* USER CODE END 3 */
+   /* USER CODE END 3 */
 }
 
 /**
@@ -326,7 +337,7 @@ static void MX_SAI1_Init(void)
   hsai_BlockA1.Instance = SAI1_Block_A;
   hsai_BlockA1.Init.Protocol = SAI_FREE_PROTOCOL;
   hsai_BlockA1.Init.AudioMode = SAI_MODEMASTER_RX;
-  hsai_BlockA1.Init.DataSize = SAI_DATASIZE_32;
+  hsai_BlockA1.Init.DataSize = SAI_DATASIZE_16;
   hsai_BlockA1.Init.FirstBit = SAI_FIRSTBIT_MSB;
   hsai_BlockA1.Init.ClockStrobing = SAI_CLOCKSTROBING_FALLINGEDGE;
   hsai_BlockA1.Init.Synchro = SAI_ASYNCHRONOUS;
@@ -338,9 +349,9 @@ static void MX_SAI1_Init(void)
   hsai_BlockA1.Init.MonoStereoMode = SAI_STEREOMODE;
   hsai_BlockA1.Init.CompandingMode = SAI_NOCOMPANDING;
   hsai_BlockA1.Init.PdmInit.Activation = ENABLE;
-  hsai_BlockA1.Init.PdmInit.MicPairsNbr = 2;
-  hsai_BlockA1.Init.PdmInit.ClockEnable = SAI_PDM_CLOCK1_ENABLE;
-  hsai_BlockA1.FrameInit.FrameLength = 32;
+  hsai_BlockA1.Init.PdmInit.MicPairsNbr = 1;
+  hsai_BlockA1.Init.PdmInit.ClockEnable = SAI_PDM_CLOCK1_ENABLE | SAI_PDM_CLOCK2_ENABLE;
+  hsai_BlockA1.FrameInit.FrameLength = 16;
   hsai_BlockA1.FrameInit.ActiveFrameLength = 1;
   hsai_BlockA1.FrameInit.FSDefinition = SAI_FS_STARTFRAME;
   hsai_BlockA1.FrameInit.FSPolarity = SAI_FS_ACTIVE_HIGH;

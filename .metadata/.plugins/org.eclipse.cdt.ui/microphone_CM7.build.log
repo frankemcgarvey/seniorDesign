@@ -1,4 +1,4 @@
-17:11:58 **** Incremental Build of configuration Debug for project microphone_CM7 ****
+10:25:09 **** Incremental Build of configuration Debug for project microphone_CM7 ****
 make -j8 all 
 arm-none-eabi-gcc "../PDM2PCM/App/pdm2pcm.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"PDM2PCM/App/pdm2pcm.d" -MT"PDM2PCM/App/pdm2pcm.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "PDM2PCM/App/pdm2pcm.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
@@ -12,7 +12,7 @@ arm-none-eabi-objdump -h -S  microphone_CM7.elf  > "microphone_CM7.list"
 arm-none-eabi-objcopy  -O binary  microphone_CM7.elf  "microphone_CM7.bin"
 arm-none-eabi-size   microphone_CM7.elf 
    text	   data	    bss	    dec	    hex	filename
-  53504	   1148	   4764	  59416	   e818	microphone_CM7.elf
+  54344	   1148	   5428	  60920	   edf8	microphone_CM7.elf
 Finished building: default.size.stdout
  
 Finished building: microphone_CM7.bin
@@ -20,5 +20,5 @@ Finished building: microphone_CM7.bin
 Finished building: microphone_CM7.list
  
 
-17:12:01 Build Finished. 0 errors, 0 warnings. (took 3s.400ms)
+10:25:13 Build Finished. 0 errors, 0 warnings. (took 3s.966ms)
 

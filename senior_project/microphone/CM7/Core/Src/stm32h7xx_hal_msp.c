@@ -299,7 +299,7 @@ void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
     PeriphClkInitStruct.PeriphClockSelection = RCC_PERIPHCLK_SAI1;
     PeriphClkInitStruct.PLL2.PLL2M = 5;
     PeriphClkInitStruct.PLL2.PLL2N = 192;
-    PeriphClkInitStruct.PLL2.PLL2P = 25;
+    PeriphClkInitStruct.PLL2.PLL2P = 50;
     PeriphClkInitStruct.PLL2.PLL2Q = 2;
     PeriphClkInitStruct.PLL2.PLL2R = 2;
     PeriphClkInitStruct.PLL2.PLL2RGE = RCC_PLL2VCIRANGE_0;
@@ -323,10 +323,10 @@ void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
 
     /**SAI1_A_Block_A GPIO Configuration
     PE2     ------> SAI1_CK1
-    PE4     ------> SAI1_D2
+    PE5     ------> SAI1_CK2
     PC1     ------> SAI1_D1
     */
-    GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_4;
+    GPIO_InitStruct.Pin = GPIO_PIN_2|GPIO_PIN_5;
     GPIO_InitStruct.Mode = GPIO_MODE_AF_PP;
     GPIO_InitStruct.Pull = GPIO_NOPULL;
     GPIO_InitStruct.Speed = GPIO_SPEED_FREQ_LOW;
@@ -347,8 +347,8 @@ void HAL_SAI_MspInit(SAI_HandleTypeDef* hsai)
     hdma_sai1_a.Init.Direction = DMA_PERIPH_TO_MEMORY;
     hdma_sai1_a.Init.PeriphInc = DMA_PINC_DISABLE;
     hdma_sai1_a.Init.MemInc = DMA_MINC_ENABLE;
-    hdma_sai1_a.Init.PeriphDataAlignment = DMA_PDATAALIGN_WORD;
-    hdma_sai1_a.Init.MemDataAlignment = DMA_MDATAALIGN_WORD;
+    hdma_sai1_a.Init.PeriphDataAlignment = DMA_PDATAALIGN_HALFWORD;
+    hdma_sai1_a.Init.MemDataAlignment = DMA_MDATAALIGN_HALFWORD;
     hdma_sai1_a.Init.Mode = DMA_CIRCULAR;
     hdma_sai1_a.Init.Priority = DMA_PRIORITY_VERY_HIGH;
     hdma_sai1_a.Init.FIFOMode = DMA_FIFOMODE_DISABLE;
@@ -381,10 +381,10 @@ void HAL_SAI_MspDeInit(SAI_HandleTypeDef* hsai)
 
     /**SAI1_A_Block_A GPIO Configuration
     PE2     ------> SAI1_CK1
-    PE4     ------> SAI1_D2
+    PE5     ------> SAI1_CK2
     PC1     ------> SAI1_D1
     */
-    HAL_GPIO_DeInit(GPIOE, GPIO_PIN_2|GPIO_PIN_4);
+    HAL_GPIO_DeInit(GPIOE, GPIO_PIN_2|GPIO_PIN_5);
 
     HAL_GPIO_DeInit(GPIOC, GPIO_PIN_1);
 
