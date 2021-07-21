@@ -17,7 +17,7 @@
 #define CHANNEL_NUMBER	2
 #define DECIMATION		PDM_FILTER_DEC_FACTOR_64
 
-#define MIC_GAIN        -10
+#define MIC_GAIN        0
 #define HIGH_PASS       0
 
 typedef struct{

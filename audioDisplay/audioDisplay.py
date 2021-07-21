@@ -11,16 +11,18 @@ data2 = []
 data3 = []
 data4 = []
 
+numOfChannel = int(input("Enter Number of Channels: "))
+
 with open(os.path.dirname(__file__) + '/../pcmFile.bin', 'rb') as pcmfile:
     hw = pcmfile.read(2)
     while hw:
-        if counter%2 == 0:
+        if counter%numOfChannel == 0:
                  data1.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%2 == 1:
+        elif counter%numOfChannel == 1:
                  data2.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%2 == 2:
+        elif counter%numOfChannel == 2:
                  data3.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%2 == 3:
+        elif counter%numOfChannel == 3:
                  data4.append(int.from_bytes(hw, "little", signed = "True"))
         counter = counter + 1
         hw = pcmfile.read(2)
@@ -29,14 +31,22 @@ pcmData1 = np.array(data1)
 pcmData2 = np.array(data2)
 pcmData3 = np.array(data3)
 pcmData4 = np.array(data4)
+
 N = len(pcmData1)/48000
 t = np.arange(0.0,N,(1/48000))
 
-fig , ax = plt.subplots(ncols = 2, sharey=True)
+fig , ax = plt.subplots(ncols = numOfChannel, sharey=True)
 
-ax[0].plot(pcmData1)
-ax[1].plot(pcmData2)
-#ax[1][0].plot(pcmData3)
-#ax[1][1].plot(pcmData4)
+if numOfChannel > 0:
+    ax[0].plot(pcmData1)
+
+if numOfChannel > 1:
+    ax[1].plot(pcmData2)
+
+if numOfChannel > 2:
+    ax[2].plot(pcmData3)
+
+if numOfChannel > 3:
+    ax[3].plot(pcmData4)
 
 plt.show()

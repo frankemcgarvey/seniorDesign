@@ -2,4 +2,10 @@
 Bass-pand with a 1Khz-5Khz range working;
 FFT on Python shows correct frequencies when playing multiple sine wave over speaker;
 
+Created GCC-phat to find delay of the signals
+Created different pythons scripts to help human analyze the signal
+
+
+TODO: Get GCC-phat working or another algorithm to find tau
+
 TODO: Get FFT working on the embedded system

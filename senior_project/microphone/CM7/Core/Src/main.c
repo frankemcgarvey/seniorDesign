@@ -192,7 +192,7 @@ Error_Handler();
 	  //Q15 to Float
 	  Q15_To_Float((q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], CHANNEL_NUMBER);
 	  //FIR Filter
-	  FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], CHANNEL_NUMBER);
+	  //FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], CHANNEL_NUMBER);
 	  //Float To Q15
 	  Float_To_Q15((float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[0][0], (q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[0][0], CHANNEL_NUMBER);
 	  //Transpose
@@ -211,7 +211,7 @@ Error_Handler();
 	  //Q15 to Float
 	  Q15_To_Float((q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
 	  //FIR Filter
-	  FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
+	  //FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
 	  //Float To Q15
 	  Float_To_Q15((float(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (q15_t(*)[PCM_CHUNK_SIZE])&buffer->pcmBuffer[CHANNEL_NUMBER][0], CHANNEL_NUMBER);
 	  //Transpose
@@ -225,8 +225,9 @@ Error_Handler();
   }
 
 
+
   while(1){}
-   /* USER CODE END 3 */
+  /* USER CODE END 3 */
 }
 
 /**
@@ -496,7 +497,6 @@ static void MX_GPIO_Init(void)
   /* GPIO Ports Clock Enable */
   __HAL_RCC_GPIOE_CLK_ENABLE();
   __HAL_RCC_GPIOH_CLK_ENABLE();
-  __HAL_RCC_GPIOC_CLK_ENABLE();
   __HAL_RCC_GPIOD_CLK_ENABLE();
 
 }
@@ -505,7 +505,7 @@ static void MX_GPIO_Init(void)
 
 static void Transpose_Clean(arm_matrix_instance_q15* m1, arm_matrix_instance_q15* m2){
 	arm_mat_trans_q15(&m1[0], &m2[0]);
-	SCB_CleanDCache_by_Addr((uint32_t*)m2->pData, 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
+	SCB_CleanDCache_by_Addr((uint32_t*)&m2->pData[0], 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
 }
 
 void HAL_SAI_RxHalfCpltCallback(SAI_HandleTypeDef *hsai){

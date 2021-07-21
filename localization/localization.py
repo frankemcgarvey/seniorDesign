@@ -23,11 +23,40 @@ def getAngle(samples, distance):
 
 def display(sig_i, sig_j, gcc_i_j, dir):
     fig , ax = plt.subplots(ncols = 4)
-    ax[0].plot(np.arange(0,k), sig_i)
-    ax[1].plot(np.arange(0,k), sig_j)
-    ax[2].plot(np.arange(0,k+1), gcc_i_j.real)
-    ax[3].plot(0,dir,'ro')
+    ax[0].plot(sig_i)
+    ax[1].plot(sig_j)
+    ax[2].plot(gcc_i_j.real)
+    ax[3].plot(dir,'ro')
     plt.show()
+
+def gcc_phat2(sig, refsig, fs=1, max_tau=None, interp=16):
+    '''
+    This function computes the offset between the signal sig and the reference signal refsig
+    using the Generalized Cross Correlation - Phase Transform (GCC-PHAT)method.
+    '''
+    
+    # make sure the length for the FFT is larger or equal than len(sig) + len(refsig)
+    n = sig.shape[0] + refsig.shape[0]
+
+    # Generalized Cross Correlation Phase Transform
+    SIG = np.fft.rfft(sig, n=n)
+    REFSIG = np.fft.rfft(refsig, n=n)
+    R = SIG * np.conj(REFSIG)
+
+    cc = np.fft.irfft(R / np.abs(R), n=(interp * n))
+
+    max_shift = int(interp * n / 2)
+    if max_tau:
+        max_shift = np.minimum(int(interp * fs * max_tau), max_shift)
+
+    cc = np.concatenate((cc[-max_shift:], cc[:max_shift+1]))
+
+    # find max cross correlation index
+    shift = np.argmax(np.abs(cc)) - max_shift
+
+    tau = shift / float(interp * fs)
+    
+    return tau, cc
 
 def gcc_phat(sig_i, sig_j, length):
     #Outputs an array of (N/2) + 1
@@ -36,7 +65,7 @@ def gcc_phat(sig_i, sig_j, length):
     fft_conj_j = np.conjugate(fft_j)
     fft_i_j = fft_i * fft_conj_j
     fft_i_j_abs = np.abs(fft_i_j)
-    ifft_i_j = ifft(fft_i_j/fft_i_j_abs)
+    ifft_i_j = np.fft.irfft(fft_i_j/fft_i_j_abs, length)
     return ifft_i_j
 
 
@@ -59,8 +88,10 @@ with open(os.path.dirname(__file__) + '/../pcmFile.bin', 'rb') as pcmfile:
 pcmData1 = np.array(data1)
 pcmData2 = np.array(data2)
 
+check = np.array_equal(pcmData1, pcmData2)
+
 counter = 0
-k      = 512
+k      = 1024
 fftLen = k*2
 
 fig , ax = plt.subplots(ncols = 2) 
@@ -78,24 +109,15 @@ while counter < (len(pcmData1)/k + 1):
 
     sig_j = pcmData2[counter*k : (counter*k)+k]
     
-    gcc_i_j = gcc_phat(sig_i, sig_j, fftLen)
-
-    max = np.argmax(gcc_i_j)
-
-    angle = getAngle(max, 0.2)
-
-    if angle < 0:
-        dir = -1
-    elif angle > 0:
-        dir = 1
-    else:
-        dir = 0
-
+   # max, gcc_i_j = gcc_phat2(sig_i, sig_j, 48000)
+    
+    gcc_i_j = gcc_phat(sig_j, sig_i, fftLen)
+    max = np.argmax(np.abs(gcc_i_j))
     max1 = np.max(sig_i)
     max2 = np.max(sig_j)
 
-    if(max1 > 10000 or max2 > 10000):
-        display(sig_i, sig_j, gcc_i_j, dir)
+    if(max1 > 4000 or max2 > 4000):
+        display(sig_i, sig_j, np.abs(gcc_i_j), max)
 
     counter = counter + 1
 
