@@ -2,7 +2,7 @@ import sys
 import wave
 import os.path
 
-numOfChannel = input("Enter Number of Channels")
+numOfChannel = int(input("Enter Number of Channels: "))
 fileName = input("Enter filename with ext: ")
 
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
