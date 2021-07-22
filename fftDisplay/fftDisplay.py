@@ -14,8 +14,9 @@ data3 = []
 data4 = []
 
 numOfChannel = int(input("Input number of channels: "))
+fileName = input("Enter filename with ext: ")
 
-with open(os.path.dirname(__file__) + '/../pcmFile.bin', 'rb') as pcmfile:
+with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
     hw = pcmfile.read(2)
     while hw:
         if counter%numOfChannel == 0:

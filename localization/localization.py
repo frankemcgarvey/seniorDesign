@@ -74,8 +74,8 @@ data1 = []
 data2 = []
 data3 = []
 data4 = []
-
-with open(os.path.dirname(__file__) + '/../pcmFile.bin', 'rb') as pcmfile:
+fileName = input("Enter filename with ext: ")
+with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
     hw = pcmfile.read(2)
     while hw:
         if counter%2 == 0:
