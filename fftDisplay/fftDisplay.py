@@ -35,8 +35,17 @@ pcmData2 = np.array(data2[256:])
 pcmData3 = np.array(data3[256:])
 pcmData4 = np.array(data4[256:])
 
+fig , ax = plt.subplots(ncols = 2)
+
+sig_i = np.fft.rfft(pcmData1[140000:150000])
+ax[0].plot(sig_i)
+ax[0].set_xlim(-10,5000)
+ax[0].plot(np.fft.rfft(pcmData2))
+
+plt.show()
+
 plt.ion()
-fig , ax = plt.subplots(nrows = 3, ncols = 2, sharey = True)
+fig , ax = plt.subplots(nrows = 3, ncols = 2)
 counter = 0
 
 k = 256

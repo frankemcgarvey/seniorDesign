@@ -1,7 +1,7 @@
-dsp.c:13:6:matrix_init	40	static
-dsp.c:20:6:FIR_Filter_Init	32	static
-dsp.c:26:6:FIR_Filter	32	static
-dsp.c:32:6:FFT_Init	24	static
-dsp.c:38:6:Q15_To_Float	32	static
-dsp.c:44:6:Float_To_Q15	32	static
-dsp.c:53:6:GCC_PHAT	32	static
+dsp.c:12:6:matrix_init	40	static
+dsp.c:19:6:FIR_Filter_Init	40	static
+dsp.c:25:6:FIR_Filter	32	static
+dsp.c:31:6:FFT_Init	24	static
+dsp.c:37:6:Q15_To_Float	32	static
+dsp.c:43:6:Float_To_Q15	32	static
+dsp.c:52:6:GCC_PHAT	32	static

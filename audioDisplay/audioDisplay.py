@@ -36,7 +36,7 @@ pcmData4 = np.array(data4)
 N = len(pcmData1)/48000
 t = np.arange(0.0,N,(1/48000))
 
-fig , ax = plt.subplots(ncols = numOfChannel, sharey=True)
+fig , ax = plt.subplots(ncols = numOfChannel)
 
 if numOfChannel > 0:
     ax[0].plot(pcmData1)
