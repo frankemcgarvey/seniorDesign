@@ -12,17 +12,18 @@
 #include "../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h"
 #include "arm_math.h"
 
-#define BUFFER_SIZE 	8192
-#define PCM_CHUNK_SIZE 	512
+#define BUFFER_SIZE 	4096
+#define PCM_CHUNK_SIZE 	256
 #define CHANNEL_NUMBER	2
 #define DECIMATION		PDM_FILTER_DEC_FACTOR_64
 
-#define MIC_GAIN        -6
+#define MIC_GAIN        -10
 #define HIGH_PASS       0
 
 typedef struct{
 	ALIGN_32BYTES(uint16_t pdmBuffer[BUFFER_SIZE]);
 	ALIGN_32BYTES(uint16_t pcmBuffer[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(uint16_t pcmBuffer_Trans[2*PCM_CHUNK_SIZE][CHANNEL_NUMBER]);
 	ALIGN_32BYTES(float    pcmBuffer_flt[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
 }buffer_t;
 

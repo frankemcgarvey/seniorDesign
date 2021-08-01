@@ -4,37 +4,36 @@ import numpy as np
 import matplotlib.pyplot as plt
 from numpy.fft import fft, ifft
 import os.path
-
+import struct 
 counter = 0
 data1 = []
 data2 = []
 data3 = []
 data4 = []
 
-numOfChannel = int(input("Enter Number of Channels: "))
-fileName = input("Enter filename with ext: ")
-
+numOfChannel = 2
+fileName = 'pcmFile.bin'
+state = True
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
-    hw = pcmfile.read(2)
+    hw = pcmfile.read(4)
     while hw:
-        if counter%numOfChannel == 0:
-                 data1.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%numOfChannel == 1:
-                 data2.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%numOfChannel == 2:
-                 data3.append(int.from_bytes(hw, "little", signed = "True"))
-        elif counter%numOfChannel == 3:
-                 data4.append(int.from_bytes(hw, "little", signed = "True"))
         counter = counter + 1
-        hw = pcmfile.read(2)
+        if(counter%512 == 0):
+            state = not(state)
+
+        if(state):
+            if(sys.getsizeof(hw) >= 37):
+                data1.append(struct.unpack('f',hw))
+        else:
+            if(sys.getsizeof(hw) >= 37):
+                data2.append(struct.unpack('f',hw))
+        hw = pcmfile.read(4)
 
 pcmData1 = np.array(data1)
 pcmData2 = np.array(data2)
 pcmData3 = np.array(data3)
 pcmData4 = np.array(data4)
 
-N = len(pcmData1)/48000
-t = np.arange(0.0,N,(1/48000))
 
 fig , ax = plt.subplots(ncols = numOfChannel)
 

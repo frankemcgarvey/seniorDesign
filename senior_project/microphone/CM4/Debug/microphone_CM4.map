@@ -153,7 +153,7 @@ Discarded input sections
                 0x0000000000000000      0x408 Common/common_drivers/Src/dsp.o
  .bss.fft_multi_i_j.9763
                 0x0000000000000000      0x408 Common/common_drivers/Src/dsp.o
- .debug_info    0x0000000000000000      0xe70 Common/common_drivers/Src/dsp.o
+ .debug_info    0x0000000000000000      0xe72 Common/common_drivers/Src/dsp.o
  .debug_abbrev  0x0000000000000000      0x21e Common/common_drivers/Src/dsp.o
  .debug_aranges
                 0x0000000000000000       0x50 Common/common_drivers/Src/dsp.o
@@ -283,8 +283,8 @@ Discarded input sections
                 0x0000000000000000       0xf0 Common/common_drivers/Src/pdm_to_pcm.o
  .text.pdm_to_pcm
                 0x0000000000000000       0x58 Common/common_drivers/Src/pdm_to_pcm.o
- .debug_info    0x0000000000000000      0xd22 Common/common_drivers/Src/pdm_to_pcm.o
- .debug_abbrev  0x0000000000000000      0x23e Common/common_drivers/Src/pdm_to_pcm.o
+ .debug_info    0x0000000000000000      0xd23 Common/common_drivers/Src/pdm_to_pcm.o
+ .debug_abbrev  0x0000000000000000      0x247 Common/common_drivers/Src/pdm_to_pcm.o
  .debug_aranges
                 0x0000000000000000       0x28 Common/common_drivers/Src/pdm_to_pcm.o
  .debug_ranges  0x0000000000000000       0x18 Common/common_drivers/Src/pdm_to_pcm.o
@@ -363,7 +363,7 @@ Discarded input sections
  .debug_macro   0x0000000000000000       0x10 Common/common_drivers/Src/pdm_to_pcm.o
  .debug_macro   0x0000000000000000       0x28 Common/common_drivers/Src/pdm_to_pcm.o
  .debug_line    0x0000000000000000      0xe34 Common/common_drivers/Src/pdm_to_pcm.o
- .debug_str     0x0000000000000000   0x16df90 Common/common_drivers/Src/pdm_to_pcm.o
+ .debug_str     0x0000000000000000   0x16df8f Common/common_drivers/Src/pdm_to_pcm.o
  .comment       0x0000000000000000       0x54 Common/common_drivers/Src/pdm_to_pcm.o
  .debug_frame   0x0000000000000000       0x58 Common/common_drivers/Src/pdm_to_pcm.o
  .ARM.attributes

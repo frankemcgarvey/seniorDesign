@@ -23,6 +23,7 @@
 typedef struct{
 	ALIGN_32BYTES(uint16_t pdmBuffer[BUFFER_SIZE]);
 	ALIGN_32BYTES(uint16_t pcmBuffer[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(uint16_t pcmBuffer_Trans[2*PCM_CHUNK_SIZE][CHANNEL_NUMBER]);
 	ALIGN_32BYTES(float    pcmBuffer_flt[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
 }buffer_t;
 
