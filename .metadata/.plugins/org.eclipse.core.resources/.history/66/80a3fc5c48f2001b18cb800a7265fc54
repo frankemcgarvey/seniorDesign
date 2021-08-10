@@ -1,0 +1,75 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable){
+	for(uint32_t i = 0; i < 2*size+1; i++){
+		arcsinTable[i] = (float)( asin((((double)i-(double)size) / 48000.0l) * 340.0l / 0.5l) * 180.0l/acos(-1) );
+	}
+}
+
+bool Localize_1D_TimeDifference(float *sig_i, float *sig_j, uint32_t size, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static int32_t sampleNum;
+
+	arm_absmax_f32(sig_i, size, &max_i, &pos_i);
+	arm_absmax_f32(sig_j, size, &max_j, &pos_j);
+
+	if( (max_i >= MAX) || (max_j >= MAX)){
+		sampleNum = (int32_t)pos_i - (int32_t)pos_j;
+
+		if(sampleNum < -1*(int32_t)offset){
+			sampleNum = -1*(int32_t)offset;
+		}
+		else if(sampleNum > (int32_t)offset){
+			sampleNum = (int32_t)offset;
+		}
+
+		*angle= arcsinTable[sampleNum + (int32_t)offset];
+		return true;
+	}
+
+	else
+		return false;
+
+
+}
+
+bool Localize_1D_CorrMax(float *sig_i, float *sig_j, uint32_t size, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static int32_t sampleNum;
+
+	arm_absmax_f32(sig_i, size, &max_i, &pos_i);
+	arm_absmax_f32(sig_j, size, &max_j, &pos_j);
+
+	if( (max_i >= MAX) || (max_j >= MAX)){
+		sampleNum = (int32_t)pos_i - (int32_t)pos_j;
+
+		if(sampleNum < -1*(int32_t)offset){
+			sampleNum = -1*(int32_t)offset;
+		}
+		else if(sampleNum > (int32_t)offset){
+			sampleNum = (int32_t)offset;
+		}
+
+		*angle= arcsinTable[sampleNum + (int32_t)offset];
+		return true;
+	}
+
+	else
+		return false;
+
+
+}
+

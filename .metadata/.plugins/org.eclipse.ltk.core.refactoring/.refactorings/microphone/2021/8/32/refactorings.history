@@ -1,0 +1,4 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<session version="1.0">
+<refactoring comment="Move &apos;main.c&apos; to &apos;Src&apos;" description="Move &apos;main.c&apos; to &apos;Src&apos;" destination="CM7/Core/Src" element1="Common/common_drivers/main.c" flags="7" id="org.eclipse.ltk.core.refactoring.move.resources" resources="1" stamp="1627833425595" updateReferences="true"/>
+</session>

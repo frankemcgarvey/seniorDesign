@@ -1,0 +1,37 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+static const float coeff[TAPS] = {4.545276e-04,-1.513079e-03,3.013465e-03,-4.646551e-03,5.191777e-03,-2.814313e-03,-4.041009e-03,1.545803e-02,-2.906281e-02,3.970477e-02,-3.992059e-02,2.057125e-02,3.078342e-02,-1.464368e-01,6.132579e-01,6.132579e-01,-1.464368e-01,3.078342e-02,2.057125e-02,-3.992059e-02,3.970477e-02,-2.906281e-02,1.545803e-02,-4.041009e-03,-2.814313e-03,5.191777e-03,-4.646551e-03,3.013465e-03,-1.513079e-03,4.545276e-04};
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
+
+	for(uint32_t i = 0; i < 2; i++){
+		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
+	}
+}
+
+void Low_Pass_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(buff[i].lpFilter_inst, TAPS, &coeff[0], buff[i].state, BLOCK_SIZE);
+	}
+}
+
+void Low_Pass_Filter(dsp_buffer_t* dsp, uint16_t (*input)[16], uint16_t (*output)[16] , uint32_t channelNumber){
+
+	float32_t floatFilter_input[4][16];
+	float32_t floatFilter_output[4][16];
+
+	arm_q15_to_float((const q15_t*)&input[0][0], (float32_t*)&floatFilter_input[0][0], channelNumber*16);
+
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(dsp[i].lpFilter_inst, &floatFilter_input[i][0], &floatFilter_output[i][0], BLOCK_SIZE);
+	}
+
+	arm_float_to_q15(&floatFilter_output[0][0], (q15_t*)&output[0][0], channelNumber*16);
+
+}

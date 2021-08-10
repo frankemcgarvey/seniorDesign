@@ -1,0 +1,41 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+static const float coeff[TAPS+1] = {2.105858e-03,-1.954550e-04,6.538354e-04,-1.302192e-04,-1.646581e-03,2.268233e-04,-3.707233e-03,-4.382506e-04,-4.267514e-03,-2.960812e-03,-3.183041e-03,-6.600986e-03,-2.011975e-03,-9.202542e-03,-3.033400e-03,-8.876598e-03,-7.178512e-03,-5.996373e-03,-1.261709e-02,-3.595170e-03,-1.562123e-02,-5.269278e-03,-1.356564e-02,-1.186713e-02,-7.803903e-03,-1.978873e-02,-3.632893e-03,-2.298563e-02,-6.527291e-03,-1.786222e-02,-1.707124e-02,-7.384940e-03,-2.885881e-02,-4.407145e-04,-3.209425e-02,-5.677997e-03,-2.131533e-02,-2.365718e-02,-1.749020e-03,-4.347074e-02,1.130808e-02,-4.767947e-02,1.229692e-03,-2.355192e-02,-3.809706e-02,2.664406e-02,-9.554488e-02,8.395382e-02,-1.467250e-01,1.220012e-01,8.328168e-01,1.220012e-01,-1.467250e-01,8.395382e-02,-9.554488e-02,2.664406e-02,-3.809706e-02,-2.355192e-02,1.229692e-03,-4.767947e-02,1.130808e-02,-4.347074e-02,-1.749020e-03,-2.365718e-02,-2.131533e-02,-5.677997e-03,-3.209425e-02,-4.407145e-04,-2.885881e-02,-7.384940e-03,-1.707124e-02,-1.786222e-02,-6.527291e-03,-2.298563e-02,-3.632893e-03,-1.978873e-02,-7.803903e-03,-1.186713e-02,-1.356564e-02,-5.269278e-03,-1.562123e-02,-3.595170e-03,-1.261709e-02,-5.996373e-03,-7.178512e-03,-8.876598e-03,-3.033400e-03,-9.202542e-03,-2.011975e-03,-6.600986e-03,-3.183041e-03,-2.960812e-03,-4.267514e-03,-4.382506e-04,-3.707233e-03,2.268233e-04,-1.646581e-03,-1.302192e-04,6.538354e-04,-1.954550e-04,2.105858e-03};
+
+
+
+
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
+
+	for(uint32_t i = 0; i < 2; i++){
+		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
+	}
+}
+
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(buff[i].lpFilter_inst, TAPS, &coeff[0], buff[i].state, BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter(dsp_buffer_t* dsp, uint16_t (*input)[16], uint16_t (*output)[16] , uint32_t channelNumber){
+
+	float32_t floatFilter_input[4][16];
+	float32_t floatFilter_output[4][16];
+
+	arm_q15_to_float((const q15_t*)&input[0][0], (float32_t*)&floatFilter_input[0][0], channelNumber*16);
+
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(dsp[i].lpFilter_inst, &floatFilter_input[i][0], &floatFilter_output[i][0], BLOCK_SIZE);
+	}
+
+	arm_float_to_q15(&floatFilter_output[0][0], (q15_t*)&output[0][0], channelNumber*16);
+
+}

@@ -1,0 +1,106 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable){
+	for(uint32_t i = 0; i < 2*size+1; i++){
+		arcsinTable[i] = (float)( asin((((double)i-(double)size) / 48000.0l) * 340.0l / 0.5l) * 180.0l/acos(-1) );
+	}
+}
+
+bool Localize_1D_TimeDifference(float *sig_i, float *sig_j, uint32_t size, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static int32_t sampleNum;
+
+	arm_absmax_f32(sig_i, size, &max_i, &pos_i);
+	arm_absmax_f32(sig_j, size, &max_j, &pos_j);
+
+	if( (max_i >= MAX) && (max_j >= MAX)){
+		sampleNum = (int32_t)pos_i - (int32_t)pos_j;
+
+		if(sampleNum < -1*(int32_t)offset){
+			sampleNum = -1*(int32_t)offset;
+		}
+		else if(sampleNum > (int32_t)offset){
+			sampleNum = (int32_t)offset;
+		}
+
+		*angle= arcsinTable[sampleNum + (int32_t)offset];
+		return true;
+	}
+
+	else
+		return false;
+
+
+}
+
+bool Localize_1D_CorrMax(float *sig_i, float *sig_j, float *corr, uint32_t size, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static int32_t sampleNum;
+	static int32_t corr_pos;
+	static float dummy;
+
+	arm_max_f32(sig_i, size, &max_i, &pos_i);
+	arm_max_f32(sig_j, size, &max_j, &pos_j);
+
+	if( (max_i >= MAX) && (max_j >= MAX)){
+
+		arm_correlate_f32(sig_i, size, sig_j, size, corr);
+		arm_max_f32(corr, size*2, &dummy, (uint32_t*)&corr_pos);
+		sampleNum = corr_pos - ((int32_t)size-1);
+		*angle= arcsinTable[sampleNum + (int32_t)offset];
+		return true;
+	}
+
+	else
+		return false;
+
+
+}
+
+bool Localize_1D_CorrBuffer(float *sig_i, float *sig_j, float *corr, uint32_t size, uint32_t buff_size, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static int32_t sampleNum;
+	static int32_t corr_pos;
+	static float dummy;
+	static buffer[size];
+	static uint32_t index = 0;
+	bool state;
+
+	arm_max_f32(sig_i, size, &max_i, &pos_i);
+	arm_max_f32(sig_j, size, &max_j, &pos_j);
+
+	if( (max_i >= MAX) && (max_j >= MAX)){
+		state = true;
+	}
+
+	if(state){
+		index++;
+		if(index == 1){
+		arm_copy_f32();
+		}
+		else if(index == 2){
+			index = 0;
+
+		}
+	}
+
+	else
+		return false;
+
+
+}

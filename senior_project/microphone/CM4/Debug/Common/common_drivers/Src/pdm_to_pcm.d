@@ -60,7 +60,8 @@ Common/common_drivers/Src/pdm_to_pcm.o: \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/filtering_functions.h \
  C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h \
- C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h
+ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h \
+ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/definition.h
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/pdm_to_pcm.h:
 
@@ -183,3 +184,5 @@ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlew
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h:
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h:
+
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/definition.h:

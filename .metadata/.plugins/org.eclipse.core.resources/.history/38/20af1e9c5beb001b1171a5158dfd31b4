@@ -1,0 +1,89 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+
+static const float coeff[TAPS+1] = {2.321385e-06,1.435421e-06,-2.268498e-21,-7.835891e-07,5.577711e-15,1.323454e-06,-2.220481e-20,-6.008520e-06,-1.318202e-05,-1.300833e-05,1.904449e-19,1.968955e-05,3.025497e-05,2.098111e-05,-1.054384e-19,-1.081869e-05,6.106091e-14,1.482080e-05,-5.297851e-19,-5.412778e-05,-1.074908e-04,-9.668912e-05,6.689865e-19,1.239042e-04,1.765729e-04,1.140496e-04,-9.860579e-19,-5.154739e-05,2.344331e-13,6.254301e-05,-1.391051e-18,-2.037580e-04,-3.828900e-04,-3.261885e-04,1.950074e-18,3.755243e-04,5.073708e-04,3.106489e-04,-2.436729e-18,-1.259514e-04,4.514306e-13,1.364688e-04,-6.077137e-20,-3.938517e-04,-6.934418e-04,-5.512340e-04,4.194104e-18,5.431516e-04,6.708021e-04,3.711492e-04,-1.804119e-18,-1.165653e-04,2.817970e-13,8.533214e-05,-8.383386e-19,-1.079567e-04,-4.842024e-05,8.889967e-05,-1.055151e-18,-4.027819e-04,-7.518039e-04,-5.912002e-04,7.949128e-19,3.532127e-04,-8.932272e-13,-5.228225e-04,4.719046e-18,1.995028e-03,4.021616e-03,3.661793e-03,-5.646152e-18,-4.785878e-03,-6.881707e-03,-4.485786e-03,8.578215e-18,2.069847e-03,-3.176889e-12,-2.579134e-03,1.221905e-17,8.707382e-03,1.672937e-02,1.462229e-02,-1.306871e-17,-1.794061e-02,-2.520723e-02,-1.614260e-02,2.189302e-17,7.309828e-03,-5.607295e-12,-9.162569e-03,3.386691e-17,3.211400e-02,6.386741e-02,5.860895e-02,3.898972e-18,-8.443042e-02,-1.352519e-01,-1.049825e-01,5.525006e-17,1.163727e-01,1.666673e-01,1.163727e-01,5.525006e-17,-1.049825e-01,-1.352519e-01,-8.443042e-02,3.898972e-18,5.860895e-02,6.386741e-02,3.211400e-02,3.386691e-17,-9.162569e-03,-5.607295e-12,7.309828e-03,2.189302e-17,-1.614260e-02,-2.520723e-02,-1.794061e-02,-1.306871e-17,1.462229e-02,1.672937e-02,8.707382e-03,1.221905e-17,-2.579134e-03,-3.176889e-12,2.069847e-03,8.578215e-18,-4.485786e-03,-6.881707e-03,-4.785878e-03,-5.646152e-18,3.661793e-03,4.021616e-03,1.995028e-03,4.719046e-18,-5.228225e-04,-8.932272e-13,3.532127e-04,7.949128e-19,-5.912002e-04,-7.518039e-04,-4.027819e-04,-1.055151e-18,8.889967e-05,-4.842024e-05,-1.079567e-04,-8.383386e-19,8.533214e-05,2.817970e-13,-1.165653e-04,-1.804119e-18,3.711492e-04,6.708021e-04,5.431516e-04,4.194104e-18,-5.512340e-04,-6.934418e-04,-3.938517e-04,-6.077137e-20,1.364688e-04,4.514306e-13,-1.259514e-04,-2.436729e-18,3.106489e-04,5.073708e-04,3.755243e-04,1.950074e-18,-3.261885e-04,-3.828900e-04,-2.037580e-04,-1.391051e-18,6.254301e-05,2.344331e-13,-5.154739e-05,-9.860579e-19,1.140496e-04,1.765729e-04,1.239042e-04,6.689865e-19,-9.668912e-05,-1.074908e-04,-5.412778e-05,-5.297851e-19,1.482080e-05,6.106091e-14,-1.081869e-05,-1.054384e-19,2.098111e-05,3.025497e-05,1.968955e-05,1.904449e-19,-1.300833e-05,-1.318202e-05,-6.008520e-06,-2.220481e-20,1.323454e-06,5.577711e-15,-7.835891e-07,-2.268498e-21,1.435421e-06,2.321385e-06};
+
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
+
+	for(uint32_t i = 0; i < 2; i++){
+		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
+	}
+}
+
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(buff[i].lpFilter_inst, TAPS, &coeff[0], buff[i].state, BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(dsp[i].lpFilter_inst, &input[i][0], &output[i][0], BLOCK_SIZE);
+	}
+}
+
+void FFT_Init(arm_rfft_fast_instance_f32* fft_instance, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_rfft_fast_init_f32(&fft_instance[i], FFT_LEN);
+	}
+}
+
+void Q15_To_Float(q15_t (*q15)[Q15_FLOAT_LEN], float (*flt)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_q15_to_float(&q15[i][0], &flt[i][0], Q15_FLOAT_LEN);
+	}
+}
+
+void Float_To_Q15(float (*flt)[Q15_FLOAT_LEN], q15_t (*q15)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_float_to_q15(&flt[i][0], &q15[i][0], Q15_FLOAT_LEN);
+	}
+}
+#define FALSE 				0
+#define fft_conjugate_j 	fft_output_j
+#define fft_absolute_i_j	fft_output_i
+
+void GCC_PHAT(arm_rfft_fast_instance_f32* fft_instance_i, float *fft_input_i, arm_rfft_fast_instance_f32* fft_instance_j, float *fft_input_j, float* Gphat_output){
+
+	static float fft_output_i[FFT_LEN+2];
+	static float fft_output_j[FFT_LEN+2];
+	static float fft_multi_i_j[FFT_LEN+2];
+
+	//FFT Signals I & J
+	arm_rfft_fast_f32(&fft_instance_i[0], &fft_input_i[0], &fft_output_i[0], FALSE);
+	arm_rfft_fast_f32(&fft_instance_j[0], &fft_input_j[0], &fft_output_j[0], FALSE);
+
+	//Take the conjugate of signal J
+	arm_cmplx_conj_f32(&fft_output_j[2], &fft_conjugate_j[2], FFT_LEN/2 - 1);
+
+	//Re-assign the values for J
+	fft_conjugate_j[FFT_LEN-2] 	= fft_output_j[1];
+	fft_conjugate_j[FFT_LEN-1] 	= 0;
+	fft_conjugate_j[1] 			= 0;
+
+	//Re-assign the value for I
+	fft_output_i[FFT_LEN-2] 	= fft_output_i[1];
+	fft_output_i[FFT_LEN-1] 	= 0;
+	fft_output_i[1] 			= 0;
+
+	//Multiply the Top
+	arm_cmplx_mult_cmplx_f32(&fft_output_i[0], &fft_conjugate_j[0], &fft_multi_i_j[0], (FFT_LEN+2)/2);
+
+	//Find the bottoms magnitude
+	arm_cmplx_mag_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], (FFT_LEN+2)/2);
+
+	//Take the inverse of each one
+	for(uint32_t i = 0; i < (FFT_LEN+2)/2; i++){
+		fft_absolute_i_j[i] = 1/fft_absolute_i_j[i];
+	}
+
+	//Multiply the top with the bottom
+	arm_cmplx_mult_real_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], &Gphat_output[0], (FFT_LEN+2)/2);
+}

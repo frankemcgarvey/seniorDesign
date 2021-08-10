@@ -1,0 +1,31 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable){
+	for(uint32_t i = 0; i < 2*size; i++){
+		arcsinTable[i] = asinf(((i-size) / 48000.0) * 340.0 / 0.5);
+	}
+}
+
+float Localize_1D(float *sig_i, float *sig_j, uint32_t size){
+
+	static uint32_t pos_i, pos_j;
+	static float max_i, max_j;
+	static uint32_t sampleNum;
+
+	arm_absmax_f32(sig_i, size, max_i, pos_i);
+	arm_absmax_f32(sig_j, size, max_j, pos_j);
+
+	sampleNum = pos_i - pos_j;
+
+	return
+
+}

@@ -1,0 +1,25 @@
+/*
+ * localization.h
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_DRIVERS_INC_LOCALIZATION_H_
+#define COMMON_DRIVERS_INC_LOCALIZATION_H_
+
+
+
+#endif /* COMMON_DRIVERS_INC_LOCALIZATION_H_ */
+
+
+#include "arm_math.h"
+#include "math.h"
+#include "stdbool.h"
+
+#define LOCALIZATION_SIZE 256
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable);
+bool Localize_1D_TimeDifference(float *sig_i, float *sig_j, uint32_t offset, float MAX, float *arcsinTable, float *angle);
+bool Localize_1D_CorrBuffer(float *sig_i, float *sig_j,  uint32_t offset, float MAX, float *arcsinTable, float *angle);
+bool Localize_1D_CorrMax(float *sig_i, float *sig_j, uint32_t offset, float MAX, float *arcsinTable, float *angle);

@@ -1,0 +1,46 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable){
+	for(uint32_t i = 0; i < 2*size+1; i++){
+		arcsinTable[i] = (float)( asin((((double)i-(double)size) / 48000.0l) * 340.0l / 0.5l) * 180.0l/acos(-1) );
+	}
+}
+
+bool Localize_1D_TimeDifference(float *sig_i, float *sig_j, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+}
+
+bool Localize_1D_CorrMax(float *sig_i, float *sig_j, uint32_t offset, float MAX, float *arcsinTable, float *angle){
+
+
+}
+
+float Localize_1D_CorrBuffer(float *sig_i, float *sig_j,  uint32_t offset, float *arcsinTable){
+
+
+}
+
+bool Max_Threshold_Q15(q15_t *sig_i, q15_t *sig_j, q15_t MAX){
+	static q15_t max_i, max_j;
+	static uint32_t pos_i, pos_j;
+
+	arm_absmax_q15(sig_i, BLOCK_SIZE, &max_i, &pos_i);
+	arm_absmax_q15(sig_j, BLOCK_SIZE, &max_j, &pos_j);
+
+	if(max_i >= MAX || max_j >= MAX){
+		return true;
+	}
+	else{
+		return false;
+	}
+
+}

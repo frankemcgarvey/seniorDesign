@@ -1,0 +1,15 @@
+/*
+ * definition.h
+ *
+ *  Created on: Aug 6, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_DRIVERS_INC_DEFINITION_H_
+#define COMMON_DRIVERS_INC_DEFINITION_H_
+
+
+#define MAX 500
+#define OFFSET 69
+
+#endif /* COMMON_DRIVERS_INC_DEFINITION_H_ */

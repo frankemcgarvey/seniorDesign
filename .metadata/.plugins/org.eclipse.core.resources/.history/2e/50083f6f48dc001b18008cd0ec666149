@@ -1,0 +1,13 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#define "dsp.h"
+
+void matrix_init(){uint32_t numRow, uint32_t numCol, q15_t* matrix, arm_matrix_instance_q15* instance, uint32_t channelNumber){
+
+
+}

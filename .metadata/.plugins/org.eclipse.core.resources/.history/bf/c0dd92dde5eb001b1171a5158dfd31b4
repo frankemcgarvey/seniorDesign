@@ -1,0 +1,89 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+
+static const float coeff[TAPS+1] = {-0.000000e+00,-6.246519e-06,-1.407746e-05,-2.051146e-05,-2.204879e-05,-1.569055e-05,4.670453e-14,2.410801e-05,5.312655e-05,8.141996e-05,1.023648e-04,1.099451e-04,1.004219e-04,7.362404e-05,3.345471e-05,-1.263106e-05,-5.517205e-05,-8.498556e-05,-9.566975e-05,-8.567525e-05,-5.932763e-05,-2.637900e-05,1.135014e-13,6.478093e-06,-1.660714e-05,-7.176879e-05,-1.521975e-04,-2.416549e-04,-3.167779e-04,-3.515862e-04,-3.234143e-04,-2.190403e-04,-3.957544e-05,1.972105e-04,4.580122e-04,6.987501e-04,8.723388e-04,9.380759e-04,8.707435e-04,6.673873e-04,3.500546e-04,-3.648425e-05,-4.319752e-04,-7.717196e-04,-9.993056e-04,-1.078384e-03,-1.000841e-03,-7.893273e-04,-4.932142e-04,-1.784472e-04,8.681996e-05,2.478401e-04,2.766677e-04,1.801092e-04,-9.240514e-13,-1.948425e-04,-3.237959e-04,-3.138226e-04,-1.189554e-04,2.646040e-04,7.916481e-04,1.371733e-03,1.883727e-03,2.198926e-03,2.208426e-03,1.849161e-03,1.122817e-03,1.029238e-04,-1.072395e-03,-2.221658e-03,-3.151851e-03,-3.694975e-03,-3.742016e-03,-3.267134e-03,-2.336442e-03,-1.098705e-03,2.410601e-04,1.460443e-03,2.363376e-03,2.819771e-03,2.792465e-03,2.345161e-03,1.628838e-03,8.486132e-04,2.173956e-04,-9.408878e-05,9.167129e-13,4.751415e-04,1.194982e-03,1.935783e-03,2.433151e-03,2.442241e-03,1.799093e-03,4.695992e-04,-1.425676e-03,-3.618253e-03,-5.731255e-03,-7.345963e-03,-8.083487e-03,-7.685623e-03,-6.077969e-03,-3.400936e-03,2.769008e-12,3.625546e-03,6.907592e-03,9.312727e-03,1.044434e-02,1.012253e-02,8.424432e-03,5.674825e-03,2.386543e-03,-8.393117e-04,-3.434564e-03,-4.982244e-03,-5.306940e-03,-4.516636e-03,-2.984514e-03,-1.271124e-03,1.314463e-12,2.894826e-04,-7.182377e-04,-3.013630e-03,-6.224299e-03,-9.654517e-03,-1.240086e-02,-1.352687e-02,-1.226611e-02,-8.214584e-03,-1.472185e-03,7.300380e-03,1.692899e-02,2.587892e-02,3.249397e-02,3.528455e-02,3.321558e-02,2.594081e-02,1.393668e-02,-1.496509e-03,-1.837613e-02,-3.430677e-02,-4.683929e-02,-5.386289e-02,-5.396535e-02,-4.669840e-02,-3.269941e-02,-1.364288e-02,7.976723e-03,2.920054e-02,4.704487e-02,5.895505e-02,6.320019e-02,5.895505e-02,4.704487e-02,2.920054e-02,7.976723e-03,-1.364288e-02,-3.269941e-02,-4.669840e-02,-5.396535e-02,-5.386289e-02,-4.683929e-02,-3.430677e-02,-1.837613e-02,-1.496509e-03,1.393668e-02,2.594081e-02,3.321558e-02,3.528455e-02,3.249397e-02,2.587892e-02,1.692899e-02,7.300380e-03,-1.472185e-03,-8.214584e-03,-1.226611e-02,-1.352687e-02,-1.240086e-02,-9.654517e-03,-6.224299e-03,-3.013630e-03,-7.182377e-04,2.894826e-04,1.314463e-12,-1.271124e-03,-2.984514e-03,-4.516636e-03,-5.306940e-03,-4.982244e-03,-3.434564e-03,-8.393117e-04,2.386543e-03,5.674825e-03,8.424432e-03,1.012253e-02,1.044434e-02,9.312727e-03,6.907592e-03,3.625546e-03,2.769008e-12,-3.400936e-03,-6.077969e-03,-7.685623e-03,-8.083487e-03,-7.345963e-03,-5.731255e-03,-3.618253e-03,-1.425676e-03,4.695992e-04,1.799093e-03,2.442241e-03,2.433151e-03,1.935783e-03,1.194982e-03,4.751415e-04,9.167129e-13,-9.408878e-05,2.173956e-04,8.486132e-04,1.628838e-03,2.345161e-03,2.792465e-03,2.819771e-03,2.363376e-03,1.460443e-03,2.410601e-04,-1.098705e-03,-2.336442e-03,-3.267134e-03,-3.742016e-03,-3.694975e-03,-3.151851e-03,-2.221658e-03,-1.072395e-03,1.029238e-04,1.122817e-03,1.849161e-03,2.208426e-03,2.198926e-03,1.883727e-03,1.371733e-03,7.916481e-04,2.646040e-04,-1.189554e-04,-3.138226e-04,-3.237959e-04,-1.948425e-04,-9.240514e-13,1.801092e-04,2.766677e-04,2.478401e-04,8.681996e-05,-1.784472e-04,-4.932142e-04,-7.893273e-04,-1.000841e-03,-1.078384e-03,-9.993056e-04,-7.717196e-04,-4.319752e-04,-3.648425e-05,3.500546e-04,6.673873e-04,8.707435e-04,9.380759e-04,8.723388e-04,6.987501e-04,4.580122e-04,1.972105e-04,-3.957544e-05,-2.190403e-04,-3.234143e-04,-3.515862e-04,-3.167779e-04,-2.416549e-04,-1.521975e-04,-7.176879e-05,-1.660714e-05,6.478093e-06,1.135014e-13,-2.637900e-05,-5.932763e-05,-8.567525e-05,-9.566975e-05,-8.498556e-05,-5.517205e-05,-1.263106e-05,3.345471e-05,7.362404e-05,1.004219e-04,1.099451e-04,1.023648e-04,8.141996e-05,5.312655e-05,2.410801e-05,4.670453e-14,-1.569055e-05,-2.204879e-05,-2.051146e-05,-1.407746e-05,-6.246519e-06,-0.000000e+00};
+
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
+
+	for(uint32_t i = 0; i < 2; i++){
+		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
+	}
+}
+
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(buff[i].lpFilter_inst, TAPS, &coeff[0], &buff[i].state[0], BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(dsp[i].lpFilter_inst, &input[i][0], &output[i][0], BLOCK_SIZE);
+	}
+}
+
+void FFT_Init(arm_rfft_fast_instance_f32* fft_instance, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_rfft_fast_init_f32(&fft_instance[i], FFT_LEN);
+	}
+}
+
+void Q15_To_Float(q15_t (*q15)[Q15_FLOAT_LEN], float (*flt)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_q15_to_float(&q15[i][0], &flt[i][0], Q15_FLOAT_LEN);
+	}
+}
+
+void Float_To_Q15(float (*flt)[Q15_FLOAT_LEN], q15_t (*q15)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_float_to_q15(&flt[i][0], &q15[i][0], Q15_FLOAT_LEN);
+	}
+}
+#define FALSE 				0
+#define fft_conjugate_j 	fft_output_j
+#define fft_absolute_i_j	fft_output_i
+
+void GCC_PHAT(arm_rfft_fast_instance_f32* fft_instance_i, float *fft_input_i, arm_rfft_fast_instance_f32* fft_instance_j, float *fft_input_j, float* Gphat_output){
+
+	static float fft_output_i[FFT_LEN+2];
+	static float fft_output_j[FFT_LEN+2];
+	static float fft_multi_i_j[FFT_LEN+2];
+
+	//FFT Signals I & J
+	arm_rfft_fast_f32(&fft_instance_i[0], &fft_input_i[0], &fft_output_i[0], FALSE);
+	arm_rfft_fast_f32(&fft_instance_j[0], &fft_input_j[0], &fft_output_j[0], FALSE);
+
+	//Take the conjugate of signal J
+	arm_cmplx_conj_f32(&fft_output_j[2], &fft_conjugate_j[2], FFT_LEN/2 - 1);
+
+	//Re-assign the values for J
+	fft_conjugate_j[FFT_LEN-2] 	= fft_output_j[1];
+	fft_conjugate_j[FFT_LEN-1] 	= 0;
+	fft_conjugate_j[1] 			= 0;
+
+	//Re-assign the value for I
+	fft_output_i[FFT_LEN-2] 	= fft_output_i[1];
+	fft_output_i[FFT_LEN-1] 	= 0;
+	fft_output_i[1] 			= 0;
+
+	//Multiply the Top
+	arm_cmplx_mult_cmplx_f32(&fft_output_i[0], &fft_conjugate_j[0], &fft_multi_i_j[0], (FFT_LEN+2)/2);
+
+	//Find the bottoms magnitude
+	arm_cmplx_mag_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], (FFT_LEN+2)/2);
+
+	//Take the inverse of each one
+	for(uint32_t i = 0; i < (FFT_LEN+2)/2; i++){
+		fft_absolute_i_j[i] = 1/fft_absolute_i_j[i];
+	}
+
+	//Multiply the top with the bottom
+	arm_cmplx_mult_real_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], &Gphat_output[0], (FFT_LEN+2)/2);
+}

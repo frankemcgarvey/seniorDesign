@@ -11,14 +11,7 @@
 #include "main.h"
 #include "../../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc/pdm2pcm_glo.h"
 #include "arm_math.h"
-
-#define BUFFER_SIZE 	8192
-#define PCM_CHUNK_SIZE 	512
-#define CHANNEL_NUMBER	2
-#define DECIMATION		PDM_FILTER_DEC_FACTOR_64
-
-#define MIC_GAIN        -6
-#define HIGH_PASS       0
+#include "definition.h"
 
 typedef struct{
 	ALIGN_32BYTES(uint16_t pdmBuffer[BUFFER_SIZE]);
@@ -26,7 +19,7 @@ typedef struct{
 	ALIGN_32BYTES(float    pcmBuffer_flt[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
 }buffer_t;
 
-void pdm_to_pcm(PDM_Filter_Handler_t* PDM_FilterHandler, uint8_t *pdm, uint16_t (*pcm)[PCM_CHUNK_SIZE],  uint32_t channelNumber);
-void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_t* PDM_FilterConfig, uint32_t channelNumber);
+void pdm_to_pcm(PDM_Filter_Handler_t* PDM_FilterHandler, uint8_t *pdm, uint16_t (*pcm)[PCM_CHUNK_SIZE]);
+void pdm_to_pcm_init(PDM_Filter_Handler_t* PDM_FilterHandler, PDM_Filter_Config_t* PDM_FilterConfig);
 
 #endif /* COMMON_DRIVERS_INC_PDM_TO_PCM_H_ */

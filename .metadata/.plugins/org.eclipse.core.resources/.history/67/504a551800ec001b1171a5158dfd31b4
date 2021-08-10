@@ -1,0 +1,101 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+
+static const q15_t coeff[TAPS] = {0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, -1, -1, -2, -2, -2, -1, 0, 0, 2, 3, 4, 4, 3, 2, 0, 0, -2, -4, -5, -5, -4, -2, 0, 0, 2, 3, 4, 3, 2, 1, 0, 0, 0, 0, 0, 0, 0, 1, 0, 0, -2, -4, -6, -6, -6, -4, -1, 2, 6, 10, 13, 14, 12, 9, 3, -3, -10, -15, -19, -19, -16, -11, -4, 4, 11, 17, 20, 20, 16, 10, 3, -3, -9, -13, -14, -13, -9, -5, -1, 1, 2, 2, 1, -1, -2, -3, -1, 2, 7, 12, 17, 20, 19, 14, 5, -5, -18, -29, -37, -39, -34, -24, -8, 9, 27, 41, 50, 51, 43, 29, 10, -10, -29, -43, -50, -49, -41, -26, -8, 8, 22, 31, 34, 31, 23, 13, 4, -3, -6, -6, -2, 2, 6, 7, 3, -4, -16, -29, -40, -45, -43, -32, -12, 13, 40, 65, 81, 86, 76, 53, 19, -20, -59, -90, -109, -110, -95, -63, -22, 22, 63, 93, 109, 106, 87, 56, 19, -18, -48, -68, -73, -67, -50, -29, -8, 6, 14, 13, 5, -5, -13, -15, -7, 9, 34, 62, 85, 97, 92, 68, 26, -28, -87, -140, -175, -185, -165, -115, -42, 43, 128, 197, 237, 242, 208, 140, 49, -49, -141, -209, -243, -239, -198, -128, -43, 41, 111, 157, 171, 156, 118, 69, 20, -16, -34, -31, -12, 13, 33, 38, 19, -25, -89, -161, -224, -258, -248, -185, -72, 79, 248, 402, 512, 550, 499, 355, 132, -139, -419, -659, -814, -850, -751, -521, -189, 196, 577, 891, 1081, 1109, 964, 658, 236, -240, -698, -1061, -1270, -1286, -1103, -744, -263, 265, 759, 1140, 1348, 1348, 1140, 759, 265, -263, -744, -1103, -1286, -1270, -1061, -698, -240, 236, 658, 964, 1109, 1081, 891, 577, 196, -189, -521, -751, -850, -814, -659, -419, -139, 132, 355, 499, 550, 512, 402, 248, 79, -72, -185, -248, -258, -224, -161, -89, -25, 19, 38, 33, 13, -12, -31, -34, -16, 20, 69, 118, 156, 171, 157, 111, 41, -43, -128, -198, -239, -243, -209, -141, -49, 49, 140, 208, 242, 237, 197, 128, 43, -42, -115, -165, -185, -175, -140, -87, -28, 26, 68, 92, 97, 85, 62, 34, 9, -7, -15, -13, -5, 5, 13, 14, 6, -8, -29, -50, -67, -73, -68, -48, -18, 19, 56, 87, 106, 109, 93, 63, 22, -22, -63, -95, -110, -109, -90, -59, -20, 19, 53, 76, 86, 81, 65, 40, 13, -12, -32, -43, -45, -40, -29, -16, -4, 3, 7, 6, 2, -2, -6, -6, -3, 4, 13, 23, 31, 34, 31, 22, 8, -8, -26, -41, -49, -50, -43, -29, -10, 10, 29, 43, 51, 50, 41, 27, 9, -8, -24, -34, -39, -37, -29, -18, -5, 5, 14, 19, 20, 17, 12, 7, 2, -1, -3, -2, -1, 1, 2, 2, 1, -1, -5, -9, -13, -14, -13, -9, -3, 3, 10, 16, 20, 20, 17, 11, 4, -4, -11, -16, -19, -19, -15, -10, -3, 3, 9, 12, 14, 13, 10, 6, 2, -1, -4, -6, -6, -6, -4, -2, 0, 0, 1, 0, 0, 0, 0, 0, 0, 0, 1, 2, 3, 4, 3, 2, 0, 0, -2, -4, -5, -5, -4, -2, 0, 0, 2, 3, 4, 4, 3, 2, 0, 0, -1, -2, -2, -2, -1, -1, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0, 0};
+
+void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
+
+	for(uint32_t i = 0; i < 2; i++){
+		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
+	}
+}
+
+void FIR_Filter_F32_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(buff[i].lpFilter_inst, TAPS, &coeff[0], &buff[i].state[0], BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter_F32(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(dsp[i].lpFilter_inst, &input[i][0], &output[i][0], BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter_Q15(dsp_buffer_t* dsp, q15_t (*input)[BLOCK_SIZE], q15_t (*output)[BLOCK_SIZE] , uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_q15(&dsp[i].lpFilter_inst[0], &input[i][0], &output[i][0], BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter_Q15_Init(dsp_buffer_t* buff, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_q15(&buff[i].lpFilter_inst[0], TAPS, &coeff[0], &buff[i].state[0], BLOCK_SIZE);
+	}
+}
+
+void FFT_Init(arm_rfft_fast_instance_f32* fft_instance, uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_rfft_fast_init_f32(&fft_instance[i], FFT_LEN);
+	}
+}
+
+void Q15_To_Float(q15_t (*q15)[Q15_FLOAT_LEN], float (*flt)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_q15_to_float(&q15[i][0], &flt[i][0], Q15_FLOAT_LEN);
+	}
+}
+
+void Float_To_Q15(float (*flt)[Q15_FLOAT_LEN], q15_t (*q15)[Q15_FLOAT_LEN], uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_float_to_q15(&flt[i][0], &q15[i][0], Q15_FLOAT_LEN);
+	}
+}
+#define FALSE 				0
+#define fft_conjugate_j 	fft_output_j
+#define fft_absolute_i_j	fft_output_i
+
+void GCC_PHAT(arm_rfft_fast_instance_f32* fft_instance_i, float *fft_input_i, arm_rfft_fast_instance_f32* fft_instance_j, float *fft_input_j, float* Gphat_output){
+
+	static float fft_output_i[FFT_LEN+2];
+	static float fft_output_j[FFT_LEN+2];
+	static float fft_multi_i_j[FFT_LEN+2];
+
+	//FFT Signals I & J
+	arm_rfft_fast_f32(&fft_instance_i[0], &fft_input_i[0], &fft_output_i[0], FALSE);
+	arm_rfft_fast_f32(&fft_instance_j[0], &fft_input_j[0], &fft_output_j[0], FALSE);
+
+	//Take the conjugate of signal J
+	arm_cmplx_conj_f32(&fft_output_j[2], &fft_conjugate_j[2], FFT_LEN/2 - 1);
+
+	//Re-assign the values for J
+	fft_conjugate_j[FFT_LEN-2] 	= fft_output_j[1];
+	fft_conjugate_j[FFT_LEN-1] 	= 0;
+	fft_conjugate_j[1] 			= 0;
+
+	//Re-assign the value for I
+	fft_output_i[FFT_LEN-2] 	= fft_output_i[1];
+	fft_output_i[FFT_LEN-1] 	= 0;
+	fft_output_i[1] 			= 0;
+
+	//Multiply the Top
+	arm_cmplx_mult_cmplx_f32(&fft_output_i[0], &fft_conjugate_j[0], &fft_multi_i_j[0], (FFT_LEN+2)/2);
+
+	//Find the bottoms magnitude
+	arm_cmplx_mag_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], (FFT_LEN+2)/2);
+
+	//Take the inverse of each one
+	for(uint32_t i = 0; i < (FFT_LEN+2)/2; i++){
+		fft_absolute_i_j[i] = 1/fft_absolute_i_j[i];
+	}
+
+	//Multiply the top with the bottom
+	arm_cmplx_mult_real_f32(&fft_multi_i_j[0], &fft_absolute_i_j[0], &Gphat_output[0], (FFT_LEN+2)/2);
+}

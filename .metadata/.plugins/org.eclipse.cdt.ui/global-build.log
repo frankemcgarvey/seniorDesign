@@ -1,74 +1,27 @@
-14:09:50 **** Incremental Build of configuration Debug for project microphone_CM7 ****
+14:05:35 **** Incremental Build of configuration Debug for project microphone_CM7 ****
 make -j8 all 
+arm-none-eabi-gcc "../PDM2PCM/App/pdm2pcm.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"PDM2PCM/App/pdm2pcm.d" -MT"PDM2PCM/App/pdm2pcm.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "PDM2PCM/App/pdm2pcm.o"
 arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c: In function 'main':
-../Core/Src/main.c:196:4: warning: implicit declaration of function 'Transpose_Clean' [-Wimplicit-function-declaration]
-  196 |    Transpose_Clean((float*)&buffer->pcmBuffer_flt[0][0], 4*PCM_CHUNK_SIZE*CHANNEL_NUMBER);
-      |    ^~~~~~~~~~~~~~~
-At top level:
-../Core/Src/main.c:77:32: warning: 'pcmMatrix_Trans' defined but not used [-Wunused-variable]
-   77 | static arm_matrix_instance_q15 pcmMatrix_Trans[2];
-      |                                ^~~~~~~~~~~~~~~
-../Core/Src/main.c:76:32: warning: 'pcmMatrix' defined but not used [-Wunused-variable]
-   76 | static arm_matrix_instance_q15 pcmMatrix[2];
-      |                                ^~~~~~~~~
-arm-none-eabi-gcc -o "microphone_CM7.elf" @"objects.list"  -l:libPDMFilter_CM7_GCC_wc32.a -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="microphone_CM7.map" -Wl,--gc-sections -static -Wl,--start-group -l:libPDMFilter_CM7_GCC_wc32.a -Wl,--end-group -L../../Middlewares/ST/STM32_Audio/Addons/PDM/Lib --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-c:\st\stm32cubeide_1.6.1\stm32cubeide\plugins\com.st.stm32cube.ide.mcu.externaltools.gnu-tools-for-stm32.9-2020-q2-update.win32_1.5.0.202011040924\tools\arm-none-eabi\bin\ld.exe: Core/Src/main.o: in function `main':
-C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/CM7/Debug/../Core/Src/main.c:196: undefined reference to `Transpose_Clean'
-collect2.exe: error: ld returned 1 exit status
-make: *** [makefile:69: microphone_CM7.elf] Error 1
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_drivers/Src/dsp.d" -MT"Common/common_drivers/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_drivers/Src/dsp.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_drivers/Src/localization.d" -MT"Common/common_drivers/Src/localization.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_drivers/Src/localization.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/pdm_to_pcm.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_drivers/Src/pdm_to_pcm.d" -MT"Common/common_drivers/Src/pdm_to_pcm.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_drivers/Src/pdm_to_pcm.o"
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c: In function 'Localize_1D':
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:21:9: warning: type defaults to 'int' in declaration of 'corr' [-Wimplicit-int]
+   21 |  static corr[];
+      |         ^~~~
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:21:9: error: storage size of 'corr' isn't known
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:23:26: error: expected expression before ';' token
+   23 |  for(uint32_t i = 0; i < ; i++){
+      |                          ^
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:24:3: error: 'arm' undeclared (first use in this function)
+   24 |   arm
+      |   ^~~
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:24:3: note: each undeclared identifier is reported only once for each function it appears in
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Src/localization.c:21:9: warning: unused variable 'corr' [-Wunused-variable]
+   21 |  static corr[];
+      |         ^~~~
+make: *** [Common/common_drivers/Src/subdir.mk:27: Common/common_drivers/Src/localization.o] Error 1
+make: *** Waiting for unfinished jobs....
 "make -j8 all" terminated with exit code 2. Build might be incomplete.
-14:10:43 **** Incremental Build of configuration Debug for project microphone_CM4 ****
-make -j8 all 
-arm-none-eabi-size   microphone_CM4.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3192	     24	   1568	   4784	   12b0	microphone_CM4.elf
-Finished building: default.size.stdout
- 
-14:10:45 **** Incremental Build of configuration Debug for project microphone_CM7 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-../Core/Src/main.c:77:32: warning: 'pcmMatrix_Trans' defined but not used [-Wunused-variable]
-   77 | static arm_matrix_instance_q15 pcmMatrix_Trans[2];
-      |                                ^~~~~~~~~~~~~~~
-../Core/Src/main.c:76:32: warning: 'pcmMatrix' defined but not used [-Wunused-variable]
-   76 | static arm_matrix_instance_q15 pcmMatrix[2];
-      |                                ^~~~~~~~~
-arm-none-eabi-gcc -o "microphone_CM7.elf" @"objects.list"  -l:libPDMFilter_CM7_GCC_wc32.a -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="microphone_CM7.map" -Wl,--gc-sections -static -Wl,--start-group -l:libPDMFilter_CM7_GCC_wc32.a -Wl,--end-group -L../../Middlewares/ST/STM32_Audio/Addons/PDM/Lib --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: microphone_CM7.elf
- 
-arm-none-eabi-objdump -h -S  microphone_CM7.elf  > "microphone_CM7.list"
-arm-none-eabi-objcopy  -O binary  microphone_CM7.elf  "microphone_CM7.bin"
-arm-none-eabi-size   microphone_CM7.elf 
-   text	   data	    bss	    dec	    hex	filename
-  53248	   2152	   8512	  63912	   f9a8	microphone_CM7.elf
-Finished building: default.size.stdout
- 
-Finished building: microphone_CM7.bin
- 
-Finished building: microphone_CM7.list
- 
-14:11:10 **** Incremental Build of configuration Debug for project microphone_CM4 ****
-make -j8 all 
-arm-none-eabi-size   microphone_CM4.elf 
-   text	   data	    bss	    dec	    hex	filename
-   3192	     24	   1568	   4784	   12b0	microphone_CM4.elf
-Finished building: default.size.stdout
- 
-14:11:11 **** Incremental Build of configuration Debug for project microphone_CM7 ****
-make -j8 all 
-arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-D__FPU_PRESENT=1' '-DARM_MATH_CM7=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc" -I../PDM2PCM/App -I../../Middlewares/ST/STM32_Audio/Addons/PDM/Inc -I../../Middlewares/ST/ARM/DSP/Inc -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
-arm-none-eabi-gcc -o "microphone_CM7.elf" @"objects.list"  -l:libPDMFilter_CM7_GCC_wc32.a -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\senior_project\microphone\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="microphone_CM7.map" -Wl,--gc-sections -static -Wl,--start-group -l:libPDMFilter_CM7_GCC_wc32.a -Wl,--end-group -L../../Middlewares/ST/STM32_Audio/Addons/PDM/Lib --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
-Finished building target: microphone_CM7.elf
- 
-arm-none-eabi-objdump -h -S  microphone_CM7.elf  > "microphone_CM7.list"
-arm-none-eabi-objcopy  -O binary  microphone_CM7.elf  "microphone_CM7.bin"
-arm-none-eabi-size   microphone_CM7.elf 
-   text	   data	    bss	    dec	    hex	filename
-  53248	   2152	   8512	  63912	   f9a8	microphone_CM7.elf
-Finished building: default.size.stdout
- 
-Finished building: microphone_CM7.bin
- 
-Finished building: microphone_CM7.list
- 

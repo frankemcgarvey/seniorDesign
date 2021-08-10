@@ -8,41 +8,33 @@
 #include "dsp.h"
 
 
-
-void matrix_init(uint32_t numRow, uint32_t numCol, uint16_t* matrix, arm_matrix_instance_q15* instance, uint32_t offset){
-
-	for(uint32_t i = 0; i < 2; i++){
-		arm_mat_init_q15(&instance[i], numRow, numCol, (q15_t*)&matrix[offset*i]);
-	}
-}
-
-void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber, float *coeff){
-	for(uint32_t i = 0; i < channelNumber; i++){
+void FIR_Filter_Init(dsp_buffer_t* buff, float *coeff){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
 		arm_fir_init_f32(&buff[i].Filter_inst, TAPS, &coeff[0], buff[i].state, BLOCK_SIZE);
 	}
 }
 
-void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber){
-	for(uint32_t i = 0; i < channelNumber; i++){
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
 		arm_fir_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], BLOCK_SIZE);
 	}
 }
 
-void FFT_Init(arm_rfft_fast_instance_f32* fft_instance, uint32_t channelNumber){
-	for(uint32_t i = 0; i < channelNumber; i++){
+void FFT_Init(arm_rfft_fast_instance_f32* fft_instance){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
 		arm_rfft_fast_init_f32(&fft_instance[i], FFT_LEN);
 	}
 }
 
-void Q15_To_Float(q15_t (*q15)[Q15_FLOAT_LEN], float (*flt)[Q15_FLOAT_LEN], uint32_t channelNumber){
-	for(uint32_t i = 0; i < channelNumber; i++){
-		arm_q15_to_float(&q15[i][0], &flt[i][0], Q15_FLOAT_LEN);
+void Q15_To_Float(q15_t (*q15)[BLOCK_SIZE], float (*flt)[BLOCK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_q15_to_float(&q15[i][0], &flt[i][0], BLOCK_SIZE);
 	}
 }
 
-void Float_To_Q15(float (*flt)[Q15_FLOAT_LEN], q15_t (*q15)[Q15_FLOAT_LEN], uint32_t channelNumber){
-	for(uint32_t i = 0; i < channelNumber; i++){
-		arm_float_to_q15(&flt[i][0], &q15[i][0], Q15_FLOAT_LEN);
+void Float_To_Q15(float (*flt)[BLOCK_SIZE], q15_t (*q15)[BLOCK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_float_to_q15(&flt[i][0], &q15[i][0], BLOCK_SIZE);
 	}
 }
 #define FALSE 				0

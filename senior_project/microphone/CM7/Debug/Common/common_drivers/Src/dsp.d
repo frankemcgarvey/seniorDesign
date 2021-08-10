@@ -31,7 +31,8 @@ Common/common_drivers/Src/dsp.o: \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/complex_math_functions.h \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/filtering_functions.h \
  ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h \
- ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h
+ ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h \
+ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/definition.h
 
 C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/dsp.h:
 
@@ -96,3 +97,5 @@ C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/
 ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/support_functions.h:
 
 ../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/dsp/quaternion_math_functions.h:
+
+C:/Users/frank/OneDrive/Documents/seniorDesign/senior_project/microphone/Common/common_drivers/Inc/definition.h:

@@ -5,6 +5,7 @@ import matplotlib.pyplot as plt
 from numpy.fft import fft, ifft
 import os.path
 import struct 
+
 counter = 0
 data1 = []
 data2 = []
@@ -18,7 +19,7 @@ with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfi
     hw = pcmfile.read(4)
     while hw:
         counter = counter + 1
-        if(counter%512 == 0):
+        if(counter%1024 == 0):
             state = not(state)
 
         if(state):

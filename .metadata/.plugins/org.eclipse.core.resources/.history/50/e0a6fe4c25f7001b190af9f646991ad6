@@ -1,0 +1,39 @@
+/*
+ * definition.h
+ *
+ *  Created on: Aug 6, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_DRIVERS_INC_DEFINITION_H_
+#define COMMON_DRIVERS_INC_DEFINITION_H_
+
+
+
+//Arcsine Table
+#define ARCSIN_INDEX 69
+
+//Max Threshold
+#define MAX 5000.0f
+
+//PCM Buffer
+#define BUFFER_SIZE 	32768
+//PCM Chunk Size
+#define PCM_CHUNK_SIZE 	2048
+//Channels
+#define CHANNEL_NUMBER	2
+//Decimation
+#define DECIMATION		PDM_FILTER_DEC_FACTOR_64
+//PCM Buffer Size
+#define PCM_FLT_BUFFER_SIZE    256
+//Mic Gain
+#define MIC_GAIN        -1
+//High Pass Coeff
+#define HIGH_PASS       2040109464
+//Number of Taps
+#define TAPS 			251
+//Block Size
+#define BLOCK_SIZE 		PCM_FLT_BUFFER_SIZE/2
+
+#define FFT_LEN			PCM_FLT_BUFFER_SIZE
+#endif /* COMMON_DRIVERS_INC_DEFINITION_H_ */

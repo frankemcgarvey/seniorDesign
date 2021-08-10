@@ -1,0 +1,26 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+
+
+
+
+
+
+
+
+
+
+
+float Localize_1D(float *sig_i, float *sig_j, uint32_t size){
+
+	static uint32_t pos_i, pos_j;
+
+
+}
