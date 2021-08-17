@@ -1,0 +1,43 @@
+/*
+ * definition.h
+ *
+ *  Created on: Aug 13, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_FOLDER_INC_DEFINITION_H_
+#define COMMON_FOLDER_INC_DEFINITION_H_
+
+#include "stm32h7xx_hal.h"
+#include "arm_math.h"
+
+#define PCM_CHUNK_SIZE 		2048
+#define CHANNEL_NUMBER		3
+
+#define TAPS 				200
+
+typedef enum{
+	NONE,
+	HALF,
+	FULL,
+	READY,
+}flag_t;
+
+typedef struct{
+	ALIGN_32BYTES(int32_t topLeftChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(int32_t bottomLeftChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(int32_t bottomRightChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(q15_t pcmBuffer[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(float pcmBuffer_float[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+}buffer_t;
+
+typedef struct{
+	arm_fir_instance_q15  Filter_inst;
+	q15_t state[TAPS + PCM_CHUNK_SIZE];
+}dsp_buffer_t;
+
+typedef struct{
+	arm_fir_instance_f32  Filter_inst;
+	float state[TAPS + PCM_CHUNK_SIZE - 1];
+}dsp_buffer_float_t;
+#endif /* COMMON_FOLDER_INC_DEFINITION_H_ */

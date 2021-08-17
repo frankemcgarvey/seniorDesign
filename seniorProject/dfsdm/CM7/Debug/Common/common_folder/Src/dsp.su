@@ -1,0 +1,2 @@
+dsp.c:10:6:FIR_Filter_Init	32	static
+dsp.c:16:6:FIR_Filter	32	static

@@ -1,0 +1,23 @@
+/*
+ * dsp.h
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_DRIVERS_INC_DSP_H_
+#define COMMON_DRIVERS_INC_DSP_H_
+
+#include "arm_math.h"
+#include "stdint.h"
+#include "definition.h"
+
+#define BLOCK_SIZE 		512
+#define Q15_FLOAT_LEN 	BLOCK_SIZE
+#define FFT_LEN			256
+
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber);
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber, float *coeff);
+void Q15_To_Float(q15_t (*q15)[Q15_FLOAT_LEN], float (*flt)[Q15_FLOAT_LEN], uint32_t channelNumber);
+void Float_To_Q15(float (*flt)[Q15_FLOAT_LEN], q15_t (*q15)[Q15_FLOAT_LEN], uint32_t channelNumber);
+#endif /* COMMON_DRIVERS_INC_DSP_H_ */

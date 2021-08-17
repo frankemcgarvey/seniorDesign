@@ -1,0 +1,7 @@
+stm32h7xx_hal_msp.c:73:6:HAL_MspInit	16	static
+stm32h7xx_hal_msp.c:99:6:HAL_DFSDM_FilterMspInit	240	static
+stm32h7xx_hal_msp.c:277:6:HAL_DFSDM_ChannelMspInit	240	static
+stm32h7xx_hal_msp.c:353:6:HAL_DFSDM_FilterMspDeInit	16	static
+stm32h7xx_hal_msp.c:397:6:HAL_DFSDM_ChannelMspDeInit	16	static
+stm32h7xx_hal_msp.c:432:6:HAL_UART_MspInit	208	static
+stm32h7xx_hal_msp.c:484:6:HAL_UART_MspDeInit	16	static

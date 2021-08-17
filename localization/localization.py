@@ -1,4 +1,3 @@
-
 import sys
 import wave
 import numpy as np
@@ -7,21 +6,7 @@ from numpy.fft import fft, ifft
 import os.path
 import struct 
 from scipy.signal import savgol_filter
-
-def getAngle(samples, distance):
-    if samples <= 33:
-       if samples > 28:
-          samples = 28.0
-       samples = samples
-       return np.arcsin((28.0-samples)/48000.0 * 340.0/distance)*180.0/np.pi
-    elif samples >= 224:
-       if samples < 229:
-          samples = 229.0
-       samples = (256.0-samples)
-       return np.arcsin((-28.0 + samples)/48000.0 * 340.0/distance)*180.0/np.pi
-    else:
-       samples = 0.0
-       return 0.0
+from scipy import signal
 
 def display(sig_i, sig_j, corr, delay):
     fig , ax = plt.subplots(ncols = 4)
@@ -132,7 +117,7 @@ def gcc(sig_i, sig_j):
         max_i = np.max(np.abs(sig_i_buff))
         max_j = np.max(np.abs(sig_j_buff))
         
-        if(max_i > .04 or max_j > .04):
+        if(max_i > 2e-5 or max_j > 2e-5):
             maxFlag = True
         elif(maxFlag):
             doneFlag = True
@@ -171,56 +156,74 @@ def correlation(sig_i, sig_j):
     return (max - length), corr
 
 def correlate(pcmData1, pcmData2):
+
     counter = 0
-    k      = 1024*2
+    k      = 1024
     m      = 512
-    n      = k/m
-    
+    n      = 2*k/m
      
     maxFlag = False
-    sig_j_buff = np.zeros(k)
-    sig_i_buff = np.zeros(k)
-    temp_i, temp_j = np.zeros(k), np.zeros(k)
     doneFlag = False
+    startFlag = True
+
+    sig_j_buff = np.zeros(2*k)
+    sig_i_buff = np.zeros(2*k)
+    
+    sig_i = np.zeros(k)
+    sig_j = np.zeros(k)
+
     delayMax = 0
     corrMax = 0
     index = 0
 
     while counter < (len(pcmData1)/k):
-     
-        index = counter%2
+  
+        sig_i = pcmData1[counter*k : (counter*k)+k]
+        sig_j = pcmData2[counter*k : (counter*k)+k]
 
-        sig_i_buff = pcmData1[counter*k : (counter*k)+k]
-        sig_j_buff = pcmData2[counter*k : (counter*k)+k]
-
-        max_i = np.max(np.abs(sig_i_buff))
-        max_j = np.max(np.abs(sig_j_buff))
+        max_i = np.max(np.abs(sig_i))
+        max_j = np.max(np.abs(sig_j))
         
-        if(max_i > .04 or max_j > .04):
+        if(max_i > .25 or max_j > .25):
             maxFlag = True
         elif(maxFlag):
             doneFlag = True
         
         if(maxFlag):
-            for i in range(0, int(n)):
-               delayTemp1, corrTemp1 = correlation(sig_i_buff[i*m:i*m+m], sig_j_buff[i*m:i*m+m])
+            if(startFlag):
+                startFlag = False
 
-               tempCorrMax1 = np.max(corrTemp1)
+                sig_i_buff[k:] = sig_i
+                sig_j_buff[k:] = sig_j
+            else:
+                sig_i_buff[:k] = sig_i_buff[k:]
+                sig_j_buff[:k] = sig_j_buff[k:]
 
-               if(tempCorrMax1 > corrMax):
-                    corrMax = tempCorrMax1
-                    delayMax = delayTemp1
+                sig_i_buff[k:] = sig_i
+                sig_j_buff[k:] = sig_j
 
+                for j in range(0, int(n)):
+                    for i in range(0, int(n)):
+                       delayTemp1, corrTemp1 = correlation(sig_i_buff[j*m:j*m+m], sig_j_buff[i*m:i*m+m])
+                   
+                       tempCorrMax1 = np.max(corrTemp1)
+                       if(tempCorrMax1 > corrMax):
+                            corrMax = tempCorrMax1
+                            delayMax = delayTemp1
+                            
         if(doneFlag):
             display1(delayMax, corrMax)
             corrMax = 0
             delayMax = 0
             tempCorrMax = 0
+            
+            startFlag = True
             maxFlag = False
             doneFlag = False
         
         
         counter = counter + 1
+
 
    
 counter = 0
@@ -232,40 +235,62 @@ data4 = []
 numOfChannel = 2
 fileName = 'pcmFile.bin'
 state = True
+index = 0
+
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
-    hw = pcmfile.read(4)
+    hw = pcmfile.read(2)
     while hw:
         counter = counter + 1
         if(counter%1024 == 0):
-            state = not(state)
+            index = index + 1
 
-        if(state):
-            if(sys.getsizeof(hw) >= 37):
-                a, = struct.unpack('f',hw)
-                data1.append(a)
-        else:
-            if(sys.getsizeof(hw) >= 37):
-                b, = struct.unpack('f',hw)
-                data2.append(b)
-
-        hw = pcmfile.read(4)
+        if(index%4 == 0):
+                data1.append(int.from_bytes(hw, 'little', signed = 'True'))
+        elif(index%4 == 1): 
+                data2.append(int.from_bytes(hw, 'little', signed = 'True'))
+        elif(index%4 == 2):
+                data3.append(int.from_bytes(hw, 'little', signed = 'True'))
+        elif(index%4 == 3):
+                data4.append(int.from_bytes(hw, 'little', signed = 'True'))
+     
+        hw = pcmfile.read(2)
 k = 1024
-pcmData1 = np.array(data1[2048:])
-pcmData2 = np.array(data2[2048:])
-for i in range(0, int(len(pcmData1)/k)):
-    pcmData1[i*k:i*k+k] =  savgol_filter(pcmData1[i*k:i*k+k], window_length = 31, polyorder = 3)
-    pcmData2[i*k:i*k+k] =  savgol_filter(pcmData2[i*k:i*k+k], window_length = 31, polyorder = 3)
 
-fig , ax = plt.subplots(ncols = 2)
+pcmData1 = np.asfarray(np.array(data1))/32768.0
+pcmData2 = np.asfarray(np.array(data2))/32768.0
+pcmData3 = np.asfarray(np.array(data3))/32768.0
+pcmData4 = np.asfarray(np.array(data4))/32768.0
+
+length = len(pcmData2)
+pcmData1 = pcmData1[:length]
+
+pcmData1 = pcmData1[20*1024:]
+pcmData2 = pcmData2[20*1024:]
+pcmData3 = pcmData3[20*1024:]
+pcmData4 = pcmData4[20*1024:]
+
+sos = signal.cheby2(25, 80, (800/24000, 1200/24000), 'bandpass', output = 'sos', fs=1)
+
+pcmData1 = signal.sosfilt(sos, pcmData1)
+pcmData3 = signal.sosfilt(sos, pcmData3)
+pcmData4 = signal.sosfilt(sos, pcmData4)
+
+#for i in range(0, int(len(pcmData1)/k)):
+#    pcmData2[i*k:i*k+k] =  savgol_filter(pcmData1[i*k:i*k+k], window_length = 31, polyorder = 3)
+#    pcmData1[i*k:i*k+k] =  savgol_filter(pcmData2[i*k:i*k+k], window_length = 31, polyorder = 3)
+
+fig , ax = plt.subplots(ncols = 4)
 ax[0].plot(pcmData1)
 ax[1].plot(pcmData2)
+ax[2].plot(pcmData3)
+ax[3].plot(pcmData4)
 plt.show()
 
 
 correlate(pcmData1, pcmData2)
+correlate(pcmData3, pcmData4)
 
-gcc(pcmData1, pcmData2)
-
-#shank(pcmData1, pcmData2)
+correlate(pcmData1, pcmData3)
+correlate(pcmData2, pcmData4)
 
 eof = 0

@@ -1,0 +1,20 @@
+19:18:26 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28628	   1328	  22768	  52724	   cdf4	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+
+19:18:29 Build Finished. 0 errors, 0 warnings. (took 3s.488ms)
+

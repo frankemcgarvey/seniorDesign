@@ -1,0 +1,20 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+void FIR_Filter_Init(dsp_buffer_t* buff, uint32_t channelNumber, float *coeff){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_init_f32(&buff[i].Filter_inst, TAPS, &coeff[0], buff[i].state, BLOCK_SIZE);
+	}
+}
+
+void FIR_Filter(dsp_buffer_t* dsp, float (*input)[BLOCK_SIZE], float (*output)[BLOCK_SIZE] , uint32_t channelNumber){
+	for(uint32_t i = 0; i < channelNumber; i++){
+		arm_fir_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], BLOCK_SIZE);
+	}
+}

@@ -1,0 +1,1205 @@
+10:39:33 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+10:39:41 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+10:39:45 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    424	  16184	  47040	   b7c0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+10:43:07 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+10:46:03 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+10:46:06 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30420	    424	  16184	  47028	   b7b4	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+10:54:04 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:13:22 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+11:13:28 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30420	    424	  16176	  47020	   b7ac	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:13:51 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:15:05 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:16:00 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:16:04 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30420	    424	  16176	  47020	   b7ac	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:17:07 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:47:17 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+11:47:24 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:55:12 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29796	     24	   1840	  31660	   7bac	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:01:34 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+12:01:41 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:01:44 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+12:02:23 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:02:26 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+12:03:40 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:05:12 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:05:16 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+12:05:34 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+13:01:26 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+13:01:30 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+13:01:56 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:00:55 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:00:58 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:01:22 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:02:52 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:03:15 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:03:18 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:05:57 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:06:00 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:06:28 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:08:08 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:08:12 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:08:43 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:10:42 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:10:46 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:11:16 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+16:16:00 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+16:16:04 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30432	    828	  17388	  48648	   be08	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+16:17:07 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29804	     24	   1840	  31668	   7bb4	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+18:46:05 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/helper.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/helper.d" -MT"Common/common_folder/Src/helper.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/helper.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.d" -MT"Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o"
+C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/helper.c: In function 'Clean':
+C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/helper.c:14:2: warning: implicit declaration of function 'SCB_CleanDCache_by_Addr' [-Wimplicit-function-declaration]
+   14 |  SCB_CleanDCache_by_Addr((uint32_t*)&buffer[0], byte);
+      |  ^~~~~~~~~~~~~~~~~~~~~~~
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+Finished building: dfsdm_CM4.list
+ 
+ 
+18:46:18 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_cortex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_cortex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dfsdm.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dfsdm.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dfsdm.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dfsdm.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_dma_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_dma_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_exti.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_exti.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_flash_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_flash_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_gpio.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_gpio.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_hsem.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_hsem.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_i2c_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_i2c_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_mdma.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_mdma.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_pwr_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_pwr_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.d" -MT"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o"
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/helper.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/helper.d" -MT"Common/common_folder/Src/helper.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/helper.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.d" -MT"Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/Src/system_stm32h7xx_dualcore_boot_cm4_cm7.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  31344	    828	  22556	  54728	   d5c8	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+18:46:47 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:10:22 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+11:10:28 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:12:07 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:15:21 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:15:25 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:16:02 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:18:17 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:18:31 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:18:35 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+11:18:58 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:19:51 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:36:38 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+11:36:42 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+11:47:45 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:19:21 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+12:19:25 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+12:20:12 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+13:48:48 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+13:48:52 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+14:03:57 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:04:00 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+14:04:34 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:08:58 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:09:01 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:32:23 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:32:28 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:54:32 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+14:54:38 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+14:55:06 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:56:41 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:56:53 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+14:56:57 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+14:57:22 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:03:31 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:03:35 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+15:05:26 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:20:16 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:20:20 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+Finished building: dfsdm_CM7.bin
+ 
+ 
+Finished building: dfsdm_CM7.list
+ 
+15:20:48 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:41:07 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:41:11 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+../Core/Src/main.c: In function 'main':
+../Core/Src/main.c:212:1: error: expected expression before '/' token
+  212 | /
+      | ^
+make: *** [Core/Src/subdir.mk:31: Core/Src/main.o] Error 1
+"make -j8 all" terminated with exit code 2. Build might be incomplete.
+15:41:30 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:41:35 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:41:39 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30080	   1328	  22768	  54176	   d3a0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+15:45:37 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:45:41 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30080	   1328	  22768	  54176	   d3a0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+15:46:05 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:52:42 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+15:52:46 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+15:54:08 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+16:27:41 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+16:27:45 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30096	   1328	  22768	  54192	   d3b0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+17:12:23 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+17:12:29 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  30144	   1328	  22768	  54240	   d3e0	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+17:13:06 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+17:25:13 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM4.elf" @"objects.list"   -mcpu=cortex-m4 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM4\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM4.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM4.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM4.elf  > "dfsdm_CM4.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM4.elf  "dfsdm_CM4.bin"
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM4.bin
+ 
+Finished building: dfsdm_CM4.list
+ 
+17:25:19 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_hal_msp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_hal_msp.d" -MT"Core/Src/stm32h7xx_hal_msp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_hal_msp.o"
+arm-none-eabi-gcc "../Core/Src/stm32h7xx_it.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/stm32h7xx_it.d" -MT"Core/Src/stm32h7xx_it.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/stm32h7xx_it.o"
+arm-none-eabi-gcc "C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Src/dsp.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Common/common_folder/Src/dsp.d" -MT"Common/common_folder/Src/dsp.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Common/common_folder/Src/dsp.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28752	   1328	  22768	  52848	   ce70	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+18:52:16 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+18:52:20 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28752	   1328	  22768	  52848	   ce70	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+18:52:44 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+18:55:26 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+18:55:29 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28752	   1328	  22768	  52848	   ce70	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+18:56:00 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+19:18:22 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 
+19:18:26 **** Incremental Build of configuration Debug for project dfsdm_CM7 ****
+make -j8 all 
+arm-none-eabi-gcc "../Core/Src/main.c" -mcpu=cortex-m7 -std=gnu11 -g3 -DDEBUG -DCORE_CM7 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M7=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7 =1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Core/Src/main.d" -MT"Core/Src/main.o" --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -o "Core/Src/main.o"
+arm-none-eabi-gcc -o "dfsdm_CM7.elf" @"objects.list"   -mcpu=cortex-m7 -T"C:\Users\frank\OneDrive\Documents\seniorDesign\seniorProject\dfsdm\CM7\STM32H755ZITX_FLASH.ld" --specs=nosys.specs -Wl,-Map="dfsdm_CM7.map" -Wl,--gc-sections -static --specs=nano.specs -mfpu=fpv5-d16 -mfloat-abi=hard -mthumb -Wl,--start-group -lc -lm -Wl,--end-group
+Finished building target: dfsdm_CM7.elf
+ 
+arm-none-eabi-objdump -h -S  dfsdm_CM7.elf  > "dfsdm_CM7.list"
+arm-none-eabi-objcopy  -O binary  dfsdm_CM7.elf  "dfsdm_CM7.bin"
+arm-none-eabi-size   dfsdm_CM7.elf 
+   text	   data	    bss	    dec	    hex	filename
+  28628	   1328	  22768	  52724	   cdf4	dfsdm_CM7.elf
+Finished building: default.size.stdout
+ 
+Finished building: dfsdm_CM7.bin
+ 
+Finished building: dfsdm_CM7.list
+ 
+19:19:21 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+make -j8 all 
+arm-none-eabi-size   dfsdm_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+Finished building: default.size.stdout
+ 

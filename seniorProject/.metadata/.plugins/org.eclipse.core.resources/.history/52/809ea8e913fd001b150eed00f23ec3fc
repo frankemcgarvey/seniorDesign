@@ -1,0 +1,29 @@
+/*
+ * definition.h
+ *
+ *  Created on: Aug 13, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_FOLDER_INC_DEFINITION_H_
+#define COMMON_FOLDER_INC_DEFINITION_H_
+
+#define PCM_CHUNK_SIZE 1024
+
+
+
+
+typedef enum{
+	NONE,
+	HALF,
+	FULL,
+}flag_t;
+
+typedef struct{
+	ALIGN_32BYTES(int32_t leftChannel[2048]);
+	ALIGN_32BYTES(int32_t rightChannel[2048]);
+	ALIGN_32BYTES(int32_t pcmBuffer[4][1024]);
+}buffer_t;
+
+
+#endif /* COMMON_FOLDER_INC_DEFINITION_H_ */
