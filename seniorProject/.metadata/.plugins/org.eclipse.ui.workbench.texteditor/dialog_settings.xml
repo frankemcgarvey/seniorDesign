@@ -6,8 +6,16 @@
 		<item key="wholeword" value="false"/>
 		<item key="incremental" value="false"/>
 		<item key="isRegEx" value="false"/>
-		<item key="selection" value="pSrc"/>
+		<item key="selection" value="S-&gt;x"/>
 		<list key="findhistory">
+			<item value="x"/>
+			<item value="S-&gt;x"/>
+			<item value="arm_biquad_cas"/>
+			<item value="dsp"/>
+			<item value="cas"/>
+			<item value="biquad"/>
+			<item value="init"/>
+			<item value="bi"/>
 			<item value="pSrc"/>
 			<item value="pState"/>
 			<item value="pIn"/>
@@ -15,16 +23,9 @@
 			<item value="pDst"/>
 			<item value="smlad"/>
 			<item value="ARM_MATH_DSP"/>
-			<item value="rightChannel"/>
-			<item value="leftChannel"/>
-			<item value="exti"/>
-			<item value="exto"/>
-			<item value="software"/>
-			<item value="HAL_GPIO_EXTI_Callback"/>
-			<item value="HAL_EXTI_RegisterCallback"/>
-			<item value="HAL_HSEM_DeactivateNotification"/>
 		</list>
 		<list key="replacehistory">
+			<item value="dsp_fir"/>
 			<item value="bottomRightChannel"/>
 			<item value="bottomLeftChannel"/>
 		</list>

@@ -14,11 +14,16 @@
 #define PCM_CHUNK_SIZE 		1024
 #define CHANNEL_NUMBER		4
 
-#define TAPS 				201
+#define STAGES			    35
 
-#define STAGES			    25
+#define FIR_TAPS 			101
+#define IIR_TAPS			5*STAGES
 
+#define UPSAMPLE_SIZE		3
+#define UPSAMPLE			12
 
+#define SPLINE_SIZE			(3*(UPSAMPLE_SIZE*UPSAMPLE-1))
+#define ARGMAX_RANGE		24
 typedef enum{
 	NONE,
 	HALF,
@@ -31,16 +36,34 @@ typedef struct{
 	ALIGN_32BYTES(int32_t topRightChannel[2*PCM_CHUNK_SIZE]);
 	ALIGN_32BYTES(int32_t bottomLeftChannel[2*PCM_CHUNK_SIZE]);
 	ALIGN_32BYTES(int32_t bottomRightChannel[2*PCM_CHUNK_SIZE]);
-	ALIGN_32BYTES(float pcmBuffer_flt[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
-	ALIGN_32BYTES(float pcmBuffer_flt_trans_in[PCM_CHUNK_SIZE][2]);
-	ALIGN_32BYTES(float pcmBuffer_flt_trans_out[PCM_CHUNK_SIZE][2]);
+
+	ALIGN_32BYTES(float pcmBuffer_flt[CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+
 	ALIGN_32BYTES(q15_t pcmBuffer_q15[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(q31_t pcmBuffer_q31[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
 }buffer_t;
 
 typedef struct{
 	arm_fir_instance_f32  Filter_inst;
-	float state[TAPS + PCM_CHUNK_SIZE - 1];
-}dsp_buffer_t;
+	float state[FIR_TAPS + PCM_CHUNK_SIZE - 1];
+}dsp_buffer_fir_t;
 
+typedef struct{
+	arm_biquad_cascade_df2T_instance_f32  Filter_inst;
+	float state[2*STAGES];
+}dsp_buffer_iir_t;
+
+typedef struct{
+	float correlation;
+	float sample;
+}corr_t;
+
+typedef struct{
+	arm_spline_instance_f32 S;
+	arm_spline_type splineType;
+	float coeff[SPLINE_SIZE];
+	float tempBuffer[2*UPSAMPLE*UPSAMPLE_SIZE - 1];
+	uint32_t n;
+}cubic_spline_t;
 
 #endif /* COMMON_FOLDER_INC_DEFINITION_H_ */

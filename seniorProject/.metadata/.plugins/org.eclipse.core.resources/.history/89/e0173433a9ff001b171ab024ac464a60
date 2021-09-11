@@ -1,0 +1,75 @@
+/*
+ * localization.c
+ *
+ *  Created on: Jul 27, 2021
+ *      Author: Chris
+ */
+
+#include "localization.h"
+
+void Create_Arcsine_Table(uint32_t size, float *arcsinTable){
+	for(uint32_t i = 0; i < 2*size+1; i++){
+		arcsinTable[i] = (float)( asin((((double)i-(double)size) / 48000.0l) * 340.0l / 0.5l) * 180.0l/acos(-1) );
+	}
+}
+
+bool Localize_1D_CorrBuffer(float *sig_i, float *sig_j, float *arcsinTable, float *angle){
+
+	static float max_i, max_j;
+	static uint32_t sampleNum;
+	static uint32_t corr_pos;
+	static float dummy;
+	static float buffer_i[2*PCM_CHUNK_SIZE], buffer_j[2*LOCALIZATION_SIZE];
+	static uint32_t index = 0;
+
+	static bool maxFlag = false;
+	static bool doneFlag = false;
+	static bool startFlag = true;
+
+	static float corr[4*LOCALIZATION_SIZE];
+
+	arm_max_no_idx_f32(sig_i, PCM_CHUNK_SIZE, &max_i);
+	arm_max_no_idx_f32(sig_j, PCM_CHUNK_SIZE, &max_j);
+
+	if( (max_i >= MAX) || (max_j >= MAX)){
+		maxFlag = true;
+	}
+	else if(maxFlag){
+		doneFlag = true;
+	}
+
+	if(maxFlag){
+		if(startFlag){
+			startFlag = false;
+
+			arm_copy_f32(&sig_i[0], &buffer_i[PCM_CHUNK_SIZE], PCM_CHUNK_SIZE);
+			arm_copy_f32(&sig_j[0], &buffer_j[PCM_CHUNK_SIZE], PCM_CHUNK_SIZE);
+		}
+		else{
+			index = 0;
+			state = false;
+			arm_copy_f32(&sig_i[0], &buffer_i[LOCALIZATION_SIZE], LOCALIZATION_SIZE);
+			arm_copy_f32(&sig_j[0], &buffer_j[LOCALIZATION_SIZE], LOCALIZATION_SIZE);
+
+			arm_correlate_f32(&buffer_i[0], 2*LOCALIZATION_SIZE, &buffer_j[0], 2*LOCALIZATION_SIZE, &corr[0]);
+			arm_max_f32(&corr[0], 4*LOCALIZATION_SIZE, &dummy, (uint32_t*)&corr_pos);
+			sampleNum = corr_pos - (2*LOCALIZATION_SIZE-1);
+
+			if(sampleNum < -1*(int32_t)offset){
+				sampleNum = -1*(int32_t)offset;
+			}
+			else if(sampleNum > (int32_t)offset){
+				sampleNum = (int32_t)offset;
+			}
+
+			*angle= arcsinTable[sampleNum + (int32_t)offset];
+
+			return true;
+
+		}
+	}
+
+	else
+		return false;
+
+}

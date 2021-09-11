@@ -1,0 +1,63 @@
+/*
+ * definition.h
+ *
+ *  Created on: Aug 13, 2021
+ *      Author: Chris
+ */
+
+#ifndef COMMON_FOLDER_INC_DEFINITION_H_
+#define COMMON_FOLDER_INC_DEFINITION_H_
+
+#include "stm32h7xx_hal.h"
+#include "arm_math.h"
+
+#define PCM_CHUNK_SIZE 		1024
+#define CHANNEL_NUMBER		4
+
+#define SEARCH_LEN			512
+#define ARCSIN_INDEX		39
+#define MAX					.05f
+
+#define TAPS 				151
+
+#define STAGES			    10
+
+#define DOWNSAMPLE		 	8
+#define DOWNSAMPLE_TAPS		101
+
+#define SHIFT_AMOUNT		-8
+
+typedef enum{
+	NONE,
+	HALF,
+	FULL,
+	READY,
+}flag_t;
+
+typedef struct{
+	ALIGN_32BYTES(int32_t topLeftChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(int32_t topRightChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(int32_t bottomLeftChannel[2*PCM_CHUNK_SIZE]);
+	ALIGN_32BYTES(int32_t bottomRightChannel[2*PCM_CHUNK_SIZE]);
+
+	ALIGN_32BYTES(float pcmBuffer_flt[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE]);
+
+	ALIGN_32BYTES(q15_t pcmBuffer_q15[2*CHANNEL_NUMBER][PCM_CHUNK_SIZE/DOWNSAMPLE]);
+}buffer_t;
+
+typedef struct{
+	arm_fir_instance_f32  Filter_inst;
+	float state[TAPS + PCM_CHUNK_SIZE - 1];
+}dsp_buffer_t;
+
+typedef struct{
+	arm_fir_decimate_instance_f32 Filter_inst;
+	float state[DOWNSAMPLE_TAPS + PCM_CHUNK_SIZE - 1];
+}dsp_buffer_ds_t;
+
+typedef struct{
+	arm_biquad_cascade_df2T_instance_f32 Filter_inst;
+	float state[2*STAGES];
+}dsp_buffer_IIR_t;
+
+#endif /* COMMON_FOLDER_INC_DEFINITION_H_ */

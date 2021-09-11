@@ -7,7 +7,6 @@
 
 
 #include "helper.h"
-#include "stm32h7xx_hal.h"
 
 
 void Clean(uint32_t *buffer, uint32_t byte){

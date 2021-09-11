@@ -1,0 +1,13 @@
+/*
+ * encoding.c
+ *
+ *  Created on: Aug 19, 2021
+ *      Author: Chris
+ */
+
+
+
+
+void Encode_Difference(uint16_t){
+
+}

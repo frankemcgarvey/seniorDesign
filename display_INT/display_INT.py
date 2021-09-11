@@ -13,7 +13,7 @@ data2 = []
 data3 = []
 data4 = []
 
-numOfChannel = 2
+numOfChannel = 4
 fileName = 'pcmFile.bin'
 state = True
 index = 0
@@ -25,13 +25,13 @@ with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfi
         if(counter%1024 == 0):
             index = index + 1
 
-        if(index%4 == 0):
+        if(index%numOfChannel == 0):
                 data1.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 1): 
+        elif(index%numOfChannel == 1): 
                 data2.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 2):
+        elif(index%numOfChannel == 2):
                 data3.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 3):
+        elif(index%numOfChannel == 3):
                 data4.append(int.from_bytes(hw, 'little', signed = 'True'))
         hw = pcmfile.read(2)
 

@@ -22,9 +22,7 @@ C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32
 C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc.c \
 C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_rcc_ex.c \
 C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim.c \
-C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c \
-C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c \
-C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c 
+C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c 
 
 OBJS += \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.o \
@@ -44,9 +42,7 @@ OBJS += \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.o \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.o \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o 
+./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o 
 
 C_DEPS += \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal.d \
@@ -66,9 +62,7 @@ C_DEPS += \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc.d \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_rcc_ex.d \
 ./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.d \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.d \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.d \
-./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.d 
+./Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.d 
 
 
 # Each subdirectory must supply rules for building sources it contributes
@@ -108,8 +102,4 @@ Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.o: C:/Users/frank/OneDrive/Docume
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.o: C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_tim_ex.c Drivers/STM32H7xx_HAL_Driver/subdir.mk
 	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_tim_ex.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
-Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.o: C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart.c Drivers/STM32H7xx_HAL_Driver/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
-Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.o: C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Drivers/STM32H7xx_HAL_Driver/Src/stm32h7xx_hal_uart_ex.c Drivers/STM32H7xx_HAL_Driver/subdir.mk
-	arm-none-eabi-gcc "$<" -mcpu=cortex-m4 -std=gnu11 -g3 -DDEBUG -DCORE_CM4 -DUSE_HAL_DRIVER -DSTM32H755xx '-DARM_MATH_DSP=1' '-DARM_MATH_LOOPUNROLL=1' '-DCORTEX_M4=1' '-D__DSP_PRESENT=1' '-D__ARM_ARCH_7EM__=1' '-DARM_MATH_CM7=1' '-DARM_MATH_ROUNDING=1' -c -I../Core/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc -I../../Drivers/STM32H7xx_HAL_Driver/Inc/Legacy -I../../Drivers/CMSIS/Device/ST/STM32H7xx/Include -I../../Drivers/CMSIS/Include -I"C:/Users/frank/OneDrive/Documents/seniorDesign/seniorProject/dfsdm/Common/common_folder/Inc" -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/Core_A/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/PrivateInclude/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include/ -I../../Middlewares/Third_Party/ARM_CMSIS/CMSIS/DSP/Include -O0 -ffunction-sections -fdata-sections -Wall -fstack-usage -MMD -MP -MF"Drivers/STM32H7xx_HAL_Driver/stm32h7xx_hal_uart_ex.d" -MT"$@" --specs=nano.specs -mfpu=fpv4-sp-d16 -mfloat-abi=hard -mthumb -o "$@"
 

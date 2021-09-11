@@ -1,35 +1,19 @@
-import sys
-import wave
-import numpy as np
+
 import matplotlib.pyplot as plt
+import numpy as np
 from numpy.fft import fft, ifft
+from pylab import *
+from scipy.interpolate import CubicSpline
 import os.path
-import struct 
-from scipy.signal import savgol_filter
-from scipy import signal
 
-def display(sig_i, sig_j, corr, delay):
-    fig , ax = plt.subplots(ncols = 4)
-    ax[0].plot(sig_i)
-    ax[1].plot(sig_j)
-    ax[2].plot(corr)
-    ax[3].plot(delay,'ro')
-    plt.show()
-
-def display1(sig_i, sig_j):
-    fig , ax = plt.subplots(ncols = 2)
-    ax[0].plot(sig_i, 'ro')
-    ax[1].plot(sig_j, 'bo')
-    plt.show()
-
-def gcc_phat2(sig, refsig, fs=1, max_tau=None, interp=16):
+def gcc_phat2(sig, refsig, fs=1, max_tau=None, interp=1):
     '''
     This function computes the offset between the signal sig and the reference signal refsig
     using the Generalized Cross Correlation - Phase Transform (GCC-PHAT)method.
     '''
     
     # make sure the length for the FFT is larger or equal than len(sig) + len(refsig)
-    n = sig.shape[0] + refsig.shape[0]
+    n = sig.shape[0] + refsig.shape[0] + 1
 
     # Generalized Cross Correlation Phase Transform
     SIG = np.fft.rfft(sig, n=n)
@@ -51,190 +35,186 @@ def gcc_phat2(sig, refsig, fs=1, max_tau=None, interp=16):
     
     return tau, cc
 
-def gcc_phat(sig_i, sig_j, length):
-    #Outputs an array of (N/2) + 1
-    fft_i = np.fft.rfft(sig_i,length)
-    fft_j = np.fft.rfft(sig_j,length)
-    fft_conj_j = np.conjugate(fft_j)
-    fft_i_j = fft_i * fft_conj_j
-    fft_i_j_abs = np.abs(fft_i_j)
-    ifft_i_j = np.fft.irfft(fft_i_j/fft_i_j_abs, length)
-    return ifft_i_j
+def gcc_phat(sig_i, sig_j):
 
-def shank(sig_i, sig_j):
+    n = sig_i.shape[0] + sig_j.shape[0]
+
+    sig_i_fft = np.fft.rfft(sig_i, n=n)
+    sig_j_fft = np.fft.rfft(sig_j, n=n)
+
+    sig_j_conj = np.conjugate(sig_j_fft)
     
-    counter = 0
-    n      = 1024*80
-    m      = 1024
-     
-    maxFlag = False
-    sig_j_buff = np.zeros(n)
-    sig_i_buff = np.zeros(n)
-    tf0 = 0
-    tf1 = 0
-    h = 6  
-        
-    while counter < (len(sig_i)/n):
-        sig_i_buff = pcmData1[counter*n : (counter*n)+n]
-        sig_j_buff = pcmData2[counter*n : (counter*n)+n]
-            
-        for i in range(0, int(n-m)):
-            shankAvg0 = 1/m*np.sum(np.abs(sig_i_buff[i:i+m-1]))
-            shankAvg1 = 1/m*np.sum(np.abs(sig_j_buff[i:i+m-1]))
-            if(np.abs(sig_i_buff[m+i] > shankAvg0*h)):
-                tf0 = m + i
-                display1(sig_i_buff[i:i+m-1], tf0)
-                display1(1,tf0 - tf1)
-            if(np.abs(sig_j_buff[m+i] > shankAvg1*h)):
-                tf1 = m + i
-                display1(sig_j_buff[i:i+m-1], tf1)
-                display1(1,tf0 - tf1)
-            
+    sig = sig_i_fft * sig_j_conj
 
-        counter = counter + 1
+    sig = sig/(np.abs(sig))
 
+    cc = np.fft.irfft(sig, n)
 
-def gcc(sig_i, sig_j):
+    cc = np.concatenate((cc[-int(n/2):], cc[:int(n/2)+1]))
+    return cc
 
-    counter = 0
-    k      = 1024*10
-    m      = 512
-    n      = k/m
-     
-    maxFlag = False
-    sig_j_buff = np.zeros(k)
-    sig_i_buff = np.zeros(k)
-    doneFlag = False
-    delayMax = 0
-    corrMax = 0
-    index = 0
-    sigMax = 0
-    while counter < (len(sig_i)/k):
-     
-        sig_i_buff = pcmData1[counter*k : (counter*k)+k]
-        sig_j_buff = pcmData2[counter*k : (counter*k)+k]
+   
 
-        max_i = np.max(np.abs(sig_i_buff))
-        max_j = np.max(np.abs(sig_j_buff))
-        
-        if(max_i > 2e-5 or max_j > 2e-5):
-            maxFlag = True
-        elif(maxFlag):
-            doneFlag = True
-         
-        if(maxFlag):
-            for i in range(0, int(n)):
-                tempSig = gcc_phat(sig_i_buff[i*m:i*m+m], sig_j_buff[i*m:i*m+m], len(sig_i_buff[i*m:i*m+m])*2)
-                tempMax = np.max(tempSig)
-                tempDelay = np.argmax(tempSig)
-
-                if(tempMax > corrMax):
-                    sigMax      = tempSig
-                    corrMax     = tempMax
-                    delayMax    = tempDelay
-
-            
-
-        if(doneFlag):
-            display1(sigMax, delayMax)
-            corrMax = 0
-            delayMax = 0
-            tempCorrMax = 0
-            maxFlag = False
-            doneFlag = False
-
-        counter = counter + 1
-
-
-def correlation(sig_i, sig_j):
-
- #   corr = np.abs(np.correlate(sig_i, sig_j, mode = 'full'))
-    corr = np.correlate(sig_i, sig_j, mode = 'full')
-    length = len(sig_i)
-    max = np.argmax(corr)
+def normalize(sig_i, sig_j): 
+    #Normalize 
  
-    return (max - length), corr
+    normalize_corr = np.correlate(sig_i, sig_j, mode = 'full')/np.sqrt(np.sum(np.power(sig_i,2)) * np.sum(np.power(sig_j,2)))
+   
+    plt.figure()
+    plt.plot(normalize_corr)
+    plt.show()
+    return normalize_corr
 
-def correlate(pcmData1, pcmData2):
+
+def cubic_spline(sig, maxArg, rate):
+  
+
+    x    = np.arange((maxArg) - 1, (maxArg) + 2)
+    y    = np.array(sig)
+    cs   = CubicSpline(x, y, bc_type = 'not-a-knot')
+
+    x_new = np.arange((maxArg) - 1, (maxArg) + 2, rate)
+    s = cs(x_new)
+
+    return s
+
+def parabola(sig, argMax, rate):
+
+    argMaxPara = argMax
+    argMaxSig  = np.argmax(sig)
+
+    up_x = np.zeros(3)
+    up_x[1] = (argMaxPara)
+    up_x[0] = up_x[1] - 1/rate
+    up_x[2] = up_x[1] + 1/rate
+
+    x0   = up_x[0] 
+    x0sq = np.power(up_x[0],2)
+
+    x1   = up_x[1]
+    x1sq = np.power(up_x[1],2)
+
+    x2   = up_x[2]
+    x2sq = np.power(up_x[2],2)
+
+    A = np.array([[x0sq, x0, 1],
+                  [x1sq, x1, 1],
+                  [x2sq, x2, 1]])
+    
+    y = np.array([sig[argMaxSig -1], sig[argMaxSig], sig[argMaxSig + 1]])
+
+    x = np.linalg.solve(A, y)
+
+    a = x[0]
+    b = x[1]
+    c = x[2]
+
+    vert = -b/(2*a)
+    return vert
+
+def localize(pcmData1, pcmData2):
 
     counter = 0
     k      = 1024
-    m      = 512
+    m      = 1024
     n      = 2*k/m
      
     maxFlag = False
     doneFlag = False
     startFlag = True
 
-    sig_j_buff = np.zeros(2*k)
-    sig_i_buff = np.zeros(2*k)
-    
-    sig_i = np.zeros(k)
-    sig_j = np.zeros(k)
-
-    delayMax = 0
-    corrMax = 0
-    index = 0
-
     while counter < (len(pcmData1)/k):
   
-        sig_i = pcmData1[counter*k : (counter*k)+k]
-        sig_j = pcmData2[counter*k : (counter*k)+k]
+            sig_i = pcmData1[counter*k : (counter*k)+k]
+            sig_j = pcmData2[counter*k : (counter*k)+k]
 
-        max_i = np.max(np.abs(sig_i))
-        max_j = np.max(np.abs(sig_j))
+            max_i = np.max(np.abs(sig_i))
+            max_j = np.max(np.abs(sig_j))
         
-        if(max_i > .25 or max_j > .25):
-            maxFlag = True
-        elif(maxFlag):
-            doneFlag = True
-        
-        if(maxFlag):
-            if(startFlag):
-                startFlag = False
+            if(max_i > .01 or max_j > .01):
+                cc = gcc_phat(sig_i, sig_j)
+                plt.figure()
+                plt.plot(cc)
+                plt.show()
+                max = np.argmax(cc[1000:1040])
+                norm = normalize(sig_i, sig_j)
+                l = np.argmax(norm)
+                s = cubic_spline(norm[1023-12:1023+12],l, 1/8)
+                d = np.argmax(s)/8
+                x = np.round(parabola(s) - 1023, 2)
+                bp = 0
+            counter = counter + 1
 
-                sig_i_buff[k:] = sig_i
-                sig_j_buff[k:] = sig_j
-            else:
-                sig_i_buff[:k] = sig_i_buff[k:]
-                sig_j_buff[:k] = sig_j_buff[k:]
+def signals():
 
-                sig_i_buff[k:] = sig_i
-                sig_j_buff[k:] = sig_j
+    sig_i = np.zeros(1024)
+    sig_j = np.zeros(1024)
 
-                for j in range(0, int(n)):
-                    for i in range(0, int(n)):
-                       delayTemp1, corrTemp1 = correlation(sig_i_buff[j*m:j*m+m], sig_j_buff[i*m:i*m+m])
-                   
-                       tempCorrMax1 = np.max(corrTemp1)
-                       if(tempCorrMax1 > corrMax):
-                            corrMax = tempCorrMax1
-                            delayMax = delayTemp1
-                            
-        if(doneFlag):
-            display1(delayMax, corrMax)
-            corrMax = 0
-            delayMax = 0
-            tempCorrMax = 0
-            
-            startFlag = True
-            maxFlag = False
-            doneFlag = False
-        
-        
-        counter = counter + 1
+    D = 10
+    fs = 24000
+    f = 1000
+
+    delay = D/fs
+    t = 1
+    n = np.arange(1024)/fs
+
+    sig_i = np.sin(2*np.pi*f*(n-delay))*np.exp(-(n-delay)*250)
+    sig_j = np.sin(2*np.pi*f*(n))*np.exp(-(n)*250)
+
+ #   sig_i[:50] = 0
+ #   sig_j[:50] = 0
+ #   sig_i[1000:] = 0
+ #   sig_j[1000:] = 0
+ #   sig_i[100:150] = 1
+ #   sig_j[120:170] = 1
+
+    plt.figure()
+    plt.plot(sig_i)
+    plt.plot(sig_j)
+    plt.show()
+
+    norm = normalize(sig_i, sig_j)
+
+    tau, corr = gcc_phat2(sig_j, sig_i)
+
+    argMaxNorm = np.argmax(norm)
+
+    maxNorm = np.max(norm)
+
+    s = cubic_spline(norm[argMaxNorm-1:argMaxNorm+2], argMaxNorm, 1/96)
+
+    argMaxS = (np.argmax(s)/96 + (argMaxNorm-1))
+
+    max = (argMaxS/48)
+  
+    x  = round((parabola(s, argMaxS, 96) - 1023),3)
+    x2 = round((parabola(norm, argMaxNorm, 1) - 1023),3)
+    plt.figure(0)
+    plt.plot(s)
+ #   plt.plot(max, 'ro')
+    plt.show()
+
+    bp = 0
 
 
-   
+
+
+
+
+
+
+
+
+signals()
 counter = 0
 data1 = []
 data2 = []
 data3 = []
 data4 = []
 
-numOfChannel = 2
+numOfChannel = 4
 fileName = 'pcmFile.bin'
-state = True
+
 index = 0
 
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
@@ -244,17 +224,16 @@ with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfi
         if(counter%1024 == 0):
             index = index + 1
 
-        if(index%4 == 0):
+        if(index%numOfChannel == 0):
                 data1.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 1): 
+        elif(index%numOfChannel == 1): 
                 data2.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 2):
+        elif(index%numOfChannel == 2):
                 data3.append(int.from_bytes(hw, 'little', signed = 'True'))
-        elif(index%4 == 3):
+        elif(index%numOfChannel == 3):
                 data4.append(int.from_bytes(hw, 'little', signed = 'True'))
      
         hw = pcmfile.read(2)
-k = 1024
 
 pcmData1 = np.asfarray(np.array(data1))/32768.0
 pcmData2 = np.asfarray(np.array(data2))/32768.0
@@ -269,28 +248,13 @@ pcmData2 = pcmData2[20*1024:]
 pcmData3 = pcmData3[20*1024:]
 pcmData4 = pcmData4[20*1024:]
 
-sos = signal.cheby2(25, 80, (800/24000, 1200/24000), 'bandpass', output = 'sos', fs=1)
-
-pcmData1 = signal.sosfilt(sos, pcmData1)
-pcmData3 = signal.sosfilt(sos, pcmData3)
-pcmData4 = signal.sosfilt(sos, pcmData4)
-
-#for i in range(0, int(len(pcmData1)/k)):
-#    pcmData2[i*k:i*k+k] =  savgol_filter(pcmData1[i*k:i*k+k], window_length = 31, polyorder = 3)
-#    pcmData1[i*k:i*k+k] =  savgol_filter(pcmData2[i*k:i*k+k], window_length = 31, polyorder = 3)
-
 fig , ax = plt.subplots(ncols = 4)
 ax[0].plot(pcmData1)
 ax[1].plot(pcmData2)
 ax[2].plot(pcmData3)
 ax[3].plot(pcmData4)
-plt.show()
+plt.show() 
 
-
-correlate(pcmData1, pcmData2)
-correlate(pcmData3, pcmData4)
-
-correlate(pcmData1, pcmData3)
-correlate(pcmData2, pcmData4)
+localize(pcmData2,pcmData1)
 
 eof = 0

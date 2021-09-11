@@ -7,15 +7,66 @@
 
 #include "dsp.h"
 
-void FIR_Filter_Init(dsp_buffer_t* buff, float *coeff){
+void FIR_Filter_Init(dsp_buffer_fir_t* dsp, float *coeff){
 	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
-		arm_fir_init_f32(&buff[i].Filter_inst, TAPS, &coeff[0], buff[i].state, PCM_CHUNK_SIZE);
+		arm_fir_init_f32(&dsp[i].Filter_inst, FIR_TAPS, &coeff[0], dsp[i].state, PCM_CHUNK_SIZE);
 	}
 }
 
-void FIR_Filter(dsp_buffer_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]){
+void FIR_Filter(dsp_buffer_fir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]){
 	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
 		arm_fir_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], PCM_CHUNK_SIZE);
 	}
 }
+
+void IIR_Filter_Init(dsp_buffer_iir_t* dsp, float *coeff){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_biquad_cascade_df2T_init_f32(&dsp[i].Filter_inst, STAGES, &coeff[0], dsp[i].state);
+	}
+}
+
+void IIR_Filter(dsp_buffer_iir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_biquad_cascade_df2T_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], PCM_CHUNK_SIZE);
+	}
+
+}
+
+void Cubic_Spline(cubic_spline_t *spline, float *sig,  float *output){
+
+	static float argMax;
+	static uint32_t index;
+	static float x[UPSAMPLE_SIZE];
+	static float x_new[UPSAMPLE_SIZE*UPSAMPLE];
+
+	arm_max_f32(&sig[(1023 - ARGMAX_RANGE/2)], ARGMAX_RANGE, &argMax, &index);
+
+	argMax =+ (1023 - ARGMAX_RANGE/2);
+
+	arm_spline_init_f32(&spline->S, spline->splineType, 1, &sig[argMax-(uint32_t)(spline->n/2)], spline->n, &spline->coeff[0], &spline->tempBuffer[0]);
+	arm_spline_f32(&spline->S, &spline->x_new[0], &output[0], UPSAMPLE_SIZE*UPSAMPLE);
+
+
+
+}
+
+
+void Normalized_CC(float *sig_i, float *sig_j, float *corr){
+
+	float xy_corr[2*PCM_CHUNK_SIZE - 1];
+
+	float sumOfSquare[2];
+	float normalize_scalar;
+
+	arm_power_f32(&sig_i[0], PCM_CHUNK_SIZE, &sumOfSquare[0]);
+	arm_power_f32(&sig_j[0], PCM_CHUNK_SIZE, &sumOfSquare[1]);
+
+	arm_sqrt_f32(sumOfSquare[0]*sumOfSquare[1], &normalize_scalar);
+
+	arm_correlate_f32(&sig_i[0], PCM_CHUNK_SIZE, &sig_j[0], PCM_CHUNK_SIZE, &xy_corr[0]);
+
+	arm_scale_f32(&xy_corr[0], 1/normalize_scalar, &corr[0], PCM_CHUNK_SIZE);
+
+}
+
 

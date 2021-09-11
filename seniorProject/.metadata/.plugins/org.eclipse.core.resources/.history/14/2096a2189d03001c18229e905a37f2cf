@@ -1,0 +1,33 @@
+/*
+ * dsp.c
+ *
+ *  Created on: Jul 3, 2021
+ *      Author: Chris
+ */
+
+#include "dsp.h"
+
+void FIR_Filter_Init(dsp_buffer_fir_t* dsp, float *coeff){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_fir_init_f32(&dsp[i].Filter_inst, FIR_TAPS, &coeff[0], dsp[i].state, PCM_CHUNK_SIZE);
+	}
+}
+
+void FIR_Filter(dsp_buffer_fir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_fir_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], PCM_CHUNK_SIZE);
+	}
+}
+
+void IIR_Filter_Init(dsp_buffer_iir_t* dsp, float *coeff){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_biquad_cascade_df1_init_f32(&dsp[i].Filter_inst, STAGES, &coeff[0], dsp[i].state);
+	}
+}
+
+void IIR_Filter(dsp_buffer_iir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]){
+	for(uint32_t i = 0; i < CHANNEL_NUMBER; i++){
+		arm_biquad_cascade_df1_f32(&dsp[i].Filter_inst, &input[i][0], &output[i][0], PCM_CHUNK_SIZE);
+	}
+
+}

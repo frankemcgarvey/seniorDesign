@@ -1,10 +1,10 @@
-19:19:21 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
+19:45:29 **** Incremental Build of configuration Debug for project dfsdm_CM4 ****
 make -j8 all 
 arm-none-eabi-size   dfsdm_CM4.elf 
    text	   data	    bss	    dec	    hex	filename
-  29800	     24	   1840	  31664	   7bb0	dfsdm_CM4.elf
+   3388	     24	   1576	   4988	   137c	dfsdm_CM4.elf
 Finished building: default.size.stdout
  
 
-19:19:23 Build Finished. 0 errors, 0 warnings. (took 1s.547ms)
+19:45:31 Build Finished. 0 errors, 0 warnings. (took 1s.703ms)
 

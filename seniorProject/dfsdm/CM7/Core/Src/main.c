@@ -22,7 +22,6 @@
 
 /* Private includes ----------------------------------------------------------*/
 /* USER CODE BEGIN Includes */
-
 /* USER CODE END Includes */
 
 /* Private typedef -----------------------------------------------------------*/
@@ -76,11 +75,12 @@ DMA_HandleTypeDef hdma_usart3_tx;
 
 static buffer_t * const pcmBuffer = (buffer_t *) 0x30020000;
 static volatile channel_flag_t channelFlag;
-static float coeff[TAPS] = {0.000000165398674, 0.000000229690158, 0.000000397722403, 0.000000694217590, 0.000001137992058, 0.000001739037430, 0.000002494951104, 0.000003386718163, 0.000004373931461, 0.000005389634680, 0.000006335084436, 0.000007074826044, 0.000007432587154, 0.000007188562449, 0.000006078736078, 0.000003796896863, -0.000000000000002, -0.000005682549272, -0.000013635211872, -0.000024237933758, -0.000037842979509, -0.000054747142713, -0.000075159863627, -0.000099167991721, -0.000126698447275, -0.000157480186317, -0.000191007478861, -0.000226506395848, -0.000262907065917, -0.000298823986668, -0.000332547206199, -0.000362046441296, -0.000384990649763, -0.000398784701247, -0.000400624849135, -0.000387573178159, -0.000356651435141, -0.000304953166051, -0.000229772151215, -0.000128744461108, 0.000000000000034, 0.000157681148266, 0.000344713305822, 0.000560557411518, 0.000803587434348, 0.001070978702046, 0.001358625362627, 0.001661093789153, 0.001971618272364, 0.002282146131620, 0.002583432011306, 0.002865190617740, 0.003116302192211, 0.003325073281303, 0.003479547565803, 0.003567861858755, 0.003578637493774, 0.003501398488879, 0.003327003447339, 0.003048076527193, 0.002659422345459, 0.002158410614356, 0.001545312581584, 0.000823571928777, -0.000000000000125, -0.000915122160222, -0.001908043632284, -0.002961653750390, -0.004055706318468, -0.005167161114514, -0.006270634941757, -0.007338960189372, -0.008343835361302, -0.009256556630135, -0.010048799216747, -0.010693450458348, -0.011165439151227, -0.011442561633885, -0.011506262235343, -0.011342342942953, -0.010941583663225, -0.010300240479410, -0.009420401416719, -0.008310195058584, -0.006983817555010, -0.005461392458528, -0.003768648486584, -0.001936422428116, 0.000000000000095, 0.002001693472266, 0.004027028568089, 0.006032709497958, 0.007974884472787, 0.009810291230679, 0.011497415602207, 0.012997610494494, 0.014276152476668, 0.015303205698729, 0.016054648905993, 0.016512749716640, 0.016666667535901, 0.016512749716640, 0.016054648905993, 0.015303205698729, 0.014276152476668, 0.012997610494494, 0.011497415602207, 0.009810291230679, 0.007974884472787, 0.006032709497958, 0.004027028568089, 0.002001693472266, 0.000000000000095, -0.001936422428116, -0.003768648486584, -0.005461392458528, -0.006983817555010, -0.008310195058584, -0.009420401416719, -0.010300240479410, -0.010941583663225, -0.011342342942953, -0.011506262235343, -0.011442561633885, -0.011165439151227, -0.010693450458348, -0.010048799216747, -0.009256556630135, -0.008343835361302, -0.007338960189372, -0.006270634941757, -0.005167161114514, -0.004055706318468, -0.002961653750390, -0.001908043632284, -0.000915122160222, -0.000000000000125, 0.000823571928777, 0.001545312581584, 0.002158410614356, 0.002659422345459, 0.003048076527193, 0.003327003447339, 0.003501398488879, 0.003578637493774, 0.003567861858755, 0.003479547565803, 0.003325073281303, 0.003116302192211, 0.002865190617740, 0.002583432011306, 0.002282146131620, 0.001971618272364, 0.001661093789153, 0.001358625362627, 0.001070978702046, 0.000803587434348, 0.000560557411518, 0.000344713305822, 0.000157681148266, 0.000000000000034, -0.000128744461108, -0.000229772151215, -0.000304953166051, -0.000356651435141, -0.000387573178159, -0.000400624849135, -0.000398784701247, -0.000384990649763, -0.000362046441296, -0.000332547206199, -0.000298823986668, -0.000262907065917, -0.000226506395848, -0.000191007478861, -0.000157480186317, -0.000126698447275, -0.000099167991721, -0.000075159863627, -0.000054747142713, -0.000037842979509, -0.000024237933758, -0.000013635211872, -0.000005682549272, -0.000000000000002, 0.000003796896863, 0.000006078736078, 0.000007188562449, 0.000007432587154, 0.000007074826044, 0.000006335084436, 0.000005389634680, 0.000004373931461, 0.000003386718163, 0.000002494951104, 0.000001739037430, 0.000001137992058, 0.000000694217590, 0.000000397722403, 0.000000229690158, 0.000000165398674};
 
-static float coeff_iir[5*STAGES] = {1.000000000000000, -1.989052414894104, 1.000000000000000, 1.974731206893921, -0.998637437820435, 1.000000000000000, -1.975357294082642, 1.000000000000000, 1.987789869308472, -0.999062776565552, 1.000000000000000, -1.989122509956360, 1.000000000000000, 1.971846342086792, -0.995820462703705, 1.000000000000000, -1.975199103355408, 1.000000000000000, 1.985921740531921, -0.997135937213898, 1.000000000000000, -1.989266753196716, 1.000000000000000, 1.968560099601746, -0.992704510688782, 1.000000000000000, -1.974866867065430, 1.000000000000000, 1.983935236930847, -0.995041072368622, 1.000000000000000, -1.989494204521179, 1.000000000000000, 1.964611291885376, -0.989033699035645, 1.000000000000000, -1.974324822425842, 1.000000000000000, 1.981693863868713, -0.992639362812042, 1.000000000000000, -1.989819884300232, 1.000000000000000, 1.959644317626953, -0.984460234642029, 1.000000000000000, -1.973506808280945, 1.000000000000000, 1.979018568992615, -0.989749372005463, 1.000000000000000, -1.990266919136047, 1.000000000000000, 1.953147649765015, -0.978478550910950, 1.000000000000000, -1.972295284271240, 1.000000000000000, 1.975655913352966, -0.986116766929626, 1.000000000000000, -1.990870952606201, 1.000000000000000, 1.944368124008179, -0.970328569412231, 1.000000000000000, -1.970471382141113, 1.000000000000000, 1.971226930618286, -0.981366753578186, 1.000000000000000, -1.991685509681702, 1.000000000000000, 1.932221770286560, -0.958876550197601, 1.000000000000000, -1.967595338821411, 1.000000000000000, 1.965142488479614, -0.974927484989166, 1.000000000000000, -1.992791175842285, 1.000000000000000, 1.915335536003113, -0.942583262920380, 1.000000000000000, -1.962661266326904, 1.000000000000000, 1.956461429595947, -0.965909242630005, 1.000000000000000, -1.994301438331604, 1.000000000000000, 1.892780542373657, -0.920072197914124, 1.000000000000000, -1.952865004539490, 1.000000000000000, 1.943670034408569, -0.952931165695190, 1.000000000000000, -1.996326804161072, 1.000000000000000, 1.924437880516052, -0.933997154235840, 1.000000000000000, -1.927310109138489, 1.000000000000000, 1.867101907730103, -0.892920613288879, 1.000000000000000, -1.998690128326416, 1.000000000000000, 1.896225452423096, -0.907381474971771, 1.000000000000000, -1.802518725395203, 1.000000000000000, 1.850903630256653, -0.872500360012054, 1.000000000000000, 0.000000000000000, -1.000000000000000, 1.863547563552856, -0.878983974456787};
+//static float coeff_fir[FIR_TAPS] = {-0.000000,-0.000000,0.000111,0.000396,0.000912,0.001710,0.002831,0.004307,0.006154,0.008378,0.010968,0.013901,0.017138,0.020629,0.024313,0.028118,0.031966,0.035773,0.039456,0.042929,0.046112,0.048931,0.051319,0.053222,0.054596,0.055413,0.054596,0.053222,0.051319,0.048931,0.046112,0.042929,0.039456,0.035773,0.031966,0.028118,0.024313,0.020629,0.017138,0.013901,0.010968,0.008378,0.006154,0.004307,0.002831,0.001710,0.000912,0.000396,0.000111,-0.000000,-0.000000};
+static float coeff_iir[IIR_TAPS] = {0.014764, 0.000000, -0.014764, 1.895962, -0.994284, 0.025741, 0.000000, -0.025741, 1.952879, -0.996178, 0.047707, 0.000000, -0.047707, 1.885551, -0.983015, 0.026840, 0.000000, -0.026840, 1.945317, -0.988588, 0.051229, 0.000000, -0.051229, 1.875737, -0.972066, 0.032454, 0.000000, -0.032454, 1.937704, -0.981083, 0.052886, 0.000000, -0.052886, 1.866618, -0.961552, 0.039704, 0.000000, -0.039704, 1.930058, -0.973681, 0.053823, 0.000000, -0.053823, 1.858280, -0.951580, 0.047111, 0.000000, -0.047111, 1.922398, -0.966403, 0.056357, 0.000000, -0.056357, 1.850795, -0.942245, 0.049099, 0.000000, -0.049099, 1.914744, -0.959271, 0.056850, 0.000000, -0.056850, 1.844223, -0.933633, 0.055693, 0.000000, -0.055693, 1.907120, -0.952311, 0.058761, 0.000000, -0.058761, 1.838613, -0.925818, 0.059948, 0.000000, -0.059948, 1.899552, -0.945550, 0.058982, 0.000000, -0.058982, 1.833997, -0.918860, 0.061226, 0.000000, -0.061226, 1.892072, -0.939022, 0.060501, 0.000000, -0.060501, 1.830397, -0.912808, 0.064785, 0.000000, -0.064785, 1.884714, -0.932765, 0.062169, 0.000000, -0.062169, 1.827819, -0.907699, 0.065635, 0.000000, -0.065635, 1.877520, -0.926821, 0.062438, 0.000000, -0.062438, 1.826257, -0.903553, 0.067847, 0.000000, -0.067847, 1.870536, -0.921240, 0.061495, 0.000000, -0.061495, 1.825692, -0.900381, 0.067104, 0.000000, -0.067104, 1.863816, -0.916073, 0.063508, 0.000000, -0.063508, 1.826094, -0.898178, 0.065190, 0.000000, -0.065190, 1.857417, -0.911377, 0.060436, 0.000000, -0.060436, 1.827421, -0.896927, 0.058881, 0.000000, -0.058881, 1.851405, -0.907215, 0.055711, 0.000000, -0.055711, 1.829619, -0.896602, 0.056287, 0.000000, -0.056287, 1.845847, -0.903649, 0.055548, 0.000000, -0.055548, 1.832630, -0.897162, 0.055002, 0.000000, -0.055002, 1.840816, -0.900744, 0.047617, 0.000000, -0.047617, 1.836386, -0.898561};
 
-static dsp_buffer_t dsp[CHANNEL_NUMBER];
+static dsp_buffer_iir_t dsp_iir[CHANNEL_NUMBER];
+
 /* USER CODE END PV */
 
 /* Private function prototypes -----------------------------------------------*/
@@ -88,6 +88,7 @@ void SystemClock_Config(void);
 static void MX_GPIO_Init(void);
 static void MX_DMA_Init(void);
 static void MX_DFSDM1_Init(void);
+static void MX_USART3_UART_Init(void);
 /* USER CODE BEGIN PFP */
 
 /* USER CODE END PFP */
@@ -149,33 +150,20 @@ HAL_HSEM_Release(HSEM_ID_0,0);
   MX_GPIO_Init();
   MX_DMA_Init();
   MX_DFSDM1_Init();
+  MX_USART3_UART_Init();
   /* USER CODE BEGIN 2 */
-
-  channelFlag.topLeftChannelFlag		= NONE;
-  channelFlag.bottomLeftChannelFlag 	= NONE;
-  channelFlag.bottomRightChannelFlag 	= NONE;
 
   CoreDebug->DEMCR |= CoreDebug_DEMCR_TRCENA_Msk;
   DWT->LAR = 0xC5ACCE55;
   DWT->CYCCNT = 0;
   DWT->CTRL |= DWT_CTRL_CYCCNTENA_Msk;
 
-  FIR_Filter_Init(&dsp[0], &coeff[0]);
+  IIR_Filter_Init(&dsp_iir[0], &coeff_iir[0]);
 
-  static arm_biquad_cascade_stereo_df2T_instance_f32 S;
-  static float state[2*STAGES];
-  arm_biquad_cascade_stereo_df2T_init_f32(&S, STAGES, &coeff_iir[0], &state[0]);
-
-//
-
-
-//
-  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter3, &pcmBuffer->topRightChannel[0], 2*PCM_CHUNK_SIZE);
-  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter2, &pcmBuffer->topLeftChannel[0], 2*PCM_CHUNK_SIZE);
-  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter1, &pcmBuffer->bottomLeftChannel[0], 2*PCM_CHUNK_SIZE);
-  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter0, &pcmBuffer->bottomRightChannel[0], 2*PCM_CHUNK_SIZE);
-
-  HAL_Delay(1000);
+  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter3, &pcmBuffer->topRightChannel[0],    2*PCM_CHUNK_SIZE);
+  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter2, &pcmBuffer->topLeftChannel[0], 	2*PCM_CHUNK_SIZE);
+  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter1, &pcmBuffer->bottomRightChannel[0], 2*PCM_CHUNK_SIZE);
+  HAL_DFSDM_FilterRegularStart_DMA(&hdfsdm1_filter0, &pcmBuffer->bottomLeftChannel[0],  2*PCM_CHUNK_SIZE);
 
   /* USER CODE END 2 */
 
@@ -184,55 +172,67 @@ HAL_HSEM_Release(HSEM_ID_0,0);
   while(1){
 
 	  if(channelFlag.bottomLeftChannelFlag == HALF && channelFlag.bottomRightChannelFlag == HALF && channelFlag.topLeftChannelFlag == HALF && channelFlag.topRightChannelFlag == HALF){
-//		  DWT->CYCCNT = 0;
-		  channelFlag.topLeftChannelFlag		= NONE;
-		  channelFlag.topRightChannelFlag		= NONE;
-		  channelFlag.bottomLeftChannelFlag 	= NONE;
-		  channelFlag.bottomRightChannelFlag 	= NONE;
+		  DWT->CYCCNT = 0;
+		  channelFlag.topLeftChannelFlag	 = NONE;
+		  channelFlag.topRightChannelFlag	 = NONE;
+		  channelFlag.bottomLeftChannelFlag  = NONE;
+		  channelFlag.bottomRightChannelFlag = NONE;
 
-		  arm_q31_to_float((q31_t*)&pcmBuffer->bottomLeftChannel[0],  &pcmBuffer->pcmBuffer_flt[0][0], PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->bottomRightChannel[0], &pcmBuffer->pcmBuffer_flt[1][0], PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->topLeftChannel[0], 	  &pcmBuffer->pcmBuffer_flt[2][0], PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->topRightChannel[0], 	  &pcmBuffer->pcmBuffer_flt[3][0], PCM_CHUNK_SIZE);
+		  for(uint32_t i = 0; i < PCM_CHUNK_SIZE; i++){
+			  pcmBuffer->pcmBuffer_q15[0][i] = (int16_t)(pcmBuffer->bottomLeftChannel [i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[1][i] = (int16_t)(pcmBuffer->bottomRightChannel[i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[2][i] = (int16_t)(pcmBuffer->topLeftChannel	  [i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[3][i] = (int16_t)(pcmBuffer->topRightChannel	  [i] >> 8);
+		  }
 
-		 // arm_mat_trans_f32(&matrix_S0, &matrix_S1);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[0][0], &pcmBuffer->pcmBuffer_flt[0][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[1][0], &pcmBuffer->pcmBuffer_flt[1][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[2][0], &pcmBuffer->pcmBuffer_flt[2][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[3][0], &pcmBuffer->pcmBuffer_flt[3][0], PCM_CHUNK_SIZE);
 
-		 // arm_biquad_cascade_stereo_df2T_f32(&S, &pcmBuffer->pcmBuffer_flt_trans_in[0][0], &pcmBuffer->pcmBuffer_flt_trans_out[0][0], PCM_CHUNK_SIZE);
 
-		  //FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[0][0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[0][0]);
 
-		 // arm_mat_trans_f32(&matrix_S2, &matrix_S0);
-
-		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[0][0], &pcmBuffer->pcmBuffer_q15[0][0], CHANNEL_NUMBER*PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[0][0], &pcmBuffer->pcmBuffer_q15[0][0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[1][0], &pcmBuffer->pcmBuffer_q15[1][0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[2][0], &pcmBuffer->pcmBuffer_q15[2][0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[3][0], &pcmBuffer->pcmBuffer_q15[3][0], PCM_CHUNK_SIZE);
 
 		  Clean((uint32_t*)&pcmBuffer->pcmBuffer_q15[0][0], 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
+
+		  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&pcmBuffer->pcmBuffer_q15[0][0], 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
 
 		  HAL_EXTI_GenerateSWInterrupt(EXTI_LINE7);
 	  }
 
 	  if(channelFlag.bottomLeftChannelFlag == FULL && channelFlag.bottomRightChannelFlag == FULL && channelFlag.topLeftChannelFlag == FULL && channelFlag.topRightChannelFlag == FULL){
-//		  DWT->CYCCNT = 0;
+		  DWT->CYCCNT = 0;
 		  channelFlag.topLeftChannelFlag		= NONE;
 		  channelFlag.topRightChannelFlag       = NONE;
 		  channelFlag.bottomLeftChannelFlag 	= NONE;
 		  channelFlag.bottomRightChannelFlag 	= NONE;
 
-		  arm_q31_to_float((q31_t*)&pcmBuffer->bottomLeftChannel[PCM_CHUNK_SIZE],   &pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER][0],   PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->bottomRightChannel[PCM_CHUNK_SIZE],  &pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER+1][0], PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->topLeftChannel[PCM_CHUNK_SIZE], 	    &pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER+2][0], PCM_CHUNK_SIZE);
-		  arm_q31_to_float((q31_t*)&pcmBuffer->topRightChannel[PCM_CHUNK_SIZE], 	&pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER+3][0], PCM_CHUNK_SIZE);
+		  for(uint32_t i = 0; i < PCM_CHUNK_SIZE; i++){
+			  pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER]    [i] = (int16_t)(pcmBuffer->bottomLeftChannel[PCM_CHUNK_SIZE  + i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 1][i] = (int16_t)(pcmBuffer->bottomRightChannel[PCM_CHUNK_SIZE + i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 2][i] = (int16_t)(pcmBuffer->topLeftChannel[PCM_CHUNK_SIZE     + i] >> 8);
+			  pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 3][i] = (int16_t)(pcmBuffer->topRightChannel[PCM_CHUNK_SIZE    + i] >> 8);
+		  }
 
-//		  arm_mat_trans_f32(&matrix_S3, &matrix_S4);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER]    [0], &pcmBuffer->pcmBuffer_flt[0][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 1][0], &pcmBuffer->pcmBuffer_flt[1][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 2][0], &pcmBuffer->pcmBuffer_flt[2][0], PCM_CHUNK_SIZE);
+		  arm_q15_to_float(&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 3][0], &pcmBuffer->pcmBuffer_flt[3][0], PCM_CHUNK_SIZE);
 
-//		  arm_biquad_cascade_stereo_df2T_f32(&S, &pcmBuffer->pcmBuffer_flt_trans_in[PCM_CHUNK_SIZE][0], &pcmBuffer->pcmBuffer_flt_trans_out[PCM_CHUNK_SIZE][0], PCM_CHUNK_SIZE);
+		  IIR_Filter(&dsp_iir[0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[0][0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[0][0]);
 
-//		  FIR_Filter(&dsp[0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER][0], (float(*)[PCM_CHUNK_SIZE])&pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER][0]);
-
-//		  arm_mat_trans_f32(&matrix_S5, &matrix_S3);
-
-		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[CHANNEL_NUMBER][0], &pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER][0], CHANNEL_NUMBER*PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[0][0], &pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER]    [0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[1][0], &pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 1][0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[2][0], &pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 2][0], PCM_CHUNK_SIZE);
+		  arm_float_to_q15(&pcmBuffer->pcmBuffer_flt[3][0], &pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER + 3][0], PCM_CHUNK_SIZE);
 
 		  Clean((uint32_t*)&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER][0], 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
+
+		  HAL_UART_Transmit_DMA(&huart3, (uint8_t*)&pcmBuffer->pcmBuffer_q15[CHANNEL_NUMBER][0], 2*CHANNEL_NUMBER*PCM_CHUNK_SIZE);
 
 		  HAL_EXTI_GenerateSWInterrupt(EXTI_LINE8);
 	  }
@@ -322,9 +322,9 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_filter0.Init.RegularParam.Trigger = DFSDM_FILTER_SW_TRIGGER;
   hdfsdm1_filter0.Init.RegularParam.FastMode = ENABLE;
   hdfsdm1_filter0.Init.RegularParam.DmaMode = ENABLE;
-  hdfsdm1_filter0.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC4_ORDER;
+  hdfsdm1_filter0.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC3_ORDER;
   hdfsdm1_filter0.Init.FilterParam.Oversampling = 64;
-  hdfsdm1_filter0.Init.FilterParam.IntOversampling = 1;
+  hdfsdm1_filter0.Init.FilterParam.IntOversampling = 2;
   if (HAL_DFSDM_FilterInit(&hdfsdm1_filter0) != HAL_OK)
   {
     Error_Handler();
@@ -333,9 +333,9 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_filter1.Init.RegularParam.Trigger = DFSDM_FILTER_SW_TRIGGER;
   hdfsdm1_filter1.Init.RegularParam.FastMode = ENABLE;
   hdfsdm1_filter1.Init.RegularParam.DmaMode = ENABLE;
-  hdfsdm1_filter1.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC4_ORDER;
+  hdfsdm1_filter1.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC3_ORDER;
   hdfsdm1_filter1.Init.FilterParam.Oversampling = 64;
-  hdfsdm1_filter1.Init.FilterParam.IntOversampling = 1;
+  hdfsdm1_filter1.Init.FilterParam.IntOversampling = 2;
   if (HAL_DFSDM_FilterInit(&hdfsdm1_filter1) != HAL_OK)
   {
     Error_Handler();
@@ -344,9 +344,9 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_filter2.Init.RegularParam.Trigger = DFSDM_FILTER_SW_TRIGGER;
   hdfsdm1_filter2.Init.RegularParam.FastMode = ENABLE;
   hdfsdm1_filter2.Init.RegularParam.DmaMode = ENABLE;
-  hdfsdm1_filter2.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC4_ORDER;
+  hdfsdm1_filter2.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC3_ORDER;
   hdfsdm1_filter2.Init.FilterParam.Oversampling = 64;
-  hdfsdm1_filter2.Init.FilterParam.IntOversampling = 1;
+  hdfsdm1_filter2.Init.FilterParam.IntOversampling = 2;
   if (HAL_DFSDM_FilterInit(&hdfsdm1_filter2) != HAL_OK)
   {
     Error_Handler();
@@ -355,9 +355,9 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_filter3.Init.RegularParam.Trigger = DFSDM_FILTER_SW_TRIGGER;
   hdfsdm1_filter3.Init.RegularParam.FastMode = ENABLE;
   hdfsdm1_filter3.Init.RegularParam.DmaMode = ENABLE;
-  hdfsdm1_filter3.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC4_ORDER;
+  hdfsdm1_filter3.Init.FilterParam.SincOrder = DFSDM_FILTER_SINC3_ORDER;
   hdfsdm1_filter3.Init.FilterParam.Oversampling = 64;
-  hdfsdm1_filter3.Init.FilterParam.IntOversampling = 1;
+  hdfsdm1_filter3.Init.FilterParam.IntOversampling = 2;
   if (HAL_DFSDM_FilterInit(&hdfsdm1_filter3) != HAL_OK)
   {
     Error_Handler();
@@ -373,8 +373,8 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_channel0.Init.SerialInterface.SpiClock = DFSDM_CHANNEL_SPI_CLOCK_INTERNAL;
   hdfsdm1_channel0.Init.Awd.FilterOrder = DFSDM_CHANNEL_FASTSINC_ORDER;
   hdfsdm1_channel0.Init.Awd.Oversampling = 1;
-  hdfsdm1_channel0.Init.Offset = 84000;
-  hdfsdm1_channel0.Init.RightBitShift = 2;
+  hdfsdm1_channel0.Init.Offset = 650;
+  hdfsdm1_channel0.Init.RightBitShift = 4;
   if (HAL_DFSDM_ChannelInit(&hdfsdm1_channel0) != HAL_OK)
   {
     Error_Handler();
@@ -390,8 +390,8 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_channel1.Init.SerialInterface.SpiClock = DFSDM_CHANNEL_SPI_CLOCK_INTERNAL;
   hdfsdm1_channel1.Init.Awd.FilterOrder = DFSDM_CHANNEL_FASTSINC_ORDER;
   hdfsdm1_channel1.Init.Awd.Oversampling = 1;
-  hdfsdm1_channel1.Init.Offset = 84000;
-  hdfsdm1_channel1.Init.RightBitShift = 2;
+  hdfsdm1_channel1.Init.Offset = 660;
+  hdfsdm1_channel1.Init.RightBitShift = 4;
   if (HAL_DFSDM_ChannelInit(&hdfsdm1_channel1) != HAL_OK)
   {
     Error_Handler();
@@ -407,8 +407,8 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_channel2.Init.SerialInterface.SpiClock = DFSDM_CHANNEL_SPI_CLOCK_INTERNAL;
   hdfsdm1_channel2.Init.Awd.FilterOrder = DFSDM_CHANNEL_FASTSINC_ORDER;
   hdfsdm1_channel2.Init.Awd.Oversampling = 1;
-  hdfsdm1_channel2.Init.Offset = 84000;
-  hdfsdm1_channel2.Init.RightBitShift = 2;
+  hdfsdm1_channel2.Init.Offset = 600;
+  hdfsdm1_channel2.Init.RightBitShift = 4;
   if (HAL_DFSDM_ChannelInit(&hdfsdm1_channel2) != HAL_OK)
   {
     Error_Handler();
@@ -424,8 +424,8 @@ static void MX_DFSDM1_Init(void)
   hdfsdm1_channel3.Init.SerialInterface.SpiClock = DFSDM_CHANNEL_SPI_CLOCK_INTERNAL;
   hdfsdm1_channel3.Init.Awd.FilterOrder = DFSDM_CHANNEL_FASTSINC_ORDER;
   hdfsdm1_channel3.Init.Awd.Oversampling = 1;
-  hdfsdm1_channel3.Init.Offset = 84000;
-  hdfsdm1_channel3.Init.RightBitShift = 2;
+  hdfsdm1_channel3.Init.Offset = 500;
+  hdfsdm1_channel3.Init.RightBitShift = 4;
   if (HAL_DFSDM_ChannelInit(&hdfsdm1_channel3) != HAL_OK)
   {
     Error_Handler();
@@ -457,7 +457,7 @@ static void MX_DFSDM1_Init(void)
   * @param None
   * @retval None
   */
-void MX_USART3_UART_Init(void)
+static void MX_USART3_UART_Init(void)
 {
 
   /* USER CODE BEGIN USART3_Init 0 */
@@ -523,6 +523,9 @@ static void MX_DMA_Init(void)
   /* DMA1_Stream3_IRQn interrupt configuration */
   HAL_NVIC_SetPriority(DMA1_Stream3_IRQn, 0, 0);
   HAL_NVIC_EnableIRQ(DMA1_Stream3_IRQn);
+  /* DMA2_Stream0_IRQn interrupt configuration */
+  HAL_NVIC_SetPriority(DMA2_Stream0_IRQn, 0, 0);
+  HAL_NVIC_EnableIRQ(DMA2_Stream0_IRQn);
 
 }
 
@@ -549,18 +552,19 @@ void HAL_DFSDM_FilterRegConvHalfCpltCallback(DFSDM_Filter_HandleTypeDef *hdfsdm_
 		 if(hdfsdm_filter == &hdfsdm1_filter3){
 			channelFlag.topRightChannelFlag 	= HALF;
 			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->topRightChannel[0], 4*PCM_CHUNK_SIZE);
+
 	}
 	else if(hdfsdm_filter == &hdfsdm1_filter2){
 			channelFlag.topLeftChannelFlag 	= HALF;
 			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->topLeftChannel[0], 4*PCM_CHUNK_SIZE);
 	}
 	else if(hdfsdm_filter == &hdfsdm1_filter1){
-			channelFlag.bottomLeftChannelFlag 	= HALF;
-			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomLeftChannel[0], 4*PCM_CHUNK_SIZE);
-	}
-	else{
 			channelFlag.bottomRightChannelFlag 	= HALF;
 			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomRightChannel[0], 4*PCM_CHUNK_SIZE);
+	}
+	else{
+			channelFlag.bottomLeftChannelFlag 	= HALF;
+			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomLeftChannel[0], 4*PCM_CHUNK_SIZE);
 	}
 
 }
@@ -577,12 +581,12 @@ void HAL_DFSDM_FilterRegConvCpltCallback(DFSDM_Filter_HandleTypeDef *hdfsdm_filt
 
 	}
 	else if(hdfsdm_filter == &hdfsdm1_filter1){
-			channelFlag.bottomLeftChannelFlag 	= FULL;
-			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomLeftChannel[PCM_CHUNK_SIZE], 4*PCM_CHUNK_SIZE);
-	}
-	else{
 			channelFlag.bottomRightChannelFlag 	= FULL;
 			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomRightChannel[PCM_CHUNK_SIZE], 4*PCM_CHUNK_SIZE);
+	}
+	else{
+			channelFlag.bottomLeftChannelFlag 	= FULL;
+			SCB_InvalidateDCache_by_Addr((uint32_t*)&pcmBuffer->bottomLeftChannel[PCM_CHUNK_SIZE], 4*PCM_CHUNK_SIZE);
 	}
 
 }

@@ -12,7 +12,14 @@
 #include "stdint.h"
 #include "definition.h"
 
-void FIR_Filter(dsp_buffer_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]);
-void FIR_Filter_Init(dsp_buffer_t* buff, float *coeff);
+void FIR_Filter(dsp_buffer_fir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]);
+void FIR_Filter_Init(dsp_buffer_fir_t* dsp, float *coeff);
+
+
+void IIR_Filter(dsp_buffer_iir_t* dsp, float (*input)[PCM_CHUNK_SIZE], float (*output)[PCM_CHUNK_SIZE]);
+void IIR_Filter_Init(dsp_buffer_iir_t* dsp, float *coeff);
+
+void Normalized_CC(float *sig_i, float *sig_j, float *corr);
+void Upsample(float *input, float *output);
 
 #endif /* COMMON_DRIVERS_INC_DSP_H_ */

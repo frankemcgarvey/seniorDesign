@@ -1,2 +1,5 @@
 dsp.c:10:6:FIR_Filter_Init	32	static
 dsp.c:16:6:FIR_Filter	32	static
+dsp.c:22:6:IIR_Filter_Init	24	static
+dsp.c:28:6:IIR_Filter	32	static
+dsp.c:35:6:Normalized_CC	8240	static
