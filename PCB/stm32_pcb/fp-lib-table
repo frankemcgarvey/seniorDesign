@@ -1,0 +1,6 @@
+(fp_lib_table
+  (lib (name stm32h7)(type KiCad)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/stm32h7/footprints.pretty)(options "")(descr ""))
+  (lib (name toggle_switch)(type KiCad)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/toggle_switch)(options "")(descr ""))
+  (lib (name push_sw)(type KiCad)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/push_switch/footprints.pretty)(options "")(descr ""))
+  (lib (name crystal)(type KiCad)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/crystal)(options "")(descr ""))
+)

@@ -1,4 +1,0 @@
-localization.c:12:6:Create_Arcsine_Table	32	static
-localization.c:18:6:Localize_1D_TimeDifference	32	static
-localization.c:72:6:Localize_1D_CorrMax	40	static
-localization.c:98:6:Localize_1D_CorrBuffer	40	static

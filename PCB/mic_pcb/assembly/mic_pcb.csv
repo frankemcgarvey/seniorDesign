@@ -1,0 +1,6 @@
+Comment,Designator,Footprint,LCSC
+"1uF","C1","Capacitor_SMD:C_0402_1005Metric",""
+"100nF","C2","Capacitor_SMD:C_0402_1005Metric",""
+"MountingHole","H1,H2","MountingHole:MountingHole_2.2mm_M2_Pad_Via",""
+"Conn_01x05_Male","J1","Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical",""
+"MP34DT05TR-A","U1","mic:MP34DT05TR-A",""

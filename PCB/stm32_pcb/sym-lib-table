@@ -1,0 +1,6 @@
+(sym_lib_table
+  (lib (name stm32h7)(type Legacy)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/stm32h7/2021-10-20_21-39-28.lib)(options "")(descr ""))
+  (lib (name toggle_sw)(type Legacy)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/toggle_switch/4-1825136-2.lib)(options "")(descr ""))
+  (lib (name push_sw)(type Legacy)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/push_switch/2021-11-07_03-08-59.lib)(options "")(descr ""))
+  (lib (name HSE)(type Legacy)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/crystal/ABM3B-8.000MHZ-B2-T.lib)(options "")(descr ""))
+)

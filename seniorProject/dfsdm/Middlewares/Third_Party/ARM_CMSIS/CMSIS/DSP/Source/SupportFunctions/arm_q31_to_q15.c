@@ -158,7 +158,7 @@ void arm_q31_to_q15(
 #else
 
   /* Initialize blkCnt with number of samples */
-   blkCnt = blockSize;
+  blkCnt = blockSize;
 
 #endif /* #if defined (ARM_MATH_LOOPUNROLL) */
 

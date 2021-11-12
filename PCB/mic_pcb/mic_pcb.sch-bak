@@ -1,0 +1,194 @@
+EESchema Schematic File Version 4
+EELAYER 30 0
+EELAYER END
+$Descr A4 11693 8268
+encoding utf-8
+Sheet 1 1
+Title ""
+Date ""
+Rev ""
+Comp ""
+Comment1 ""
+Comment2 ""
+Comment3 ""
+Comment4 ""
+$EndDescr
+$Comp
+L Device:C_Small C1
+U 1 1 62670E37
+P 3550 4400
+F 0 "C1" H 3458 4354 50  0000 R CNN
+F 1 "1uF" H 3458 4445 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3550 4400 50  0001 C CNN
+F 3 "~" H 3550 4400 50  0001 C CNN
+F 4 "C52923" H 3550 4400 50  0001 C CNN "LCSC Part #"
+	1    3550 4400
+	-1   0    0    1   
+$EndComp
+$Comp
+L Device:C_Small C2
+U 1 1 62671F9D
+P 3900 4400
+F 0 "C2" H 3808 4354 50  0000 R CNN
+F 1 "100nF" H 3808 4445 50  0000 R CNN
+F 2 "Capacitor_SMD:C_0402_1005Metric" H 3900 4400 50  0001 C CNN
+F 3 "~" H 3900 4400 50  0001 C CNN
+F 4 "C1525" H 3900 4400 50  0001 C CNN "LCSC Part #"
+	1    3900 4400
+	-1   0    0    1   
+$EndComp
+Wire Wire Line
+	4350 4300 3900 4300
+Wire Wire Line
+	3900 4300 3550 4300
+Connection ~ 3900 4300
+Wire Wire Line
+	3550 4500 3550 4550
+Wire Wire Line
+	3550 4550 3700 4550
+Wire Wire Line
+	3900 4550 3900 4500
+$Comp
+L power:GND #PWR0101
+U 1 1 62676878
+P 3700 4550
+F 0 "#PWR0101" H 3700 4300 50  0001 C CNN
+F 1 "GND" H 3705 4377 50  0000 C CNN
+F 2 "" H 3700 4550 50  0001 C CNN
+F 3 "" H 3700 4550 50  0001 C CNN
+	1    3700 4550
+	1    0    0    -1  
+$EndComp
+Connection ~ 3700 4550
+Wire Wire Line
+	3700 4550 3900 4550
+Wire Wire Line
+	3550 4300 3300 4300
+Wire Wire Line
+	3300 4300 3300 4200
+Connection ~ 3550 4300
+$Comp
+L power:VDD #PWR0102
+U 1 1 62676CBE
+P 3300 4200
+F 0 "#PWR0102" H 3300 4050 50  0001 C CNN
+F 1 "VDD" H 3315 4373 50  0000 C CNN
+F 2 "" H 3300 4200 50  0001 C CNN
+F 3 "" H 3300 4200 50  0001 C CNN
+	1    3300 4200
+	1    0    0    -1  
+$EndComp
+Text GLabel 4800 4500 1    50   Input ~ 0
+LR
+$Comp
+L Connector:Conn_01x05_Male J1
+U 1 1 62678D89
+P 4900 4700
+F 0 "J1" V 5054 4412 50  0000 R CNN
+F 1 "Conn_01x05_Male" V 4963 4412 50  0000 R CNN
+F 2 "Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical" H 4900 4700 50  0001 C CNN
+F 3 "~" H 4900 4700 50  0001 C CNN
+	1    4900 4700
+	0    -1   -1   0   
+$EndComp
+$Comp
+L power:GND #PWR0103
+U 1 1 6267AC24
+P 4000 3250
+F 0 "#PWR0103" H 4000 3000 50  0001 C CNN
+F 1 "GND" V 4005 3122 50  0000 R CNN
+F 2 "" H 4000 3250 50  0001 C CNN
+F 3 "" H 4000 3250 50  0001 C CNN
+	1    4000 3250
+	0    1    1    0   
+$EndComp
+Text GLabel 5600 2550 2    50   Input ~ 0
+DOUT
+$Comp
+L power:GND #PWR0104
+U 1 1 6267BF38
+P 4700 4500
+F 0 "#PWR0104" H 4700 4250 50  0001 C CNN
+F 1 "GND" H 4705 4327 50  0000 C CNN
+F 2 "" H 4700 4500 50  0001 C CNN
+F 3 "" H 4700 4500 50  0001 C CNN
+	1    4700 4500
+	-1   0    0    1   
+$EndComp
+$Comp
+L power:VDD #PWR0105
+U 1 1 6267C287
+P 4900 4500
+F 0 "#PWR0105" H 4900 4350 50  0001 C CNN
+F 1 "VDD" H 4915 4673 50  0000 C CNN
+F 2 "" H 4900 4500 50  0001 C CNN
+F 3 "" H 4900 4500 50  0001 C CNN
+	1    4900 4500
+	1    0    0    -1  
+$EndComp
+Text GLabel 5000 4500 1    50   Input ~ 0
+CLK
+Text GLabel 4000 2550 0    50   Input ~ 0
+CLK
+Text GLabel 5100 4500 1    50   Input ~ 0
+DOUT
+$Comp
+L mic_pcb-rescue:MP34DT05TR-A-mic U1
+U 1 1 6188B7E8
+P 4000 2550
+F 0 "U1" H 4800 2937 60  0000 C CNN
+F 1 "MP34DT05TR-A" H 4800 2831 60  0000 C CNN
+F 2 "mic:MP34DT05TR-A" H 4800 2790 60  0001 C CNN
+F 3 "" H 4000 2550 60  0000 C CNN
+	1    4000 2550
+	1    0    0    -1  
+$EndComp
+Text GLabel 4000 2750 0    50   Input ~ 0
+LR
+$Comp
+L power:VCC #PWR0106
+U 1 1 61891DD3
+P 4350 4200
+F 0 "#PWR0106" H 4350 4050 50  0001 C CNN
+F 1 "VCC" H 4365 4373 50  0000 C CNN
+F 2 "" H 4350 4200 50  0001 C CNN
+F 3 "" H 4350 4200 50  0001 C CNN
+	1    4350 4200
+	1    0    0    -1  
+$EndComp
+Wire Wire Line
+	4350 4200 4350 4300
+$Comp
+L power:VCC #PWR0107
+U 1 1 6189774D
+P 4000 3050
+F 0 "#PWR0107" H 4000 2900 50  0001 C CNN
+F 1 "VCC" H 4015 3223 50  0000 C CNN
+F 2 "" H 4000 3050 50  0001 C CNN
+F 3 "" H 4000 3050 50  0001 C CNN
+	1    4000 3050
+	0    -1   -1   0   
+$EndComp
+$Comp
+L Mechanical:MountingHole H1
+U 1 1 618B5F91
+P 5900 4150
+F 0 "H1" H 6000 4196 50  0000 L CNN
+F 1 "MountingHole" H 6000 4105 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 5900 4150 50  0001 C CNN
+F 3 "~" H 5900 4150 50  0001 C CNN
+	1    5900 4150
+	1    0    0    -1  
+$EndComp
+$Comp
+L Mechanical:MountingHole H2
+U 1 1 618B6D2B
+P 6650 4100
+F 0 "H2" H 6750 4146 50  0000 L CNN
+F 1 "MountingHole" H 6750 4055 50  0000 L CNN
+F 2 "MountingHole:MountingHole_3.2mm_M3_Pad_Via" H 6650 4100 50  0001 C CNN
+F 3 "~" H 6650 4100 50  0001 C CNN
+	1    6650 4100
+	1    0    0    -1  
+$EndComp
+$EndSCHEMATC

@@ -1,0 +1,10 @@
+23:03:34 **** Incremental Build of configuration Debug for project localization_CM4 ****
+make -j8 all 
+arm-none-eabi-size   localization_CM4.elf 
+   text	   data	    bss	    dec	    hex	filename
+   3352	     24	   1568	   4944	   1350	localization_CM4.elf
+Finished building: default.size.stdout
+ 
+
+23:03:35 Build Finished. 0 errors, 0 warnings. (took 1s.396ms)
+

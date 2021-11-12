@@ -60,9 +60,9 @@ def normalize(sig_i, sig_j):
  
     normalize_corr = np.correlate(sig_i, sig_j, mode = 'full')/np.sqrt(np.sum(np.power(sig_i,2)) * np.sum(np.power(sig_j,2)))
    
-    plt.figure()
-    plt.plot(normalize_corr)
-    plt.show()
+  #  plt.figure()
+  #  plt.plot(normalize_corr)
+  #  plt.show()
     return normalize_corr
 
 
@@ -109,7 +109,7 @@ def parabola(sig, argMax, rate):
     b = x[1]
     c = x[2]
 
-    vert = -b/(2*a)
+    vert = -b/(2.0*a)
     return vert
 
 def localize(pcmData1, pcmData2):
@@ -131,17 +131,24 @@ def localize(pcmData1, pcmData2):
             max_i = np.max(np.abs(sig_i))
             max_j = np.max(np.abs(sig_j))
         
-            if(max_i > .01 or max_j > .01):
-                cc = gcc_phat(sig_i, sig_j)
-                plt.figure()
-                plt.plot(cc)
-                plt.show()
-                max = np.argmax(cc[1000:1040])
+            if(max_i > .02 or max_j > .02):
+
                 norm = normalize(sig_i, sig_j)
-                l = np.argmax(norm)
-                s = cubic_spline(norm[1023-12:1023+12],l, 1/8)
-                d = np.argmax(s)/8
-                x = np.round(parabola(s) - 1023, 2)
+                argMaxNorm = np.argmax(norm)
+
+                s = cubic_spline(norm[argMaxNorm-1:argMaxNorm+2],argMaxNorm, 1/200)
+                argMaxS = np.argmax(s)
+
+                delay = argMaxS/200 + (argMaxNorm-1)
+
+                x = parabola(s, delay, 200) - 1023
+                if(x < -4.95):
+                      x = -4.9
+                elif(x > 4.95):
+                      x = 4.95
+
+                angle = np.arcsin(x/12000.0 * 343.0/0.1415) * 180.0/np.pi
+
                 bp = 0
             counter = counter + 1
 
@@ -150,8 +157,8 @@ def signals():
     sig_i = np.zeros(1024)
     sig_j = np.zeros(1024)
 
-    D = 10
-    fs = 24000
+    D = 3.21
+    fs = 12000
     f = 1000
 
     delay = D/fs
@@ -168,10 +175,10 @@ def signals():
  #   sig_i[100:150] = 1
  #   sig_j[120:170] = 1
 
-    plt.figure()
-    plt.plot(sig_i)
-    plt.plot(sig_j)
-    plt.show()
+  #  plt.figure()
+  #  plt.plot(sig_i)
+   # plt.plot(sig_j)
+ #   plt.show()
 
     norm = normalize(sig_i, sig_j)
 
@@ -181,31 +188,20 @@ def signals():
 
     maxNorm = np.max(norm)
 
-    s = cubic_spline(norm[argMaxNorm-1:argMaxNorm+2], argMaxNorm, 1/96)
+    s = cubic_spline(norm[argMaxNorm-1:argMaxNorm+2], argMaxNorm, 1/1000)
+    argMaxS = np.argmax(s)
 
-    argMaxS = (np.argmax(s)/96 + (argMaxNorm-1))
-
-    max = (argMaxS/48)
+    delay = (argMaxS/1000 + (argMaxNorm - 1))
   
-    x  = round((parabola(s, argMaxS, 96) - 1023),3)
-    x2 = round((parabola(norm, argMaxNorm, 1) - 1023),3)
-    plt.figure(0)
-    plt.plot(s)
- #   plt.plot(max, 'ro')
-    plt.show()
+    x  = (parabola(s, delay, 1000) - 1023)
+    x2 = (parabola(norm, argMaxNorm, 1) - 1023)
 
     bp = 0
 
 
 
-
-
-
-
-
-
-
 signals()
+
 counter = 0
 data1 = []
 data2 = []
@@ -220,9 +216,7 @@ index = 0
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
     hw = pcmfile.read(2)
     while hw:
-        counter = counter + 1
-        if(counter%1024 == 0):
-            index = index + 1
+       
 
         if(index%numOfChannel == 0):
                 data1.append(int.from_bytes(hw, 'little', signed = 'True'))
@@ -232,16 +226,15 @@ with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfi
                 data3.append(int.from_bytes(hw, 'little', signed = 'True'))
         elif(index%numOfChannel == 3):
                 data4.append(int.from_bytes(hw, 'little', signed = 'True'))
-     
+        counter = counter + 1
+        if(counter%1024 == 0):
+            index = index + 1
         hw = pcmfile.read(2)
 
 pcmData1 = np.asfarray(np.array(data1))/32768.0
 pcmData2 = np.asfarray(np.array(data2))/32768.0
 pcmData3 = np.asfarray(np.array(data3))/32768.0
 pcmData4 = np.asfarray(np.array(data4))/32768.0
-
-length = len(pcmData2)
-pcmData1 = pcmData1[:length]
 
 pcmData1 = pcmData1[20*1024:]
 pcmData2 = pcmData2[20*1024:]
@@ -255,6 +248,6 @@ ax[2].plot(pcmData3)
 ax[3].plot(pcmData4)
 plt.show() 
 
-localize(pcmData2,pcmData1)
+localize(pcmData1,pcmData2)
 
 eof = 0

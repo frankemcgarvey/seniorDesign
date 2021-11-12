@@ -1,0 +1,4 @@
+(sym_lib_table
+  (lib (name mic)(type Legacy)(uri C:/Users/frank/OneDrive/Documents/kicad/KiCAD/mic/2021-11-08_01-25-51.lib)(options "")(descr ""))
+  (lib (name mic_pcb-rescue)(type Legacy)(uri ${KIPRJMOD}/mic_pcb-rescue.lib)(options "")(descr ""))
+)

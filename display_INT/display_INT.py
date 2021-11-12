@@ -21,9 +21,7 @@ index = 0
 with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfile:
     hw = pcmfile.read(2)
     while hw:
-        counter = counter + 1
-        if(counter%1024 == 0):
-            index = index + 1
+
 
         if(index%numOfChannel == 0):
                 data1.append(int.from_bytes(hw, 'little', signed = 'True'))
@@ -34,11 +32,14 @@ with open(os.path.dirname(__file__) + '/../pcmFiles/' + fileName, 'rb') as pcmfi
         elif(index%numOfChannel == 3):
                 data4.append(int.from_bytes(hw, 'little', signed = 'True'))
         hw = pcmfile.read(2)
+        counter = counter + 1
+        if(counter%1024 == 0):
+            index = index + 1
 
-pcmData1 = np.int16(np.array(data1))
-pcmData2 = np.int16(np.array(data2))
-pcmData3 = np.int16(np.array(data3))
-pcmData4 = np.int16(np.array(data4))
+pcmData1 = np.array(data1)
+pcmData2 = np.array(data2)
+pcmData3 = np.array(data3)
+pcmData4 = np.array(data4)
 
 fig , ax = plt.subplots(ncols = 4)
 

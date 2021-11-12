@@ -1,0 +1,179 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<export version="D">
+  <design>
+    <source>C:\Users\frank\OneDrive\Documents\seniorDesign\PCB\mic_pcb\mic_pcb.sch</source>
+    <date>11/7/2021 6:41:06 PM</date>
+    <tool>Eeschema (5.1.10)-1</tool>
+    <sheet number="1" name="/" tstamps="/">
+      <title_block>
+        <title/>
+        <company/>
+        <rev/>
+        <date/>
+        <source>mic_pcb.sch</source>
+        <comment number="1" value=""/>
+        <comment number="2" value=""/>
+        <comment number="3" value=""/>
+        <comment number="4" value=""/>
+      </title_block>
+    </sheet>
+  </design>
+  <components>
+    <comp ref="C1">
+      <value>1uF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C52923</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62670E37</tstamp>
+    </comp>
+    <comp ref="C2">
+      <value>100nF</value>
+      <footprint>Capacitor_SMD:C_0402_1005Metric</footprint>
+      <datasheet>~</datasheet>
+      <fields>
+        <field name="LCSC Part #">C1525</field>
+      </fields>
+      <libsource lib="Device" part="C_Small" description="Unpolarized capacitor, small symbol"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62671F9D</tstamp>
+    </comp>
+    <comp ref="J1">
+      <value>Conn_01x05_Male</value>
+      <footprint>Connector_PinHeader_2.54mm:PinHeader_1x05_P2.54mm_Vertical</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Connector" part="Conn_01x05_Male" description="Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>62678D89</tstamp>
+    </comp>
+    <comp ref="U1">
+      <value>MP34DT05TR-A</value>
+      <footprint>mic:MP34DT05TR-A</footprint>
+      <libsource lib="mic_pcb-rescue" part="MP34DT05TR-A-mic" description=""/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>6188B7E8</tstamp>
+    </comp>
+    <comp ref="H1">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_Pad_Via</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>618B5F91</tstamp>
+    </comp>
+    <comp ref="H2">
+      <value>MountingHole</value>
+      <footprint>MountingHole:MountingHole_2.2mm_M2_Pad_Via</footprint>
+      <datasheet>~</datasheet>
+      <libsource lib="Mechanical" part="MountingHole" description="Mounting Hole without connection"/>
+      <sheetpath names="/" tstamps="/"/>
+      <tstamp>618B6D2B</tstamp>
+    </comp>
+  </components>
+  <libparts>
+    <libpart lib="Connector" part="Conn_01x05_Male">
+      <description>Generic connector, single row, 01x05, script generated (kicad-library-utils/schlib/autogen/connector/)</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>Connector*:*_1x??_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">J</field>
+        <field name="Value">Conn_01x05_Male</field>
+      </fields>
+      <pins>
+        <pin num="1" name="Pin_1" type="passive"/>
+        <pin num="2" name="Pin_2" type="passive"/>
+        <pin num="3" name="Pin_3" type="passive"/>
+        <pin num="4" name="Pin_4" type="passive"/>
+        <pin num="5" name="Pin_5" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Device" part="C_Small">
+      <description>Unpolarized capacitor, small symbol</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>C_*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">C</field>
+        <field name="Value">C_Small</field>
+      </fields>
+      <pins>
+        <pin num="1" name="~" type="passive"/>
+        <pin num="2" name="~" type="passive"/>
+      </pins>
+    </libpart>
+    <libpart lib="Mechanical" part="MountingHole">
+      <description>Mounting Hole without connection</description>
+      <docs>~</docs>
+      <footprints>
+        <fp>MountingHole*</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">H</field>
+        <field name="Value">MountingHole</field>
+      </fields>
+    </libpart>
+    <libpart lib="mic_pcb-rescue" part="MP34DT05TR-A-mic">
+      <footprints>
+        <fp>MP34DT05TR-A_STM</fp>
+      </footprints>
+      <fields>
+        <field name="Reference">U</field>
+        <field name="Value">MP34DT05TR-A-mic</field>
+        <field name="Footprint">MP34DT05TR-A_STM</field>
+      </fields>
+      <pins>
+        <pin num="1" name="VDD" type="power_in"/>
+        <pin num="2" name="LR" type="unspc"/>
+        <pin num="3" name="CLK" type="input"/>
+        <pin num="4" name="DOUT" type="output"/>
+        <pin num="5" name="GND" type="power_in"/>
+      </pins>
+    </libpart>
+  </libparts>
+  <libraries>
+    <library logical="Connector">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Connector.lib</uri>
+    </library>
+    <library logical="Device">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Device.lib</uri>
+    </library>
+    <library logical="Mechanical">
+      <uri>C:\Program Files\KiCad\share\kicad\library/Mechanical.lib</uri>
+    </library>
+    <library logical="mic_pcb-rescue">
+      <uri>C:\Users\frank\OneDrive\Documents\seniorDesign\PCB\mic_pcb/mic_pcb-rescue.lib</uri>
+    </library>
+  </libraries>
+  <nets>
+    <net code="1" name="GND">
+      <node ref="C1" pin="1"/>
+      <node ref="C2" pin="1"/>
+      <node ref="U1" pin="5"/>
+      <node ref="J1" pin="1"/>
+    </net>
+    <net code="2" name="VCC">
+      <node ref="J1" pin="3"/>
+      <node ref="C2" pin="2"/>
+      <node ref="U1" pin="1"/>
+      <node ref="C1" pin="2"/>
+    </net>
+    <net code="3" name="CLK">
+      <node ref="J1" pin="4"/>
+      <node ref="U1" pin="3"/>
+    </net>
+    <net code="4" name="LR">
+      <node ref="U1" pin="2"/>
+      <node ref="J1" pin="2"/>
+    </net>
+    <net code="5" name="DOUT">
+      <node ref="U1" pin="4"/>
+      <node ref="J1" pin="5"/>
+    </net>
+  </nets>
+</export>
